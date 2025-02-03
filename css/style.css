@@ -1,7 +1,6 @@
 :root {
     --arch_blue: #28A0B8;
 }
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -1024,9 +1023,10 @@ ul.social-list li a i {
 #contact-section {
 	position: relative;
   color:white ;
+  z-index: 0;
 }
 #contact-section h4 {
-	font-weight: 400;
+	font-weight: bold;
 }
 #contact-section .cover {
 	background-color: rgba(5, 8, 11, 0.90);
@@ -1060,6 +1060,7 @@ ul.social-list li a i {
 }
 
 ul.contact-address {
+  list-style: none;
 	float: left;
 	width: 100%;
 	padding: 0;
