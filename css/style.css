@@ -766,7 +766,7 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.8); /* Adjust opacity to control the tint intensity */
+  background: rgba(255, 255, 255, 0.7); /* Adjust opacity to control the tint intensity */
   z-index: 0;
 }
 
