@@ -1090,3 +1090,86 @@ ul.contact-address li i {
 #footer .copyright {
   text-align: center;
 }
+
+
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+/* Scoped CSS for the glow card section */
+.glow-section {
+  /* Define custom properties including a navbar offset */
+  --glow-nav-height: 75px; /* Adjust this to your navbar's height */
+  --glow-cards-count: 4;
+  --glow-card-height: 87vh;
+  --glow-card-top-padding: 1.5em;
+  --glow-card-margin: 4vw;
+  --glow-border-color: var(--arch_blue); /* Change this to your desired glow colour */
+}
+
+.glow-card-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#glow-cards {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--glow-cards-count), var(--glow-card-height));
+  gap: var(--glow-card-margin);
+  padding-bottom: calc(var(--glow-cards-count) * var(--glow-card-top-padding));
+  margin-bottom: var(--glow-card-margin);
+}
+
+/* Set the stacking index for each card */
+#glow-card1 { --glow-index: 1; }
+#glow-card2 { --glow-index: 2; }
+#glow-card3 { --glow-index: 3; }
+#glow-card4 { --glow-index: 4; }
+
+.glow-card {
+  position: sticky;
+  /* Use the navbar offset so the card starts below the navbar */
+  top: var(--glow-nav-height);
+  padding-top: calc(var(--glow-index) * var(--glow-card-top-padding));
+}
+
+.glow-card-body {
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+  height: var(--glow-card-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  position: relative;
+  border: 2px solid transparent; /* Maintain size consistency */
+}
+
+/* Pseudo-element for the glowing border */
+.glow-card-body::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: inherit;
+  border: 2px solid transparent;
+  pointer-events: none;
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Hover effect: only the border glows */
+.glow-card-body:hover::after {
+  border-color: var(--glow-border-color);
+  box-shadow: 0 0 10px var(--glow-border-color);
+}
+
+.glow-card-body h2 {
+  font-size: 2.5em;
+}
+
