@@ -1100,7 +1100,7 @@ ul.contact-address li i {
   /* Define custom properties including a navbar offset */
   --glow-nav-height: 75px; /* Adjust this to your navbar's height */
   --glow-cards-count: 4;
-  --glow-card-height: 87vh;
+  --glow-card-height: 80vh;
   --glow-card-top-padding: 1.5em;
   --glow-card-margin: 4vw;
   --glow-border-color: var(--arch_blue); /* Change this to your desired glow colour */
@@ -1130,7 +1130,6 @@ ul.contact-address li i {
 
 .glow-card {
   position: sticky;
-  /* Use the navbar offset so the card starts below the navbar */
   top: var(--glow-nav-height);
   padding-top: calc(var(--glow-index) * var(--glow-card-top-padding));
 }
@@ -1147,6 +1146,9 @@ ul.contact-address li i {
   transition: all 0.5s;
   position: relative;
   border: 2px solid transparent; /* Maintain size consistency */
+  /* Background properties to show an image */
+  background-size: cover;
+  background-position: center;
 }
 
 /* Pseudo-element for the glowing border */
@@ -1166,10 +1168,28 @@ ul.contact-address li i {
 /* Hover effect: only the border glows */
 .glow-card-body:hover::after {
   border-color: var(--glow-border-color);
-  box-shadow: 0 0 10px 3px var(--glow-border-color);
+  box-shadow: 0 0 10px var(--glow-border-color);
 }
 
 .glow-card-body h2 {
   font-size: 2.5em;
+  color: #ffffff; /* Adjust for contrast/readability against your images */
 }
 
+/* Set a background image for each card */
+/* Replace 'image1.jpg', 'image2.jpg', etc., with your own image paths */
+#glow-card1 .glow-card-body {
+  background-image: url('../images/1.jpg');
+}
+
+#glow-card2 .glow-card-body {
+  background-image: url('../images/2.jpg');
+}
+
+#glow-card3 .glow-card-body {
+  background-image: url('../images/3.jpg');
+}
+
+#glow-card4 .glow-card-body {
+  background-image: url('../images/4.jpg');
+}
