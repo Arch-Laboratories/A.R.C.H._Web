@@ -1166,7 +1166,7 @@ ul.contact-address li i {
 /* Hover effect: only the border glows */
 .glow-card-body:hover::after {
   border-color: var(--glow-border-color);
-  box-shadow: 0 0 10px var(--glow-border-color);
+  box-shadow: 0 0 10px 3px var(--glow-border-color);
 }
 
 .glow-card-body h2 {
