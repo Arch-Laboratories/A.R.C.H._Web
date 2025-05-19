@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>A.R.C.H. Labs</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/styles.css" rel="stylesheet">
+
+
+
+  <link href="images/ARCH_Labs White fevico Logo.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+<!-- <link href="teams.css"> -->
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="images/ARCH_Labs White fevico Logo.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/team.css" rel="stylesheet">
+
+<link href="img/favicon.png" rel="icon">
+<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+<!-- Bootstrap CSS File -->
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Libraries CSS Files -->
+<link href="lib/animate/animate.min.css" rel="stylesheet">
+<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+<link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+<!-- Main Stylesheet File -->
+<link href="css/style.css" rel="stylesheet">
+
+<!-- Three.js for 3D backgrounds -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<link href="all.css" rel="stylesheet">
+
+
+<style>
+
+    /* Headline News Slider for Skills */
+    .skills-slider {
+      width: 100%;
+      margin: 20px 0;
+      overflow: hidden;
+      position: relative;
+      height: 60px;
+    }
+    
+    .skills-track {
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 0;
+      animation: scroll 20s linear infinite;
+    }
+    
+    .skill-tag {
+      background: rgba(78, 154, 241, 0.2);
+      color: #4e9af1;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 10px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+    }
+    
+    .skill-tag i {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+    
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    /* Pause animation on hover */
+    .skills-slider:hover .skills-track {
+      animation-play-state: paused;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .skills-slider {
+        height: 50px;
+      }
+      
+      .skill-tag {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .skills-slider {
+        height: 40px;
+      }
+      
+      .skill-tag {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+      }
+      
+      .skill-tag i {
+        font-size: 1rem;
+        margin-right: 5px;
+      }
+    }
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .member-content {
+    padding: 25px;
+  }
+  
+  .member-name {
+    font-size: 24px;
+  }
+  
+  .member-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-member-section {
+    padding: 40px 0;
+  }
+  
+  .member-content {
+    padding: 20px;
+  }
+  
+  .member-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .member-name {
+    font-size: 22px;
+  }
+  
+  .member-bio {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-member-section {
+    padding: 30px 0;
+  }
+  
+  .member-content {
+    padding: 15px;
+  }
+  
+  .member-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .member-name {
+    font-size: 20px;
+  }
+  
+  .member-title {
+    font-size: 15px;
+  }
+  
+  .member-bio {
+    font-size: 14px;
+  }
+  
+  .skill-item {
+    margin-bottom: 10px;
+  }
+  
+  .member-social a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+  }
+}
+
+
+
+</style>
+
+</head>
+
+    <body>
+        <div id="preloader"></div>
+
+
+        <header id="header">
+            <div class="container">
+        
+              <div id="logo" class="pull-left">
+                <!-- <a href="#hero"><img src="images/ARCH_Labs White BannerLogo.png" alt="" title="" /></img></a> -->
+                <a href="#hero"><img src="img/ARCH_Labs White BannerLogo.png" alt="" title="" /></img></a>
+              </div>
+        
+              <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html#services">About Us</a></li>
+                  <li><a href="../index.html#services-section">Services</a></li>
+                  <li><a href="../index.html#portfolio">Portfolio</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <!-- <li class="menu-active"><a href="../index.html#team-intro">Team</a></li> -->
+                  <li><a href="../index.html#contact-section">Contact Us</a></li>
+
+                </ul>
+              </nav>
+              <!-- #nav-menu-container -->
+            </div>
+          </header>
+
+
+          
+          <section id="team" class="section-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h3 class="section-title">Our Team</h3>
+                    <span class="section-divider"></span>
+                    <p class="section-description">Meet the talented individuals behind A.R.C.H. Labs</p>
+                </div>
+                <div class="row wow fadeInUp">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/abc.jpg" alt="Abdul Moiz" class="flip-card-img">
+                                    <h4>Abdul Moiz</h4>
+                                    <span>Lead Developer</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h4>Abdul Moiz</h4>
+                                    <span>Lead Developer</span>
+                                    <p>Expert in full-stack development with 5+ years of experience.</p>
+                                    <div class="flip-social">
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/team/team-2.jpg" alt="Abdul Rauf" class="flip-card-img">
+                                    <h4>Abdul Rauf</h4>
+                                    <span>Chief Executive Officer</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h4>Abdul Rauf</h4>
+                                    <span>Chief Executive Officer</span>
+                                    <p>Visionary leader with 10+ years in tech industry.</p>
+                                    <div class="flip-social">
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/team/team-3.jpg" alt="Hassan UL Haq" class="flip-card-img">
+                                    <h4>Hassan UL Haq</h4>
+                                    <span>Backend Engineer</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h4>Hassan UL Haq</h4>
+                                    <span>Backend Engineer</span>
+                                    <p>Specializes in scalable server architectures.</p>
+                                    <div class="flip-social">
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="img/team/team-4.jpg" alt="Muhammad Ahsan" class="flip-card-img">
+                                    <h4>Muhammad Ahsan</h4>
+                                    <span>Accountant</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h4>Muhammad Ahsan</h4>
+                                    <span>Designer</span>
+                                    <p>Financial expert ensuring our business stability.</p>
+                                    <div class="flip-social">
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+  <!-- CEO Section with 3D Background -->
+  <section id="ceo-section" class="team-member-section">
+    <canvas class="threejs-bg" id="ceo-bg"></canvas>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="member-content wow fadeInUp">
+            <img src="img/team/team-2.jpg" alt="Abdul Rauf" class="member-image">
+            <h2 class="member-name">Abdul Rauf</h2>
+            <h3 class="member-title">Chief Executive Officer</h3>
+            <p class="member-bio">
+              As the visionary leader of A.R.C.H. Labs, Abdul brings over a decade of experience in the tech industry. 
+              His strategic thinking and business acumen have guided our company to become an emerging leader in 
+              innovative technology solutions. Under his leadership, we've delivered 50+ successful projects with 
+              100% client satisfaction.
+            </p>
+            <div class="skills-slider">
+              <div class="skills-track">
+                <div class="skill-tag"><i class="fas fa-chess-king"></i> Leadership</div>
+                <div class="skill-tag"><i class="fas fa-chess"></i> Strategic Planning</div>
+                <div class="skill-tag"><i class="fas fa-chart-line"></i> Business Growth</div>
+                <div class="skill-tag"><i class="fas fa-handshake"></i> Negotiation</div>
+                <div class="skill-tag"><i class="fas fa-lightbulb"></i> Innovation</div>
+                <div class="skill-tag"><i class="fas fa-users"></i> Team Building</div>
+                <!-- Duplicate for seamless looping -->
+                <div class="skill-tag"><i class="fas fa-chess-king"></i> Leadership</div>
+                <div class="skill-tag"><i class="fas fa-chess"></i> Strategic Planning</div>
+                <div class="skill-tag"><i class="fas fa-chart-line"></i> Business Growth</div>
+                <div class="skill-tag"><i class="fas fa-handshake"></i> Negotiation</div>
+                <div class="skill-tag"><i class="fas fa-lightbulb"></i> Innovation</div>
+                <div class="skill-tag"><i class="fas fa-users"></i> Team Building</div>
+              </div>
+            </div>
+            <div class="member-social">
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-medium"></i></a>
+              <a href="#"><i class="fa fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Developer Section with 3D Background -->
+  <section id="lead-developer-section" class="team-member-section">
+    <canvas class="threejs-bg" id="developer-bg"></canvas>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="member-content wow fadeInUp">
+            <img src="img/abc.jpg" alt="Abdul Moiz" class="member-image">
+            <h2 class="member-name">Abdul Moiz</h2>
+            <h3 class="member-title">Lead Developer</h3>
+            <p class="member-bio">
+              With 5+ years of experience in full-stack development, Abdul Moiz leads our technical team with expertise 
+              in modern web technologies. He specializes in creating scalable, high-performance applications that drive 
+              business success. His clean code and architectural decisions form the backbone of our projects.
+            </p>
+            <div class="skills-slider">
+              <div class="skills-track">
+                <div class="skill-tag js"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="skill-tag react"><i class="fab fa-react"></i> React</div>
+                <div class="skill-tag node"><i class="fab fa-node-js"></i> Node.js</div>
+                <div class="skill-tag html"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="skill-tag css"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="skill-tag git"><i class="fab fa-git-alt"></i> Git</div>
+                <!-- Duplicate for seamless looping -->
+                <div class="skill-tag js"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="skill-tag react"><i class="fab fa-react"></i> React</div>
+                <div class="skill-tag node"><i class="fab fa-node-js"></i> Node.js</div>
+                <div class="skill-tag html"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="skill-tag css"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="skill-tag git"><i class="fab fa-git-alt"></i> Git</div>
+              </div>
+            </div>
+            <div class="member-social">
+              <a href="#"><i class="fa fa-github"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-stack-overflow"></i></a>
+              <a href="#"><i class="fa fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="backend-engineer-section" class="team-member-section">
+  <div class="star-network-container">
+    <canvas class="star-network" id="backend-bg"></canvas>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="member-content wow fadeInUp">
+          <img src="img/team/team-3.jpg" alt="Hassan UL Haq" class="member-image">
+          <h2 class="member-name">Hassan UL Haq</h2>
+          <h3 class="member-title">Backend Engineer</h3>
+          <p class="member-bio">
+            Hassan specializes in building robust, scalable backend systems with expertise in database architecture and server optimization.As the visionary leader of A.R.C.H. Labs, Abdul brings over a decade of experience in the tech industry. 
+            His strategic thinking and business acumen have guided our company to become an emerging leader in 
+            innovative technology solutions. Under his leadership, we've delivered 50+ successful projects with 
+            100% client satisfaction.
+          </p>
+          <div class="skills-slider">
+            <div class="skills-track">
+              <div class="skill-tag"><i class="fas fa-database"></i> Database</div>
+              <div class="skill-tag"><i class="fas fa-server"></i> API Dev</div>
+              <div class="skill-tag python"><i class="fab fa-python"></i> Python</div>
+              <div class="skill-tag java"><i class="fab fa-java"></i> Java</div>
+              <div class="skill-tag"><i class="fas fa-shield-alt"></i> Security</div>
+              <div class="skill-tag"><i class="fas fa-cloud"></i> Cloud</div>
+              <!-- Duplicate for seamless looping -->
+              <div class="skill-tag"><i class="fas fa-database"></i> Database</div>
+              <div class="skill-tag"><i class="fas fa-server"></i> API Dev</div>
+              <div class="skill-tag python"><i class="fab fa-python"></i> Python</div>
+              <div class="skill-tag java"><i class="fab fa-java"></i> Java</div>
+              <div class="skill-tag"><i class="fas fa-shield-alt"></i> Security</div>
+              <div class="skill-tag"><i class="fas fa-cloud"></i> Cloud</div>
+            </div>
+          </div>
+          <div class="member-social">
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-stack-overflow"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Designer Section with 3D Background -->
+  <section id="designer-section" class="team-member-section">
+    <canvas class="threejs-bg" id="designer-bg"></canvas>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="member-content wow fadeInUp">
+            <img src="img/team/team-4.jpg" alt="Muhammad Ahsan" class="member-image">
+            <h2 class="member-name">Muhammad Ahsan</h2>
+            <h3 class="member-title">UI/UX Designer</h3>
+            <p class="member-bio">
+              Muhammad is the creative force behind our beautiful and intuitive interfaces. With a keen eye for detail 
+              and deep understanding of user psychology, he crafts experiences that are not just visually appealing 
+              but also highly functional. His designs bridge the gap between aesthetics and usability.
+            </p>
+            <div class="skills-slider">
+              <div class="skills-track">
+                <div class="skill-tag"><i class="fas fa-paint-brush"></i> UI Design</div>
+                <div class="skill-tag"><i class="fas fa-user-friends"></i> UX Research</div>
+                <div class="skill-tag"><i class="fas fa-mobile-alt"></i> Prototyping</div>
+                <div class="skill-tag figma"><i class="fab fa-figma"></i> Figma</div>
+                <div class="skill-tag"><i class="fas fa-palette"></i> Illustration</div>
+                <div class="skill-tag"><i class="fas fa-chart-pie"></i> Analytics</div>
+                <!-- Duplicate for seamless looping -->
+                <div class="skill-tag"><i class="fas fa-paint-brush"></i> UI Design</div>
+                <div class="skill-tag"><i class="fas fa-user-friends"></i> UX Research</div>
+                <div class="skill-tag"><i class="fas fa-mobile-alt"></i> Prototyping</div>
+                <div class="skill-tag figma"><i class="fab fa-figma"></i> Figma</div>
+                <div class="skill-tag"><i class="fas fa-palette"></i> Illustration</div>
+                <div class="skill-tag"><i class="fas fa-chart-pie"></i> Analytics</div>
+              </div>
+            </div>
+            <div class="member-social">
+              <a href="#"><i class="fa fa-dribbble"></i></a>
+              <a href="#"><i class="fa fa-behance"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+             
+          <section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/map-bg.jpg);">
+            <div class="cover"></div>
+            
+                 <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <h2>Contacts</h2>
+                            <div class="devider"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End page header-->
+                
+                <div class="contact wow bounceInRight" data-wow-delay="0.4s">
+                    <div class="container">
+                      <div class="row">
+                        
+                            <div class="col-sm-6">
+                                <div class="contact-info">
+                                    <h4>Our Contacts & Socials</h4>
+                                    <ul class="contact-address">
+                                  <li><i class="fa fa-phone"></i>&nbsp; +92 312 1359857</li>
+                                  <li><i class="fa fa-whatsapp"></i>&nbsp; +966 54 452 9682</li>
+                                  <li><i class="fa fa-facebook"></i>&nbsp; <a href="https://www.facebook.com/profile.php?id=61572590068944">A.R.C.H. Labs</a></li>
+                                  <li><i class="fa fa-instagram"></i>&nbsp; <a href="https://www.instagram.com/arch.labs.co?igsh=dGI1anVtc2VsZzlx">arch.labs.co</a></li>
+                                  <li><i class="fa fa-linkedin"></i>&nbsp; <a href="https://www.linkedin.com/in/a-r-c-h-labs-5b8738349">A.R.C.H. Labs</a></li>
+                                  <li><i class="fa fa-envelope"></i>archlabs1@gmail.com</li>
+                              </ul>
+                                </div>
+                            </div>
+                        
+                          <div class="col-sm-6">
+                                <div class="contact-form">
+                                  <h4>Contact Us</h4>
+                                  <form role="form">
+                                   <div class="form-group">
+                                       <input type="text" class="form-control input-lg" placeholder="Your Name" required name="name">
+                                   </div>
+                                   <div class="form-group">
+                                       <input type="email" class="form-control input-lg" placeholder="E-mail" required name="email">
+                                   </div>
+                                   <div class="form-group">
+                                       <input type="text" class="form-control input-lg" placeholder="Subject" required name="subject">
+                                   </div>
+                                   <div class="form-group">
+                                       <textarea class="form-control input-lg" rows="5" placeholder="Message" required name="message"></textarea>
+                                   </div>
+                                   <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">Send</button>
+                               </form>
+                                </div>	
+                            </div>
+                                                                                
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+                </div>
+            </section>
+            <!-- End contact section -->
+ 
+ 
+ 
+   <!--==========================
+   Footer
+ ============================-->
+   <footer id="footer">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-12">
+           <div class="copyright">
+             &copy; Copyright <strong>A.R.C.H. Labs</strong>. All Rights Reserved
+           </div>
+         </div>
+       </div>
+     </div>
+   </footer>
+ 
+   <!-- back to top button -->
+   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="lib/superfish/hoverIntent.js"></script>
+        <script src="lib/superfish/superfish.min.js"></script>
+        <script src="lib/morphext/morphext.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/stickyjs/sticky.js"></script>
+        <script src="lib/easing/easing.js"></script>
+        <!-- Template Specisifc Custom Javascript File -->
+        <script src="js/custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <!-- <script src="main.js"></script> -->
+         <script src="team.js"></script>
+
+  
+    </body>
+</html>
