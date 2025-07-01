@@ -15,7 +15,7 @@
     width: 64px;
     height: 64px;
     background: #000000 !important;
-    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border: none !important;
     border-radius: 50%;
     display: flex !important;
     align-items: center !important;
@@ -32,11 +32,13 @@
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
     width: 120px;
     border-radius: 32px;
-    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    border: none !important;
     background: #1a1a1a !important;
 }
 
 .arch-support-button:hover .arch-button-text {
+    margin-left: 0 !important;
+}
     opacity: 1;
     transform: translateX(0);
 }
@@ -61,6 +63,7 @@
     transition: all 0.3s ease;
     flex-shrink: 0;
     line-height: 1 !important;
+    margin-left: 95% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -180,7 +183,7 @@
 .arch-status-dot {
     width: 8px;
     height: 8px;
-    background: #4ade80;
+    background: #2ca3bb;
     border-radius: 50%;
     animation: archBlink 2s infinite;
 }
@@ -241,7 +244,7 @@
     right: -5px;
     width: 22px;
     height: 22px;
-    background: #ef4444;
+    background: #2ca3bb;
     border: 2px solid #1a1a1a;
     border-radius: 50%;
     display: flex;
@@ -299,6 +302,7 @@
     
     .arch-button-content i {
         font-size: 20px;
+        margin-left: 112% !important;
     }
     
     .arch-chat-window {
