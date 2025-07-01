@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="arch-support-widget" id="archSupportWidget">
                 <button class="arch-support-button" id="archSupportButton" type="button">
                     <div class="arch-button-content">
-                        <i class="fa fa-headset"></i>
+                        <i class="fa fa-headphones"></i>
                         <span class="arch-button-text">Support</span>
                     </div>
                     <div class="arch-pulse-ring"></div>
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="arch-chat-header">
                         <div class="arch-header-content">
                             <div class="arch-avatar">
-                                <i class="fa fa-robot"></i>
+                                <i class="fa fa-android"></i>
                             </div>
                             <div class="arch-header-text">
                                 <h4>A.R.C.H. Labs Support</h4>
