@@ -1,6 +1,32 @@
 /* A.R.C.H. Labs Customer Support Widget - Portfolio Integration */
 /* Optimized for your existing portfolio design */
 
+/* Force FontAwesome 4 icons for the support widget */
+.arch-support-widget .fa:before {
+    font-family: "FontAwesome" !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-decoration: inherit !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Specific icon content from FontAwesome 4 */
+.arch-support-widget .fa-headphones:before {
+    content: "\f025" !important;
+    font-family: "FontAwesome" !important;
+}
+
+.arch-support-widget .fa-user:before {
+    content: "\f007" !important;
+    font-family: "FontAwesome" !important;
+}
+
+.arch-support-widget .fa-times:before {
+    content: "\f00d" !important;
+    font-family: "FontAwesome" !important;
+}
+
 .arch-support-widget {
     position: fixed;
     bottom: 90px;
@@ -25,6 +51,7 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: visible;
     padding: 0 !important;
+    outline: none !important;
 }
 
 .arch-support-button:hover {
@@ -34,11 +61,10 @@
     border-radius: 32px;
     border: none !important;
     background: #1a1a1a !important;
+    outline: none !important;
 }
 
 .arch-support-button:hover .arch-button-text {
-    margin-left: 0 !important;
-}
     opacity: 1;
     transform: translateX(0);
 }
@@ -50,12 +76,11 @@
     gap: 8px;
     color: white !important;
     font-weight: 500;
-    width: 60px !important;
-    height: 60px !important;
-    position: absolute !important;
-    top: 2px !important;
-    left: 2px !important;
-    border-radius: 50%;
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    border: none !important;
+    outline: none !important;
 }
 
 .arch-button-content i {
@@ -63,20 +88,15 @@
     transition: all 0.3s ease;
     flex-shrink: 0;
     line-height: 1 !important;
-    margin-left: 95% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: center !important;
-    vertical-align: middle !important;
     border: none !important;
     background: none !important;
     outline: none !important;
-    transform: translateX(0) translateY(0) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
 }
 
 .arch-button-text {
@@ -86,6 +106,7 @@
     transform: translateX(-10px);
     transition: all 0.3s ease;
     white-space: nowrap;
+    margin-left: 8px;
 }
 
 /* Pulse Animation */
@@ -99,6 +120,7 @@
     border: 2px solid rgba(255, 255, 255, 0.6) !important;
     border-radius: 50%;
     animation: archPulse 2s infinite;
+    pointer-events: none;
 }
 
 @keyframes archPulse {
@@ -183,7 +205,7 @@
 .arch-status-dot {
     width: 8px;
     height: 8px;
-    background: #2ca3bb;
+    background: #00ff00;
     border-radius: 50%;
     animation: archBlink 2s infinite;
 }
@@ -203,6 +225,7 @@
     border-radius: 50%;
     transition: all 0.3s ease;
     opacity: 0.8;
+    outline: none;
 }
 
 .arch-close-btn:hover {
@@ -213,7 +236,7 @@
 
 /* Chat Content */
 .arch-chat-iframe-container {
-    height: calc(100% - 100px);
+    height: calc(100% - 120px);
     background: #0f0f0f;
 }
 
@@ -222,19 +245,24 @@
     background: white;
 }
 
-/* Chat Footer - Made thinner and professional */
+/* Chat Footer - Fixed height and padding to prevent text cutoff */
 .arch-chat-footer {
     background: #1a1a1a;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 8px 20px;
+    padding: 12px 20px;
     text-align: center;
     border-radius: 0 0 20px 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .arch-footer-text {
     font-size: 10px;
     color: rgba(255, 255, 255, 0.5);
     font-weight: 500;
+    line-height: 1.2;
 }
 
 /* Notification Badge */
@@ -244,7 +272,7 @@
     right: -5px;
     width: 22px;
     height: 22px;
-    background: #2ca3bb;
+    background: #28a0b8;
     border: 2px solid #1a1a1a;
     border-radius: 50%;
     display: flex;
@@ -275,6 +303,33 @@
     }
 }
 
+/* Override pink elements in chatbot iframe where possible */
+.arch-chat-iframe-container iframe {
+    border: none;
+    background: white;
+}
+
+/* Try to override chatbot colors (may not work due to iframe restrictions) */
+.arch-support-widget button[style*="rgb(255"],
+.arch-support-widget button[style*="#ff"],
+.arch-support-widget button[style*="rgb(237"],
+.arch-support-widget button[style*="#ed"],
+.arch-support-widget *[style*="rgb(255, 0, 150)"],
+.arch-support-widget *[style*="#ff0096"],
+.arch-support-widget *[style*="rgb(237, 18, 123)"],
+.arch-support-widget *[style*="#ed127b"] {
+    background-color: #28a0b8 !important;
+    border-color: #28a0b8 !important;
+    color: white !important;
+}
+
+/* Custom color variables for potential chatbot theme override */
+.arch-support-widget {
+    --primary-color: #28a0b8;
+    --accent-color: #28a0b8;
+    --brand-color: #28a0b8;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .arch-chat-window {
@@ -301,8 +356,7 @@
     }
     
     .arch-button-content i {
-        font-size: 20px;
-        margin-left: 112% !important;
+        font-size: 18px !important;
     }
     
     .arch-chat-window {
@@ -346,28 +400,23 @@
     z-index: 999999;
 }
 
-/* FontAwesome icon specific centering fix */
-.arch-button-content i.fa-headset::before {
-    display: block !important;
-    text-align: center !important;
-    width: 100% !important;
-    height: 100% !important;
-    line-height: 20px !important;
-    vertical-align: middle !important;
-}
-
-/* Additional centering for collapsed state */
+/* Perfect centering for collapsed state */
 .arch-support-button:not(:hover) .arch-button-content {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .arch-support-button:not(:hover) .arch-button-content i {
     position: relative !important;
-    top: 0 !important;
-    left: 0 !important;
-    transform: translate(0, 0) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.arch-support-button:not(:hover) .arch-button-text {
+    display: none;
 }
 
 /* Dark mode support for portfolio */

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="arch-chat-header">
                         <div class="arch-header-content">
                             <div class="arch-avatar">
-                                <i class="fa fa-android"></i>
+                                <i class="fa fa-user"></i>
                             </div>
                             <div class="arch-header-text">
                                 <h4>A.R.C.H. Labs Support</h4>
