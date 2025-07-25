@@ -591,7 +591,7 @@
     }
 
     .intro-image img {
-      max-height: 80vh;
+      max-height: 60vh;
       width: auto;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
@@ -957,7 +957,7 @@
 
       .intro-section {
         flex-direction: column;
-        padding: 80px 20px 20px 20px;
+        padding: 180px 20px 20px 20px;
         text-align: center;
         gap: 30px;
       }
@@ -982,6 +982,8 @@
         max-height: 50vh;
         width: 100%;
         object-fit: contain;
+        /* padding-bottom: 180px; */
+        padding: 0px 40px 120px 0px;
       }
 
       .page-title {
@@ -2771,6 +2773,189 @@ html {
 }
 
 
+ /* x ---------------------------------- x ---------------------------------- x */
+/* UIIIIIIII / UXXXXXXXX */
+ /* x ---------------------------------- x ---------------------------------- x */
+.uiux-explanation-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.uiux-parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/UIUX4.png'); /* Update with your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+.uiux-content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+  z-index: 0;
+}
+
+.uiux-content {
+  text-align: center;
+  max-width: 900px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.uiux-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+}
+
+.uiux-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+.uiux-features {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.uiux-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+.uiux-feature-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(79, 209, 180, 0.15);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 2px solid rgba(79, 209, 180, 0.4);
+  transition: all 0.3s ease;
+}
+
+.uiux-feature-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(79, 209, 180, 0.4);
+}
+
+.uiux-feature i {
+  font-size: 2.8rem;
+  color: #4fd1b4;
+}
+
+.uiux-feature h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.uiux-feature p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+/* Pulse Animation */
+.pulse {
+  animation: pulseEffect 2s infinite;
+}
+
+@keyframes pulseEffect {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .uiux-explanation-section {
+    height: auto;
+    padding: 4rem 0;
+  }
+
+  .uiux-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .uiux-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .uiux-features {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .uiux-feature-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .uiux-feature i {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+/* Update the chatbot-info-container padding */
+.chatbot-info-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px 25px; /* Increased side padding for mobile */
+}
+
+/* For very small devices, adjust the padding slightly less */
+@media (max-width: 359px) {
+  .chatbot-info-container {
+    padding: 20px 20px;
+  }
+}
+
+/* For larger screens, you can adjust the padding as needed */
+@media (min-width: 768px) {
+  .chatbot-info-container {
+    padding: 20px 40px;
+  }
+}
+
+
+
 
   </style>
 
@@ -2876,13 +3061,6 @@ html {
 
         <div class="service-item">
           <div class="category"></div>
-          <div class="service-icon"><i class="fas fa-hashtag"></i></div>
-          <h2 class="service-title">Social Media Marketing</h2>
-          <p class="service-description">Engage your audience and build brand loyalty through strategic social media campaigns tailored to your business goals.</p>
-        </div>
-
-        <div class="service-item">
-          <div class="category"></div>
           <div class="service-icon"><i class="fas fa-brain"></i></div>
           <h2 class="service-title">Machine Learning</h2>
           <p class="service-description">
@@ -2939,14 +3117,13 @@ html {
           </p>
         </div>
 
-        <div class="service-item">
-          <div class="category"></div>
-          <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
-          <h2 class="service-title">Logo Design</h2>
-          <p class="service-description">Create memorable logos that capture your brand's essence and make a lasting impression on your target audience.</p>
-        </div>
-       
         
+         <div class="service-item">
+          <div class="category"></div>
+          <div class="service-icon"><i class="fas fa-hashtag"></i></div>
+          <h2 class="service-title">Social Media Marketing</h2>
+          <p class="service-description">Engage your audience and build brand loyalty through strategic social media campaigns tailored to your business goals.</p>
+        </div>
         
       </div>
     </section>

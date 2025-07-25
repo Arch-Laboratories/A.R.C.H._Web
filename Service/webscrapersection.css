@@ -1,7 +1,6 @@
 /* -----------------------------
-   Web Scraper Section 1
+   Web Scraper - Hero Section
 ----------------------------- */
-
 .ws-intro-section {
   position: relative;
   height: 80vh;
@@ -33,20 +32,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
   z-index: -1;
 }
 
 .ws-content {
   text-align: center;
-  max-width: 800px;
-  z-index: 1;
-  position: relative;
+  max-width: 900px;
   padding: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .ws-content h2 {
@@ -61,26 +56,26 @@
   color: rgba(255, 255, 255, 0.9);
   font-weight: 300;
   margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 
 /* -----------------------------
-   Web Scraper Section 1 - Features
+   Web Scraper - Features Icons Row
 ----------------------------- */
-
 .ws-features {
   display: flex;
   justify-content: center;
+  gap: 4rem;
   flex-wrap: wrap;
-  gap: 3rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .ws-feature {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 260px;
+  max-width: 200px;
   text-align: center;
 }
 
@@ -93,78 +88,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border: 2px solid rgba(79, 209, 180, 0.4);
   transition: all 0.3s ease;
 }
 
 .ws-feature-circle:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(79, 209, 180, 0.4);
+  box-shadow: 0 0 25px rgba(79, 209, 180, 0.4);
 }
 
 .ws-feature i {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #4fd1b4;
 }
 
 .ws-feature h3 {
-  font-size: 1.3rem;
-  color: white;
+  font-size: 1.5rem;
   font-weight: 600;
-  text-align: center;
+  color: white;
+  margin-bottom: 0.5rem;
 }
 
 .ws-feature-desc {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  margin-top: 0.5rem;
   line-height: 1.5;
-  max-width: 200px;
-}
-
-
-/* Responsive */
-@media (max-width: 768px) {
-  .ws-features {
-    gap: 2rem;
-  }
-
-  .ws-feature {
-    max-width: 200px;
-  }
-
-  .ws-feature-circle {
-    width: 70px;
-    height: 70px;
-  }
-
-  .ws-feature i {
-    font-size: 2rem;
-  }
-
-  .ws-feature h3 {
-    font-size: 1.1rem;
-  }
-
-  .ws-feature-desc {
-    font-size: 0.9rem;
-  }
 }
 
 
 /* -----------------------------
-   Web Scraper Section 2
+   Web Scraper - Cards Section
 ----------------------------- */
-
 .ws-features-section {
   position: relative;
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #000000, #1a1f2b);
+  padding: 6rem 2rem;
   color: white;
   text-align: center;
   overflow: hidden;
+  background: linear-gradient(135deg, #000000, #1a1f2b);
 }
 
 .ws-features-bg {
@@ -173,7 +135,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('images/web-scraper-2.jpg');
+  background-image: url('images/web\ scrapering.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -187,11 +149,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
   z-index: -1;
 }
 
@@ -204,6 +162,7 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Grid */
 .ws-features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -233,8 +192,8 @@
   height: 100%;
   background: linear-gradient(
     120deg,
-    rgba(79, 209, 180, 0.1) 0%,
-    rgba(106, 90, 205, 0.2) 100%
+    rgba(79, 209, 180, 0.1),
+    rgba(106, 90, 205, 0.2)
   );
   transform: skewX(-25deg);
   transition: left 0.5s ease;
@@ -275,22 +234,61 @@
   position: relative;
 }
 
+
+/* -----------------------------
+   Responsive
+----------------------------- */
+
+@media (max-width: 1024px) {
+  .ws-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
+  .ws-intro-section {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
   .ws-content h2 {
     font-size: 2.5rem;
+    padding-top: 2rem;
   }
 
   .ws-subtitle {
     font-size: 1.2rem;
+    margin-bottom: 2.5rem;
   }
 
-  .ws-features-heading {
-    font-size: 2.2rem;
+  .ws-features {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
   }
 
-  .ws-feature-card {
-    width: 90%;
-    padding: 1.5rem;
+  .ws-feature-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .ws-feature i {
+    font-size: 2rem;
+  }
+
+  .ws-feature h3 {
+    font-size: 1.2rem;
+  }
+
+  .ws-features-section {
+    padding: 4rem 1rem;
+  }
+
+  .ws-features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .ws-feature-title {
@@ -300,38 +298,19 @@
   .ws-feature-text {
     font-size: 0.9rem;
   }
+
+  .ws-features-heading {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
 }
 
-.ws-features-section {
-  position: relative;
-  padding: 6rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #fff;
-  overflow: hidden;
-}
+@media (max-width: 480px) {
+  .ws-features-heading {
+    font-size: 1.8rem;
+  }
 
-.ws-features-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('images/web\ scrapering.jpg'); /* Add your web scraper background image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: -2;
-  filter: brightness(0.5);
-}
-
-.ws-features-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
-  z-index: -1;
+  .ws-feature-card {
+    padding: 1.5rem;
+  }
 }

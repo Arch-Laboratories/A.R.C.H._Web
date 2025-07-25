@@ -415,6 +415,7 @@
 
     .portfolio-container .portfolio-filters.animate-on-scroll {
       transition-delay: 0.2s;
+      /* padding: 0px 0px 20px 0px; */
     }
 
     .portfolio-container .portfolio-scroller.animate-on-scroll {
@@ -431,6 +432,130 @@
 
 
 
+/* Responsive for mobile screens */
+@media (max-width: 768px) {
+  .portfolio-container .portfolio-filters.animate-on-scroll {
+    padding: 0px 0px 80px 0px;
+   
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .portfolio-filters {
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .portfolio-scroller {
+    padding: 12px;
+  }
+
+  .portfolio-item {
+    min-width: 250px;
+  }
+
+  .portfolio-overlay {
+    padding: 16px;
+  }
+
+  .portfolio-title {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-container {
+    padding: 40px 0;
+  }
+
+  .portfolio-scroller {
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .portfolio-item {
+    min-width: 220px;
+  }
+
+  .portfolio-bg-text {
+    font-size: 2rem;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .portfolio-overlay {
+    padding: 14px;
+  }
+}
+
+/* =====================
+   Modal Responsiveness
+====================== */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+    padding: 16px;
+  }
+
+  .modal-title {
+    font-size: 1.25rem;
+  }
+
+  .modal-description {
+    font-size: 0.95rem;
+  }
+
+  .modal-tech {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 12px;
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+
+  .modal-description {
+    font-size: 0.9rem;
+  }
+
+  .modal-link {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+.portfolio-scroller {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  gap: 2rem;
+  padding: 2rem;
+  scroll-snap-type: x mandatory;
+  margin: 0px  0px 0px 100px;
+}
+
+.portfolio-item {
+  flex: 0 0 auto;
+  width: 300px; /* Adjust size as needed */
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
 
 
 
@@ -972,9 +1097,10 @@
     </div>
   </div>
 </div>
+</section>
 
 <!-- Portfolio Modal -->
-<div class="portfolio-modal">
+<!-- <div class="portfolio-modal">
   <div class="modal-content">
     <span class="modal-close">&times;</span>
     <img src="" alt="Project Image" class="modal-image">
@@ -995,7 +1121,7 @@
 </div>
 
       <div class="position-indicator" id="positionIndicator"></div>
-    </section>
+    </section> -->
 
 
     <section class="client-testimonials" id="testimonials">
@@ -1378,6 +1504,68 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // Your existing testimonial and pricing code...
 });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Remove "active" class from all buttons
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        // Add "active" to clicked button
+        button.classList.add("active");
+
+        const filterValue = button.getAttribute("data-filter");
+
+        portfolioItems.forEach((item) => {
+          const itemCategory = item.getAttribute("data-category");
+
+          if (filterValue === "all" || filterValue === itemCategory) {
+            item.style.display = "block"; // show item
+          } else {
+            item.style.display = "none"; // hide item
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scroller = document.getElementById("scroller");
+
+    // Convert vertical scroll to horizontal scroll
+    scroller.addEventListener("wheel", function (e) {
+      e.preventDefault();
+      scroller.scrollLeft += e.deltaY;
+    });
+
+    // Filtering logic (same as before)
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+        const filterValue = button.getAttribute("data-filter");
+
+        portfolioItems.forEach((item) => {
+          const itemCategory = item.getAttribute("data-category");
+          if (filterValue === "all" || filterValue === itemCategory) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  });
 </script>
 
     

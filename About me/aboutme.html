@@ -429,7 +429,8 @@
       .hero-section {
         flex-direction: column;
         text-align: center;
-        padding-top: 100px;
+        padding-top: 10px;
+        padding-bottom: 100px;
         justify-content: flex-start;
       }
       
@@ -444,7 +445,7 @@
       }
       
       .section-header h2 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
       }
       
       .hero-content h1 {
@@ -501,6 +502,112 @@
   width: 110%;
   max-height: 60vh;
 }
+
+
+.card-back .social-links {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+/* Updated Hero Section */
+.hero-section {
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 40px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('images/aboutme background.avif') no-repeat center center/cover;
+  text-align: center;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    text-align: left;
+    padding: 100px 10%;
+    justify-content: space-between;
+  }
+  
+  .hero-content {
+    flex: 0 1 50%;
+    max-width: 50%;
+    padding-right: 5%;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.0rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+  
+  .hero-image {
+    flex: 0 1 50%;
+    max-width: 50%;
+    margin-top: 0;
+  }
+  
+  .hero-image img {
+    max-height: 70vh;
+  }
+}
+
+/* Very small devices (below 360px) */
+@media (max-width: 359px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}
   </style>
 </head>
 <body>
@@ -542,9 +649,12 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-content animate-on-scroll">
-      <h1>Innovating the Future with A.R.C.H. Labs</h1>
-      <p>Where artificial intelligence meets human creativity to build transformative digital solutions</p>
-      <button class="cta-button">Explore Our Work</button>
+      <h1>Building the future, One line of code at a time</h1>
+      <p>Tomorrow’s solutions start with today’s code. We’re here to engineer what’s next</p>
+      <a href="../Service/Service.html">
+  <button class="cta-button">Explore Our Work</button>
+</a>
+
     </div>
     <div class="hero-image animate-on-scroll">
       <img src="images/aboutus3.png" alt="A.R.C.H. Labs Innovation">
@@ -600,106 +710,119 @@
   </section>
 
   <!-- Team Section with Flip Cards -->
-  <section class="team-section">
-    <div class="section-header animate-on-scroll">
-      <h2>Our Leadership</h2>
-      <p>The brilliant minds driving A.R.C.H. Labs forward</p>
+ <!-- Team Section with Flip Cards -->
+<section class="team-section">
+  <div class="section-header animate-on-scroll">
+    <h2>Our Leadership</h2>
+    <p>The brilliant minds driving A.R.C.H. Labs forward</p>
+  </div>
+  
+  <div class="team-grid">
+    <!-- CEO Card -->
+    <div class="team-card-container animate-on-scroll">
+      <div class="team-card">
+        <div class="card-face card-front">
+          <img src="team/Rauf.png" alt="AbdulRauf Siddiqui">
+          <h3>AbdulRauf Siddiqui</h3>
+          <p class="position">Chief Executive Officer</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/abdulrauf-siddiqui/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AbdulRauf-Sidd"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <h3>AbdulRauf Siddiqui</h3>
+          <p class="position">Chief Executive Officer</p>
+          <div class="accent-bar"></div>
+          <p class="bio">Visionary leader with many years in tech industry, driving innovation and transformation at A.R.C.H. Labs.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/abdulrauf-siddiqui/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AbdulRauf-Sidd"><i class="fab fa-github"></i></a>
+          </div>
+          <p class="signature">- AR Siddiqui</p>
+        </div>
+      </div>
     </div>
     
-    <div class="team-grid">
-      <!-- CEO Card -->
-      <div class="team-card-container animate-on-scroll">
-        <div class="team-card">
-          <div class="card-face card-front">
-            <img src="team/Rauf.jpg" alt="AbdulRauf Siddiqui">
-            <h3>AbdulRauf Siddiqui</h3>
-            <p class="position">Chief Executive Officer</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="card-face card-back">
-            <h3>AbdulRauf Siddiqui</h3>
-            <p class="position">Chief Executive Officer</p>
-            <div class="accent-bar"></div>
-            <p class="bio">Visionary leader with many years in tech industry, driving innovation and transformation at A.R.C.H. Labs.</p>
-            <p class="signature">- AR Siddiqui</p>
+    <!-- CTO Card -->
+    <div class="team-card-container animate-on-scroll">
+      <div class="team-card">
+        <div class="card-face card-front">
+          <img src="team/Ahsan.png" alt="Muhammad Ahsan">
+          <h3>Muhammad Ahsan</h3>
+          <p class="position">Lead Developer</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/ahsan-toufiq/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Ahsan-Toufiq/Ahsan-Toufiq"><i class="fab fa-github"></i></a>
           </div>
         </div>
-      </div>
-      
-      <!-- CTO Card -->
-      <div class="team-card-container animate-on-scroll">
-        <div class="team-card">
-          <div class="card-face card-front">
-            <img src="team/Ahsan.jpg" alt="Muhammad Ahsan">
-            <h3>Muhammad Ahsan</h3>
-            <p class="position">Lead Developer</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-            </div>
+        <div class="card-face card-back">
+          <h3>Muhammad Ahsan</h3>
+          <p class="position">Lead Developer</p>
+          <div class="accent-bar"></div>
+          <p class="bio">With 5+ years of experience in full-stack development, specializing in building scalable and efficient systems.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/ahsan-toufiq/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Ahsan-Toufiq/Ahsan-Toufiq"><i class="fab fa-github"></i></a>
           </div>
-          <div class="card-face card-back">
-            <h3>Muhammad Ahsan</h3>
-            <p class="position">Lead Developer</p>
-            <div class="accent-bar"></div>
-            <p class="bio">With 5+ years of experience in full-stack development, specializing in building scalable and efficient systems.</p>
-            <p class="signature">- M. Ahsan</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- CDO Card -->
-       <div class="team-card-container animate-on-scroll">
-        <div class="team-card">
-          <div class="card-face card-front">
-            <img src="team/Hassan.jpg" alt="Hassan UL Haq">
-            <h3>Hassan UL Haq</h3>
-            <p class="position">Backend Engineer</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="card-face card-back">
-            <h3>Hassan UL Haq</h3>
-            <p class="position">Backend Engineer</p>
-            <div class="accent-bar"></div>
-            <p class="bio">Specializes in scalable server architectures and high-performance systems.</p>
-            <p class="signature">- H. Haq</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- UI/UX Designer Card -->
-      <div class="team-card-container animate-on-scroll">
-        <div class="team-card">
-          <div class="card-face card-front">
-            <img src="team/Moiz1.jpg" alt="Abdul Moiz">
-            <h3>Abdul Moiz</h3>
-            <p class="position">UI/UX Designer</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="card-face card-back">
-            <h3>Abdul Moiz</h3>
-            <p class="position">UI/UX Designer</p>
-            <div class="accent-bar"></div>
-            <p class="bio">Designs intuitive interfaces for seamless user journeys and exceptional digital experiences.</p>
-            <p class="signature">- A. Moiz</p>
-          </div>
+          <p class="signature">- M. Ahsan</p>
         </div>
       </div>
     </div>
-  </section>
+    
+    <!-- CDO Card -->
+     <div class="team-card-container animate-on-scroll">
+      <div class="team-card">
+        <div class="card-face card-front">
+          <img src="team/Hassan.png" alt="Hassan UL Haq">
+          <h3>Hassan UL Haq</h3>
+          <p class="position">Backend Engineer</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/syed-hassan-ul-haq/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/SyedHassanUlHaq/SyedHassanUlHaq"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <h3>Hassan UL Haq</h3>
+          <p class="position">Backend Engineer</p>
+          <div class="accent-bar"></div>
+          <p class="bio">Specializes in scalable server architectures and high-performance systems.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/syed-hassan-ul-haq/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/SyedHassanUlHaq/SyedHassanUlHaq"><i class="fab fa-github"></i></a>
+          </div>
+          <p class="signature">- H. Haq</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- UI/UX Designer Card -->
+    <div class="team-card-container animate-on-scroll">
+      <div class="team-card">
+        <div class="card-face card-front">
+          <img src="team/Moiz.png" alt="Abdul Moiz">
+          <h3>Abdul Moiz</h3>
+          <p class="position">UI/UX Designer</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/abdulmoiznoman"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AbdulMoiz261"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <h3>Abdul Moiz</h3>
+          <p class="position">UI/UX Designer</p>
+          <div class="accent-bar"></div>
+          <p class="bio">Designs intuitive interfaces for seamless user journeys and exceptional digital experiences.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/abdulmoiznoman"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AbdulMoiz261"><i class="fab fa-github"></i></a>
+          </div>
+          <p class="signature">- A. Moiz</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Values Section -->
   <section class="values-section">
