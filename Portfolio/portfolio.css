@@ -1994,7 +1994,7 @@ body {
     width: 35px;
     height: 35px;
     font-size: 14px;
-    margin: 0 5px;
+    margin: 0 -15px;
   }
   
   .pricing-categories .category {
@@ -2134,7 +2134,7 @@ body {
 @media (max-width: 768px) {
   .intro-section {
     flex-direction: column;
-    padding: 80px 20px 20px 20px;
+    padding: 180px 20px 0px 20px;
     text-align: center;
     gap: 30px;
   }
@@ -2167,6 +2167,7 @@ body {
   }
   .intro-text p {
     animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    font-size: 1.4rem;
   }
   .intro-text a.btn {
     animation: fadeInUp 0.8s ease-out 0.6s forwards, 
@@ -2174,12 +2175,14 @@ body {
   }
   .intro-image img {
     animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    padding: 0px 0px 180px 0px;
+
   }
 }
 
 @media (max-width: 480px) {
   .intro-text h1 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 }
 
