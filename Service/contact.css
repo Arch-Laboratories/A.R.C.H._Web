@@ -59,7 +59,7 @@ body, html {
   left: 50%;
   width: 100px;
   height: 2px;
-  background-color: #00e0ff;
+  background-color: #28A0B8;
   transform: translateX(-50%);
   z-index: -1;
 }
@@ -97,11 +97,11 @@ body, html {
 }
 
 .contact-left i {
-  color: #00e0ff;
+  color: #28A0B8;
 }
 
 .contact-left a {
-  color: #00e0ff;
+  color: #28A0B8;
   text-decoration: none;
 }
 
@@ -137,7 +137,7 @@ form textarea::placeholder {
 }
 
 form button {
-  background-color: #00e0ff;
+  background-color: #28A0B8;
   border: none;
   padding: 10px 25px;
   color: rgb(0, 0, 0);
@@ -147,5 +147,45 @@ form button {
 }
 
 form button:hover {
-  background-color: #00b7cc;
+  background-color: #28A0B8;
+}
+
+
+
+.underline {
+  position: relative;
+  height: 2px;
+  margin: 0 auto 40px auto;
+  width: 100px;
+  background-color: #28A0B8;
+}
+
+
+
+.fancy-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  width: 20%; /* Increase width */
+  position: relative;
+}
+
+.fancy-divider::before,
+.fancy-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: #28A0B8; /* Blue color */
+  box-shadow: 0 0 10px #28A0B8;
+}
+
+.divider-icon {
+  margin: 0 20px;
+  color: #28A0B8;
+  font-weight: bold;
+  font-size: 0.8rem;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  z-index: 2;
 }
