@@ -5,13 +5,13 @@
 }
 
 body, html {
-  height: 100%;
+  height: 80%;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .contact-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 50vh;
   overflow: hidden;
   color: white;
   display: flex;
@@ -37,7 +37,7 @@ body, html {
   background-color: rgba(0, 0, 0, 0.85);
   width: 100%;
   padding: 60px 40px;
-  margin: 40px 0;
+  /* margin: 0px 0; */
 }
 
 .section-title {
