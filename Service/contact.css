@@ -5,15 +5,18 @@
 }
 
 body, html {
-  height: 100%;
+  height: 80%;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .contact-section {
   position: relative;
-  height: 70vh;
+  min-height: 50vh;
   overflow: hidden;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .parallax-bg {
@@ -21,20 +24,20 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70%;
-  background-image: url('images/map-bg.jpg'); /* replace with your image path */
-  background-attachment: fixed;
+  height: 100%;
+  background-image: url('images/map-bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
-  transform: translateZ(0); /* smooth scrolling fix */
+  transform: translateZ(0);
 }
 
 .contact-content {
-  background-color: rgba(0, 0, 0, 0.90);
-  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
   padding: 60px 40px;
+  /* margin: 0px 0; */
 }
 
 .section-title {
@@ -47,7 +50,7 @@ body, html {
 .underline {
   text-align: center;
   position: relative;
-  color: #00e0ff;
+  color: #28A0B8;
   font-weight: bold;
   margin-bottom: 40px;
 }
@@ -82,6 +85,8 @@ body, html {
 
 .contact-left h3 {
   margin-bottom: 40px;
+  font-size: 22px;
+  color: #ffffff;
 }
 
 .contact-left ul {
@@ -98,11 +103,14 @@ body, html {
 
 .contact-left i {
   color: #28A0B8;
+  min-width: 20px;
+  text-align: center;
 }
 
 .contact-left a {
   color: #28A0B8;
   text-decoration: none;
+  word-break: break-all;
 }
 
 .contact-left a:hover {
@@ -117,18 +125,20 @@ body, html {
 
 .contact-right h3 {
   margin-bottom: 20px;
+  font-size: 22px;
+  color: #ffffff;
 }
 
 form input,
 form textarea {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.08);
-  border: none;
-  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #444;
+  padding: 12px 15px;
   margin-bottom: 15px;
-  border-radius: 4px;
+  border-radius: 6px;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 form input::placeholder,
@@ -139,18 +149,18 @@ form textarea::placeholder {
 form button {
   background-color: #28A0B8;
   border: none;
-  padding: 10px 25px;
-  color: rgb(0, 0, 0);
-  border-radius: 4px;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s ease;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
 }
 
 form button:hover {
-  background-color: #28A0B8;
+  background-color: #1e8fa5;
 }
-
-
 
 .underline {
   position: relative;
@@ -160,14 +170,12 @@ form button:hover {
   background-color: #28A0B8;
 }
 
-
-
 .fancy-divider {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0px auto;
-  width: 20%; /* Increase width */
+  width: 20%;
   position: relative;
 }
 
@@ -176,7 +184,7 @@ form button:hover {
   content: "";
   flex: 1;
   height: 2px;
-  background: #28A0B8; /* Blue color */
+  background: #28A0B8;
   box-shadow: 0 0 10px #28A0B8;
 }
 
@@ -184,8 +192,72 @@ form button:hover {
   margin: 0 20px;
   color: #28A0B8;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-family: 'Arial', sans-serif;
   position: relative;
   z-index: 2;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .parallax-bg {
+    background-attachment: scroll !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    padding: 40px 20px;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .contact-left, 
+  .contact-right {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .fancy-divider {
+    width: 80%;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .contact-left h3,
+  .contact-right h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  form input,
+  form textarea {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-content {
+    padding: 30px 15px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .contact-left li {
+    font-size: 14px;
+  }
+  
+  .fancy-divider {
+    width: 90%;
+  }
+}
+
