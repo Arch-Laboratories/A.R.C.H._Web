@@ -564,6 +564,7 @@
 }
 
 
+
     
   </style>
 
@@ -604,7 +605,7 @@
           <li><a href="../Service/Service.html">Services</a></li>
           <li class="menu-active"><a href="portfolio.html">Portfolio</a></li>
           <!-- <li><a href="./team/team.html">Team</a></li> -->
-          <li><a href="index.html#contact-section">Contact Us</a></li>
+          <li><a href="#contact-section">Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -621,7 +622,7 @@
           <li><a href="../Service/Service.html">Services</a></li>
           <li class="menu-active"><a href="portfolio.html">Portfolio</a></li>
           <!-- <li><a href="./team/team.html">Team</a></li> -->
-          <li><a href="index.html#contact-section">Contact Us</a></li>
+          <li><a href="#contact-section">Contact Us</a></li>
     </ul>
   </nav>
   <!-- #header -->
@@ -1190,7 +1191,7 @@
 </section>
 
 
-<section class="contact-section">
+<section class="contact-section" id="contact-section">
   <div class="parallax-bg"></div>
   <div class="contact-content">
     <h2 class="section-title">Contacts</h2>
@@ -1595,6 +1596,28 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+});
 </script>
 
     
