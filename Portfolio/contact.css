@@ -260,3 +260,18 @@ form button:hover {
     width: 90%;
   }
 }
+
+ .parallax-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url('images/map-bg.jpg'); /* replace with your image path */
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          z-index: -1;
+          transform: translateZ(0); /* smooth scrolling fix */
+}
