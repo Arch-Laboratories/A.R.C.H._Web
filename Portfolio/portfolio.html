@@ -6,590 +6,20 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="test.css">
-  
-  <!-- Bootstrap CSS File -->
+
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Libraries CSS Files -->
-  <!-- <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
   <link href="lib/animate-css/animate.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <!-- <link href="css/style.css" rel="stylesheet"> -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="portfolio2.css">
   <link rel="stylesheet" href="portfolio.js">
   <link rel="stylesheet" href="contact.css">
-  <style>
-
-#header {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20px 0;
-      height: 90px;
-      border-bottom: 1px solid #888888;
-      backdrop-filter: blur(10px);
-      transition: background-color 0.8s ease-in-out, backdrop-filter 0.8s ease-in-out;
-    }
-
-    .is-sticky #header {
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(5px);
-    }
-
-    #header #logo {
-      float: left;
-    }
-
-    #header #logo h1 {
-      font-size: 36px;
-      margin: 0;
-      padding: 6px 0;
-      line-height: 1;
-      font-family: "Raleway", sans-serif;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    #header #logo h1 a, #header #logo h1 a:hover {
-      color: #fff;
-    }
-
-    #header #logo img {
-      padding: 0;
-      margin: 0;
-      max-height: 50px;
-    }
-
-    @media (max-width: 768px) {
-      #header {
-        height: 80px;
-      }
-      #header #logo h1 {
-        font-size: 26px;
-      }
-      #header #logo img {
-        max-height: 40px;
-      }
-    }
-
-    .is-sticky #header {
-      background: rgba(0, 0, 0, 0.65);
-    }
-
-    /* Navigation Menu */
-    #header #logo {
-      float: left;
-      position: relative;
-    }
-
-    #header #logo::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 150%;
-      width: 1px;
-      background-color: #888888;
-    }
-
-    #header {
-      background: #111;
-      padding: 20px 0;
-      height: 90px;
-      border-bottom: 1px solid #888888;
-    }
-
-    .nav-menu, .nav-menu * {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .nav-menu ul {
-      position: absolute;
-      display: none;
-      top: 100%;
-      left: 0;
-      z-index: 99;
-    }
-
-    .nav-menu li {
-      position: relative;
-      white-space: nowrap;
-    }
-
-    .nav-menu > li {
-      float: left;
-    }
-
-    .nav-menu li:hover > ul,
-    .nav-menu li.sfHover > ul {
-      display: block;
-    }
-
-    .nav-menu ul ul {
-      top: 0;
-      left: 100%;
-    }
-
-    .nav-menu ul li {
-      min-width: 180px;
-    }
-
-    .sf-arrows .sf-with-ul {
-      padding-right: 30px;
-    }
-
-    .sf-arrows .sf-with-ul:after {
-      content: "\f107";
-      position: absolute;
-      right: 15px;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-    }
-
-    .sf-arrows ul .sf-with-ul:after {
-      content: "\f105";
-    }
-
-    #nav-menu-container {
-      float: right;
-      margin: 5px 0;
-    }
-
-    @media only screen and (max-width : 767px) {
-      .navbar-collapse {
-        background-color: #676D75;
-        border-color: #fff !important;
-      }
-      .navbar-default.navbar-shrink .navbar-nav > li.active > a {
-        box-shadow: none !important;
-      }
-      .navbar-nav > li > a:hover, .navbar-nav > li > a:focus, .navbar-nav > li.active > a {
-        color: #111;
-      }
-    }
-
-    @media (max-width: 768px) {
-      #nav-menu-container {
-        display: none;
-      }
-    }
-
-    .nav-menu a {
-      padding: 10px 15px;
-      text-decoration: none;
-      display: inline-block;
-      color: #c1c1c1;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 300;
-      font-size: 14px;
-      font-weight: 600;
-      outline: none;
-    }
-
-    .nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
-      color: var(--arch_blue);
-    }
-
-    .nav-menu ul {
-      margin: 4px 0 0 15px;
-      box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
-    }
-
-    .nav-menu ul li {
-      background: #fff;
-      border-top: 1px solid #f4f4f4;
-    }
-
-    .nav-menu ul li:first-child {
-      border-top: 0;
-    }
-
-    .nav-menu ul li:hover {
-      background: #f6f6f6;
-    }
-
-    .nav-menu ul li a {
-      color: #333;
-    }
-
-    .nav-menu ul ul {
-      margin: 0;
-    }
-
-    #mobile-nav-toggle {
-      position: fixed;
-      right: 0;
-      top: 0;
-      z-index: 999;
-      margin: 20px 20px 0 0;
-      border: 0;
-      background: none;
-      font-size: 24px;
-      display: none;
-      transition: all 0.4s;
-      outline: none;
-    }
-
-    #mobile-nav-toggle i {
-      color: #fff;
-    }
-
-    @media (max-width: 768px) {
-      #mobile-nav-toggle {
-        display: inline;
-      }
-    }
-
-    #mobile-nav {
-      position: fixed;
-      top: 0;
-      padding-top: 18px;
-      bottom: 0;
-      z-index: 998;
-      background: rgba(0, 0, 0, 0.9);
-      left: -260px;
-      width: 260px;
-      overflow-y: auto;
-      transition: 0.4s;
-    }
-
-    #mobile-nav ul {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    #mobile-nav ul li {
-      position: relative;
-    }
-
-    #mobile-nav ul li a {
-      color: #fff;
-      font-size: 16px;
-      overflow: hidden;
-      padding: 10px 22px 10px 15px;
-      position: relative;
-      text-decoration: none;
-      width: 100%;
-      display: block;
-      outline: none;
-    }
-
-    #mobile-nav ul li a:hover {
-      color: #fff;
-    }
-
-    #mobile-nav ul li li {
-      padding-left: 30px;
-    }
-
-    #mobile-nav ul .menu-has-children i {
-      position: absolute;
-      right: 0;
-      z-index: 99;
-      padding: 15px;
-      cursor: pointer;
-      color: #fff;
-    }
-
-    #mobile-nav ul .menu-has-children i.fa-chevron-up {
-      color: var(--arch_blue);
-    }
-
-    #mobile-nav ul .menu-item-active {
-      color: var(--arch_blue);
-    }
-
-    #mobile-body-overly {
-      width: 100%;
-      height: 100%;
-      z-index: 997;
-      top: 0;
-      left: 0;
-      position: fixed;
-      background: rgba(0, 0, 0, 0.6);
-      display: none;
-    }
-
-    body.mobile-nav-active {
-      overflow: hidden;
-    }
-
-    body.mobile-nav-active #mobile-nav {
-      left: 0;
-    }
-
-    body.mobile-nav-active #mobile-nav-toggle {
-      color: #fff;
-    }
-
-
-    #header {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 15px 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-    }
-
-    
-    #logo {
-      height: 50px;
-    }
-
-    #logo img {
-      height: 100%;
-    }
-
-    .menu-active a {
-      color: var(--accent) !important;
-    }
-
-    #main-container {
-      height: 100vh;
-      overflow-y: scroll;
-      /* scroll-snap-type: y mandatory; */
-      scroll-behavior: smooth;
-    }
-
-
-
-    /* Animation styles added inline as requested */
-    .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .animate-on-scroll.animated {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Specific animation delays */
-    .intro-text.animate-on-scroll {
-      transition-delay: 0.3s;
-    }
-
-    .intro-image.animate-on-scroll {
-      transition-delay: 0.6s;
-    }
-
-    .portfolio-showcase .section-header.animate-on-scroll {
-      transition-delay: 0.2s;
-    }
-
-    .portfolio-showcase .portfolio-grid.animate-on-scroll {
-      transition-delay: 0.4s;
-    }
-
-    .partners-showcase .section-header.animate-on-scroll {
-      transition-delay: 0.2s;
-    }
-
-    .partners-showcase .partners-container.animate-on-scroll {
-      transition-delay: 0.4s;
-    }
-
-    .pricing-section .pricing-header.animate-on-scroll {
-      transition-delay: 0.2s;
-    }
-
-    .pricing-section .pricing-categories.animate-on-scroll {
-      transition-delay: 0.3s;
-    }
-
-    .pricing-section .pricing-container.animate-on-scroll {
-      transition-delay: 0.4s;
-    }
-
-    .portfolio-container .portfolio-filters.animate-on-scroll {
-      transition-delay: 0.2s;
-      /* padding: 0px 0px 20px 0px; */
-    }
-
-    .portfolio-container .portfolio-scroller.animate-on-scroll {
-      transition-delay: 0.4s;
-    }
-
-    .client-testimonials .testimonials-header.animate-on-scroll {
-      transition-delay: 0.2s;
-    }
-
-    .client-testimonials .testimonials-container.animate-on-scroll {
-      transition-delay: 0.4s;
-    }
-
-
-
-/* Responsive for mobile screens */
-@media (max-width: 768px) {
-  .portfolio-container .portfolio-filters.animate-on-scroll {
-    padding: 0px 0px 80px 0px;
-   
-  }
-}
-
-
-
-@media (max-width: 768px) {
-  .portfolio-filters {
-    gap: 10px;
-    padding: 0 12px;
-  }
-
-  .portfolio-scroller {
-    padding: 12px;
-  }
-
-  .portfolio-item {
-    min-width: 250px;
-  }
-
-  .portfolio-overlay {
-    padding: 16px;
-  }
-
-  .portfolio-title {
-    font-size: 1.1rem;
-  }
-
-  .portfolio-description {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .portfolio-container {
-    padding: 40px 0;
-  }
-
-  .portfolio-scroller {
-    gap: 12px;
-    padding: 10px;
-  }
-
-  .portfolio-item {
-    min-width: 220px;
-  }
-
-  .portfolio-bg-text {
-    font-size: 2rem;
-  }
-
-  .filter-btn {
-    padding: 8px 16px;
-    font-size: 0.85rem;
-  }
-
-  .portfolio-overlay {
-    padding: 14px;
-  }
-}
-
-/* =====================
-   Modal Responsiveness
-====================== */
-@media (max-width: 768px) {
-  .modal-content {
-    max-width: 90%;
-    padding: 16px;
-  }
-
-  .modal-title {
-    font-size: 1.25rem;
-  }
-
-  .modal-description {
-    font-size: 0.95rem;
-  }
-
-  .modal-tech {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 480px) {
-  .modal-content {
-    padding: 12px;
-  }
-
-  .modal-title {
-    font-size: 1.1rem;
-  }
-
-  .modal-description {
-    font-size: 0.9rem;
-  }
-
-  .modal-link {
-    font-size: 0.85rem;
-  }
-}
-
-
-
-.portfolio-scroller {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  gap: 2rem;
-  padding: 2rem;
-  scroll-snap-type: x mandatory;
-  margin: 0px  0px 0px 100px;
-}
-
-.portfolio-item {
-  flex: 0 0 auto;
-  width: 300px; /* Adjust size as needed */
-  scroll-snap-align: start;
-  transition: transform 0.3s ease;
-}
-
-
-.section-title{
-  color: white;
-}
-
-
-
-    
-  </style>
-
-  <style>
-      .parallax-bg {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-image: url('images/map-bg.jpg'); /* replace with your image path */
-          background-attachment: fixed;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          z-index: -1;
-          transform: translateZ(0); /* smooth scrolling fix */
-}
-  </style>
 
 </head>
 <body>
-  <!--==========================
-  NavBar Section
-  ============================-->
 
    <header id="header">
     <div class="container">
@@ -644,44 +74,42 @@
     <!-- Portfolio Showcase Section -->
     <section class="portfolio-showcase" id="scroller">
   <div class="section-header animate-on-scroll">
-    <h2 class="section-title">Our Featured Work</h2>
+    <h2 class="section-title">Our Recent Work</h2>
     <p class="section-subtitle">Explore our collection of innovative projects</p>
   </div>
       
       <div class="portfolio-grid animate-on-scroll">
         <!-- Project 1 -->
-        <div class="portfolio-card" data-category="web">
-          <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')">
+        <div class="portfolio-card" data-category="ai-assistant">
+          <div class="portfolio-image" style="background-image: url('../Portfolio/images/AI\ Voice\ Assistant.jpg')">
             <div class="portfolio-overlay">
-              <h3 class="portfolio-title">E-Commerce Platform</h3>
-              <span class="portfolio-category">Web Development</span>
-              <p class="portfolio-description">A full-featured online store with payment integration and inventory management.</p>
-              <a href="#" class="view-details">View Details <i class="fas fa-arrow-right"></i></a>
+              <h3 class="portfolio-title">AI Voice Assistant</h3>
+              <span class="portfolio-category">AI Assistant</span>
+              <p class="portfolio-description">An AI voice assistant for AGI Driving that answers all queries with class info, schedules, and guidance.</p>
+              <a href="https://www.agidrivingmb.com/" class="view-details">View Details <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
         
         <!-- Project 2 -->
-        <div class="portfolio-card" data-category="app">
-          <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+        <div class="portfolio-card" data-category="web-scraper">
+          <div class="portfolio-image" style="background-image: url('../Portfolio//images/webscraper.png')">
             <div class="portfolio-overlay">
-              <h3 class="portfolio-title">Fitness Tracker App</h3>
-              <span class="portfolio-category">Mobile App</span>
-              <p class="portfolio-description">AI-powered fitness companion with personalized workout plans and nutrition tracking.</p>
+              <h3 class="portfolio-title">Web Scraping</h3>
+              <span class="portfolio-category">Web Scraper</span>
+              <p class="portfolio-description">Custom web scraping solution that collects and organizes data from multiple sources with automated quality checks and API integration.</p>
               <a href="#" class="view-details">View Details <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
         
-
-        
         <!-- Project 4 -->
         <div class="portfolio-card" data-category="web">
-          <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')">
+          <div class="portfolio-image" style="background-image: url('../Portfolio/images/deepseek.png')">
             <div class="portfolio-overlay">
-              <h3 class="portfolio-title">Corporate Website</h3>
-              <span class="portfolio-category">Web Design</span>
-              <p class="portfolio-description">Modern, responsive website for a financial services firm with CMS integration.</p>
+              <h3 class="portfolio-title">Web Scraping</h3>
+              <span class="portfolio-category">Web Scraper</span>
+              <p class="portfolio-description">Custom web scraping solution that collects and organizes data from multiple sources with automated quality checks and API integration.</p>
               <a href="#" class="view-details">View Details <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
@@ -735,8 +163,6 @@
           </div>
         </div>
         
-
-
         <div class="portfolio-card" data-category="marketing">
           <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
             <div class="portfolio-overlay">
@@ -1014,7 +440,7 @@
   <div class="pagination-dots"></div>
 </section>
 
- <section class="portfolio-container" id="portfolio-section">
+ <section class="portfolio-container" id="portfolio-section"> 
       <!-- Video Background -->
       <div class="portfolio-video-bg animate-on-scroll">
         <video autoplay muted loop playsinline>
@@ -1041,40 +467,40 @@
       <!-- Filter Controls -->
       <div class="portfolio-filters animate-on-scroll">
   <button class="filter-btn active" data-filter="all">All Projects</button>
-  <button class="filter-btn" data-filter="web-dev">Web Development</button>
+  <button class="filter-btn" data-filter="ai-assistant">AI Assistant</button>
+  <button class="filter-btn" data-filter="web-scraper">Web Scraper</button>
   <button class="filter-btn" data-filter="app-dev">App Development</button>
   <button class="filter-btn" data-filter="voice-agent">Voice AI Agent</button>
   <button class="filter-btn" data-filter="chat-bot">Chat Bot</button>
-  <button class="filter-btn" data-filter="web-scraper">Web Scraper</button>
 </div>
       
    <!-- Portfolio Scroller -->
 <div class="portfolio-scroller animate-on-scroll" id="scroller">
   <!-- Web Development Projects -->
-  <div class="portfolio-item" data-category="web-dev">
-    <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')"></div>
+  <div class="portfolio-item" data-category="ai-assistant">
+    <div class="portfolio-image" style="background-image: url('../Portfolio/images/AI\ Voice\ Assistant.jpg')"></div>
     <div class="portfolio-overlay">
-      <h3 class="portfolio-title">E-Commerce Platform</h3>
-      <span class="portfolio-category">Web Development</span>
-      <p class="portfolio-description">Built with React, Node.js, and MongoDB. Features payment integration, inventory management, and admin dashboard.</p>
-      <a href="#" class="portfolio-link view-details">View Details <i class="fas fa-arrow-right"></i></a>
+      <h3 class="portfolio-title">AI Voice Assistant</h3>
+      <span class="portfolio-category">AI Assistant</span>
+      <p class="portfolio-description">An AI voice assistant for AGI Driving that answers all queries with class info, schedules, and guidance.</p>
+      <a href="https://www.agidrivingmb.com/" class="portfolio-link view-details">View Details <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
   
   <!-- App Development Project -->
-  <div class="portfolio-item" data-category="app-dev">
-    <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+  <div class="portfolio-item" data-category="web-scraper">
+    <div class="portfolio-image" style="background-image: url('../Portfolio/images/webscraper2.png')"></div>
     <div class="portfolio-overlay">
-      <h3 class="portfolio-title">Fitness Tracker App</h3>
-      <span class="portfolio-category">App Development</span>
-      <p class="portfolio-description">Cross-platform mobile app with Flutter, featuring AI-powered workout plans, nutrition tracking, and health analytics.</p>
+      <h3 class="portfolio-title">Web Scraping</h3>
+      <span class="portfolio-category">Web Scraper</span>
+      <p class="portfolio-description">Custom web scraping solution that collects and organizes data from multiple sources with automated quality checks and API integration.</p>
       <a href="#" class="portfolio-link view-details">View Details <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
   
   <!-- Chat Bot Project -->
   <div class="portfolio-item" data-category="chat-bot">
-    <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+    <div class="portfolio-image" style="background-image: url('../Portfolio/images/deepseek.png')"></div>
     <div class="portfolio-overlay">
       <h3 class="portfolio-title">Customer Support Chat Bot</h3>
       <span class="portfolio-category">Chat Bot</span>
@@ -1329,123 +755,6 @@
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const pricingContainer = document.querySelector('.pricing-plans');
-  const pricingCards = document.querySelectorAll('.pricing-card');
-  const swipeLeft = document.querySelector('.swipe-left');
-  const swipeRight = document.querySelector('.swipe-right');
-  const categories = document.querySelectorAll('.pricing-categories .category');
-  const dotsContainer = document.querySelector('.pagination-dots');
-  
-  // Create pagination dots
-  pricingCards.forEach((_, index) => {
-    const dot = document.createElement('div');
-    dot.classList.add('pagination-dot');
-    if(index === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => {
-      scrollToCard(index);
-    });
-    dotsContainer.appendChild(dot);
-  });
-  
-  const dots = document.querySelectorAll('.pagination-dot');
-  
-  // Handle swipe buttons
-  swipeLeft.addEventListener('click', () => {
-    pricingContainer.scrollBy({ left: -300, behavior: 'smooth' });
-  });
-  
-  swipeRight.addEventListener('click', () => {
-    pricingContainer.scrollBy({ left: 300, behavior: 'smooth' });
-  });
-  
-  // Update active dot on scroll
-  pricingContainer.addEventListener('scroll', updateActiveDot);
-  
-  function updateActiveDot() {
-    const cardWidth = pricingCards[0].offsetWidth + 30; // card width + gap
-    const scrollPosition = pricingContainer.scrollLeft;
-    const activeIndex = Math.round(scrollPosition / cardWidth);
-    
-    dots.forEach((dot, index) => {
-      dot.classList.toggle('active', index === activeIndex);
-    });
-  }
-  
-  function scrollToCard(index) {
-    const cardWidth = pricingCards[0].offsetWidth + 30; // card width + gap
-    pricingContainer.scrollTo({
-      left: index * cardWidth,
-      behavior: 'smooth'
-    });
-  }
-  
-  // Handle category filtering
-  categories.forEach(category => {
-    category.addEventListener('click', () => {
-      // Update active category
-      categories.forEach(c => c.classList.remove('active'));
-      category.classList.add('active');
-      
-      const selectedCategory = category.dataset.category;
-      
-      // Filter cards
-      pricingCards.forEach(card => {
-        const cardCategories = card.dataset.category.split(' ');
-        if(selectedCategory === 'all' || cardCategories.includes(selectedCategory)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-      
-      // Reset scroll position
-      pricingContainer.scrollTo({ left: 0, behavior: 'smooth' });
-      
-      // Update dots
-      updateDots();
-    });
-  });
-  
-  function updateDots() {
-    // Remove all dots
-    while(dotsContainer.firstChild) {
-      dotsContainer.removeChild(dotsContainer.firstChild);
-    }
-    
-    // Add dots for visible cards
-    const visibleCards = Array.from(pricingCards).filter(card => 
-      card.style.display !== 'none'
-    );
-    
-    visibleCards.forEach((_, index) => {
-      const dot = document.createElement('div');
-      dot.classList.add('pagination-dot');
-      if(index === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => {
-        scrollToVisibleCard(index);
-      });
-      dotsContainer.appendChild(dot);
-    });
-  }
-  
-  function scrollToVisibleCard(index) {
-    const visibleCards = Array.from(pricingCards).filter(card => 
-      card.style.display !== 'none'
-    );
-    
-    if(index >= 0 && index < visibleCards.length) {
-      visibleCards[index].scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'start'
-      });
-    }
-  }
-  
-  // Initialize
-  updateDots();
-});
 
 
 
@@ -1565,38 +874,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scroller = document.getElementById("scroller");
 
-    // Convert vertical scroll to horizontal scroll
-    scroller.addEventListener("wheel", function (e) {
-      e.preventDefault();
-      scroller.scrollLeft += e.deltaY;
-    });
-
-    // Filtering logic (same as before)
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        filterButtons.forEach((btn) => btn.classList.remove("active"));
-        button.classList.add("active");
-        const filterValue = button.getAttribute("data-filter");
-
-        portfolioItems.forEach((item) => {
-          const itemCategory = item.getAttribute("data-category");
-          if (filterValue === "all" || filterValue === itemCategory) {
-            item.style.display = "block";
-          } else {
-            item.style.display = "none";
-          }
-        });
-      });
-    });
-  });
-</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -1618,6 +896,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+// Update your existing scroll handler to this:
+let isScrolling = false;
+const scroller = document.querySelector(".portfolio-scroller");
+
+scroller.addEventListener("wheel", function (e) {
+  // Only handle horizontal scroll if there's horizontal content to scroll
+  const canScrollHorizontal = scroller.scrollWidth > scroller.clientWidth;
+  
+  if (canScrollHorizontal && Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
+    e.preventDefault();
+    scroller.scrollLeft += e.deltaY;
+    isScrolling = true;
+    
+    // Temporarily prevent vertical page scrolling
+    setTimeout(() => {
+      isScrolling = false;
+    }, 100);
+  }
+});
+
+// Prevent vertical scroll when actively scrolling horizontally
+window.addEventListener("wheel", function(e) {
+  if (isScrolling) {
+    e.preventDefault();
+  }
+}, { passive: false }); 
 </script>
 
     
