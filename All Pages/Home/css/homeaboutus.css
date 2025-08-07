@@ -1,0 +1,453 @@
+/* Parallax background for about us split */
+.aboutus-split-section {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  background-color: #111;
+  padding: 100px 20px; /* Added space at top and bottom */
+}
+
+.aboutus-split-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url('../images/aboutus.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: 1;
+  opacity: 1;
+}
+
+
+.aboutus-split-section::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.aboutus-container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Left column */
+.aboutus-left {
+  flex: 1 1 500px;
+  margin-top: -50px;
+}
+
+/* .aboutus-line {
+  width: 5px;
+  height: 60px;
+  background-color: #00bcd4;
+  margin-bottom: -70px;
+  margin-left: -20px;
+} */
+
+.aboutus-left h2 {
+  font-size: 48px; /* Increased */
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.aboutus-left h2 span {
+  color: #00bcd4;
+}
+
+.aboutus-left p {
+  font-size: 20px; /* Increased */
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.aboutus-btn {
+  display: inline-block;
+  background-color: #00bcd4;
+  color: #111;
+  text-decoration: none;
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.aboutus-btn:hover {
+  background-color: #0097a7;
+}
+
+/* Right column */
+.aboutus-right {
+  flex: 1 1 400px;
+}
+
+.aboutus-right h3 {
+  font-size: 32px; /* Increased */
+  color: #00bcd4;
+  margin-bottom: 35px;
+}
+
+.aboutus-service {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.aboutus-service i {
+  font-size: 32px; /* Increased */
+  color: #00bcd4;
+  margin-right: 18px;
+  flex-shrink: 0;
+}
+
+.aboutus-service h4 {
+  font-size: 22px; /* Increased */
+  margin-bottom: 8px;
+}
+
+.aboutus-service p {
+  font-size: 17px; /* Increased */
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aboutus-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .aboutus-left, .aboutus-right {
+    flex: 1 1 100%;
+  }
+
+  .aboutus-service {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .aboutus-left h2 {
+    font-size: 36px;
+  }
+
+  .aboutus-left p {
+    font-size: 18px;
+  }
+
+  .aboutus-right h3 {
+    font-size: 28px;
+  }
+
+  .aboutus-service h4 {
+    font-size: 20px;
+  }
+
+  .aboutus-service p {
+    font-size: 16px;
+  }
+
+  .aboutus-service i {
+    font-size: 28px;
+  }
+}
+
+
+
+/* About Us Values Section */
+.aboutus-values-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+              url('../images/ourcorevalues.webp') no-repeat center center/cover;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.aboutus-values-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.aboutus-value-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 0 15px; /* horizontal spacing */
+  border-left: 5px solid var(--accent);
+  transition: all 0.3s ease;
+}
+
+.aboutus-value-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(40, 160, 184, 0.3);
+}
+
+.aboutus-value-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+.aboutus-value-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .aboutus-about-container {
+    flex-direction: column;
+  }
+
+  .aboutus-hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    justify-content: flex-start;
+  }
+
+  .aboutus-hero-content {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-right: 0;
+  }
+
+  .aboutus-hero-image img {
+    max-height: 50vh;
+  }
+
+  .aboutus-section-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .aboutus-hero-content h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 80px 5%;
+  }
+
+  .aboutus-section-header h2 {
+    font-size: 2.8rem;
+  }
+
+  .aboutus-hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .aboutus-section-header p,
+  .aboutus-hero-content p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .aboutus-section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .aboutus-hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .aboutus-mission-cards,
+  .aboutus-team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* About Us Values Section */
+.aboutus-values-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+              url('../images/ourcorevalues.webp') no-repeat center center/cover;
+  text-align: center;
+  padding: 100px 0; /* More space top & bottom */
+}
+
+.aboutus-values-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* slightly increased from 10px if you prefer uniformity */
+  justify-content: center;
+}
+
+
+.aboutus-value-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 30px 40px 50px 40px; /* More spacing top/bottom and left/right */
+  border-left: 5px solid var(--accent);
+  transition: all 0.3s ease;
+  gap: -20px;
+}
+
+.aboutus-value-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(40, 160, 184, 0.3);
+}
+
+.aboutus-value-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+.aboutus-value-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .aboutus-about-container {
+    flex-direction: column;
+  }
+
+  .aboutus-hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    justify-content: flex-start;
+  }
+
+  .aboutus-hero-content {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-right: 0;
+  }
+
+  .aboutus-hero-image img {
+    max-height: 50vh;
+  }
+
+  .aboutus-section-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .aboutus-hero-content h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 80px 5%;
+  }
+
+  .aboutus-section-header h2 {
+    font-size: 2.8rem;
+  }
+
+  .aboutus-hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .aboutus-section-header p,
+  .aboutus-hero-content p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .aboutus-section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .aboutus-hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .aboutus-mission-cards,
+  .aboutus-team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.aboutus-section-header h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.aboutus-section-header p {
+  font-size: 1.2rem;     /* increase this value if you want even bigger */
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  text-align: center;    /* optional: center align if you want */
+}
+
+
+.outlined-heading {
+  font-size: 48px;
+  color: white; /* Inside fill color */
+  -webkit-text-stroke: 1.5px #28A0B8; /* Outline color */
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* Add to your existing styles */
+.aboutus-values-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.aboutus-values-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.aboutus-value-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: calc(var(--index) * 0.2s);
+}
+
+.aboutus-value-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
