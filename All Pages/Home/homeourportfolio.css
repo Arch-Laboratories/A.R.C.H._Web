@@ -1,0 +1,229 @@
+/* Enhanced Our Portfolio Partners Section */
+.ourportfolio-partners-showcase {
+  padding: 8rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+              url('images/ourpartner1.jpg') no-repeat center center/cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.ourportfolio-section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.ourportfolio-section-header h2 {
+  font-size: 4.5rem;
+  background: linear-gradient(90deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.ourportfolio-section-header p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.ourportfolio-partners-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.ourportfolio-partners-track {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 0;
+  animation: scroll 30s linear infinite;
+  will-change: transform;
+  width: calc(250px * 12);
+}
+
+.ourportfolio-partner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  height: 180px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.ourportfolio-partner-item:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ourportfolio-logo-container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.ourportfolio-logo-container img {
+  max-height: 100%;
+  max-width: 160px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.ourportfolio-partner-item:hover .ourportfolio-logo-container img {
+  transform: scale(1.1);
+}
+
+/* Maintain original logo colors by removing the invert filter */
+.amazon img { filter: none; }
+.microsoft img { filter: none; }
+.ibm img { filter: none; }
+.laravel img { filter: none; }
+.react img { filter: none; }
+.tailwind img { filter: none; }
+
+.ourportfolio-partner-item span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-220px * 6)); }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .ourportfolio-section-header h2 {
+    font-size: 3.5rem;
+  }
+
+  .ourportfolio-section-header p {
+    font-size: 1.8rem;
+  }
+
+  .ourportfolio-partner-item {
+    min-width: 200px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ourportfolio-partners-showcase {
+    padding: 6rem 0;
+  }
+
+  .ourportfolio-section-header h2 {
+    font-size: 2.8rem;
+  }
+
+  .ourportfolio-section-header p {
+    font-size: 1.5rem;
+  }
+
+  .ourportfolio-partner-item {
+    min-width: 180px;
+    height: 150px;
+    padding: 1.5rem;
+  }
+
+  .ourportfolio-logo-container img {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ourportfolio-section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .ourportfolio-section-header p {
+    font-size: 1.2rem;
+  }
+
+  .ourportfolio-partner-item {
+    min-width: 160px;
+    height: 140px;
+    padding: 1rem;
+  }
+
+  .ourportfolio-partner-item span {
+    font-size: 0.9rem;
+  }
+}
+
+
+.ourportfolio-section-header h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.ourportfolio-section-header p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.ourportfolio-partner-item span {
+  font-size: 1.0rem; /* Or smaller if needed */
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+}
+
+
+.ourportfolio-partner-item {
+  border-top: 5px solid var(--accent);
+}
+.outlined-heading {
+  font-size: 48px;
+  color: white; /* Fill color */
+  -webkit-text-stroke: 1.5px #28A0B8; /* Outline color */
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+
+/* Animation styles for both sections */
+.aboutus-value-item, .ai-feature {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.aboutus-value-item.visible, .ai-feature.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
