@@ -88,15 +88,3 @@ function setupSequentialScroll() {
     }
   });
 }
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-  setupSequentialScroll();
-  
-  // Initialize particle.js if needed
-  if (typeof particlesJS !== 'undefined') {
-    particlesJS.init({
-      /* your particle.js config */
-    });
-  }
-});
