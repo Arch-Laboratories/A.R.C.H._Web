@@ -1,0 +1,2483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A.R.C.H. Labs - Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@800&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="service.css" />
+  <link rel="stylesheet" href="voicesection.css">
+  <link rel="stylesheet" href="webdevelopmentsection.css">
+  <link rel="stylesheet" href="uiuxsection.css">
+  <link rel="stylesheet" href="chatbotsection.css">
+  <link rel="stylesheet" href="webscrapersection.css">
+  <link rel="stylesheet" href="machinelearningsection.css">  
+  <link rel="stylesheet" href="contact.css">
+  <style>
+
+    html {
+  scroll-behavior: smooth;
+}
+
+
+.ai-voice-section {
+
+   scroll-snap-align: start;
+}
+.voice-ai-info-section {
+ 
+  scroll-snap-align: start;
+}
+
+
+
+/* AI Voice Agent Section */
+.ai-voice-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a192f 0%, #0f1c32 100%);
+  scroll-snap-align: start;
+}
+
+.ai-voice-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ai-voice-heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.ai-voice-subheading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+}
+
+.ai-voice-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--arch_blue);
+  margin: 2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.ai-voice-cta {
+  display: inline-block;
+  padding: 15px 40px;
+  background: var(--arch_blue);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(40, 160, 184, 0.3);
+  margin-top: 2rem;
+  border: 2px solid var(--arch_blue);
+}
+
+.ai-voice-cta:hover {
+  background: transparent;
+  color: var(--arch_blue);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(40, 160, 184, 0.4);
+}
+
+/* AI Voice Animation Elements */
+.voice-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%2328A0B8" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%2328A0B8" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%2328A0B8"/></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 5;
+  animation: waveAnimation 15s linear infinite;
+}
+
+@keyframes waveAnimation {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1200px; }
+}
+
+.ai-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(40, 160, 184, 0.6);
+  animation: float 15s infinite linear;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; }
+}
+
+.ai-circuit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(40, 160, 184, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(40, 160, 184, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+  z-index: 1;
+  animation: circuitMove 20s linear infinite;
+}
+
+@keyframes circuitMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+.ai-voice-graphic {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(40, 160, 184, 0.15) 0%, transparent 70%);
+  filter: blur(20px);
+  animation: pulse 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+}
+
+.ai-voice-mic {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2328A0B8"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3zm0-2a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5zm-1 20v-3.29A7.008 7.008 0 0 1 5 12H3a9.01 9.01 0 0 0 8 8.94V22h2v-1.06A9.01 9.01 0 0 0 21 12h-2a7.008 7.008 0 0 1-6 6.71V20h-2z"/></svg>') center no-repeat;
+  background-size: contain;
+  opacity: 0.1;
+  z-index: 3;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .ai-voice-heading {
+    font-size: 3.5rem;
+  }
+  
+  .ai-voice-tagline {
+    font-size: 2rem;
+  }
+  
+  .ai-voice-subheading {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-voice-heading {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .ai-voice-tagline {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+  
+  .ai-voice-subheading {
+    font-size: 1rem;
+  }
+  
+  .ai-voice-cta {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+  
+  .voice-wave {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-voice-heading {
+    font-size: 2rem;
+  }
+  
+  .ai-voice-tagline {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+}
+
+
+
+
+
+
+
+
+/* AI Voice Agent Section */
+.ai-voice-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a192f 0%, #0f1c32 100%);
+  scroll-snap-align: start;
+}
+
+.ai-voice-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ai-voice-heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.ai-voice-subheading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+}
+
+.ai-voice-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--arch_blue);
+  margin: 2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.ai-voice-cta {
+  display: inline-block;
+  padding: 15px 40px;
+  background: var(--arch_blue);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(40, 160, 184, 0.3);
+  margin-top: 2rem;
+  border: 2px solid var(--arch_blue);
+}
+
+.ai-voice-cta:hover {
+  background: transparent;
+  color: var(--arch_blue);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(40, 160, 184, 0.4);
+}
+
+/* AI Voice Animation Elements */
+.voice-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%2328A0B8" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%2328A0B8" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%2328A0B8"/></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 5;
+  animation: waveAnimation 15s linear infinite;
+}
+
+@keyframes waveAnimation {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1200px; }
+}
+
+.ai-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(40, 160, 184, 0.6);
+  animation: float 15s infinite linear;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; }
+}
+
+.ai-circuit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(40, 160, 184, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(40, 160, 184, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+  z-index: 1;
+  animation: circuitMove 20s linear infinite;
+}
+
+@keyframes circuitMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+.ai-voice-graphic {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(40, 160, 184, 0.15) 0%, transparent 70%);
+  filter: blur(20px);
+  animation: pulse 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+}
+
+.ai-voice-mic {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2328A0B8"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3zm0-2a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5zm-1 20v-3.29A7.008 7.008 0 0 1 5 12H3a9.01 9.01 0 0 0 8 8.94V22h2v-1.06A9.01 9.01 0 0 0 21 12h-2a7.008 7.008 0 0 1-6 6.71V20h-2z"/></svg>') center no-repeat;
+  background-size: contain;
+  opacity: 0.1;
+  z-index: 3;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .ai-voice-heading {
+    font-size: 3.5rem;
+  }
+  
+  .ai-voice-tagline {
+    font-size: 2rem;
+  }
+  
+  .ai-voice-subheading {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-voice-heading {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .ai-voice-tagline {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+  
+  .ai-voice-subheading {
+    font-size: 1rem;
+  }
+  
+  .ai-voice-cta {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+  
+  .voice-wave {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-voice-heading {
+    font-size: 2rem;
+  }
+  
+  .ai-voice-tagline {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+}
+
+/* Rest of your existing CSS */
+
+
+
+
+
+/* AI Voice Agent Section - Harmonized Color Theme */
+.ai-voice-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a192f 0%, #0f1c32 100%);
+  scroll-snap-align: start;
+}
+
+.ai-voice-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ai-voice-heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #28a0b8, #00d6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(40,160,184,0.4);
+}
+
+.ai-voice-subheading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+}
+
+.ai-voice-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00d6ff;
+  margin: 2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px rgba(0, 214, 255, 0.5);
+}
+
+.ai-voice-cta {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #28a0b8;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(40, 160, 184, 0.3);
+  margin-top: 2rem;
+  border: 2px solid #28a0b8;
+}
+
+.ai-voice-cta:hover {
+  background: transparent;
+  color: #00d6ff;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 214, 255, 0.5);
+}
+
+/* Voice Wave background overlay */
+.voice-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%2328A0B8" opacity=".2"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%2300D6FF" opacity=".3"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%2300D6FF" opacity=".3"/></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 5;
+  animation: waveAnimation 15s linear infinite;
+}
+
+@keyframes waveAnimation {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1200px; }
+}
+
+.ai-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 214, 255, 0.4);
+  animation: float 15s infinite linear;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; }
+}
+
+.ai-circuit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(0, 214, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 214, 255, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.25;
+  z-index: 1;
+  animation: circuitMove 20s linear infinite;
+}
+
+@keyframes circuitMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+.ai-voice-graphic {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 214, 255, 0.25) 0%, transparent 70%);
+  filter: blur(30px);
+  animation: pulse 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+}
+
+.ai-voice-mic {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2300D6FF"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3zm0-2a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5zm-1 20v-3.29A7.008 7.008 0 0 1 5 12H3a9.01 9.01 0 0 0 8 8.94V22h2v-1.06A9.01 9.01 0 0 0 21 12h-2a7.008 7.008 0 0 1-6 6.71V20h-2z"/></svg>') center no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 3;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+.voice-ai-info-section {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #0f1c32 0%, #142544 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  scroll-snap-align: start;
+}
+
+.voice-ai-info-container {
+  max-width: 1000px;
+}
+
+.voice-ai-info-heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #28a0b8;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.voice-ai-info-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+  .voice-ai-info-heading {
+    font-size: 2.5rem;
+  }
+  
+  .voice-ai-info-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .voice-ai-info-heading {
+    font-size: 2rem;
+  }
+  
+  .voice-ai-info-text {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.ai-voice-section {
+
+   scroll-snap-align: start;
+}
+.voice-ai-info-section {
+ 
+  scroll-snap-align: start;
+}
+
+
+.services-scroll {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.services-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+/* Voice AI Info Section */
+.voice-ai-info-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a192f 0%, #0f1c32 100%);
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.voice-ai-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.voice-ai-info-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+  padding: 0 40px;
+  text-align: center;
+  color: white;
+}
+
+.voice-ai-info-heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #28a0b8, #00d6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-shadow: 0 0 15px rgba(40,160,184,0.4);
+}
+
+.voice-ai-info-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.voice-ai-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.voice-ai-visual-mic {
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 214, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  border: 2px solid rgba(0, 214, 255, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.voice-ai-visual-mic i {
+  font-size: 40px;
+  color: #00d6ff;
+}
+
+.voice-ai-visual-wave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 60px;
+}
+
+.wave-bar {
+  width: 8px;
+  height: 30px;
+  background: linear-gradient(to top, #28a0b8, #00d6ff);
+  border-radius: 4px;
+  transform-origin: bottom center;
+}
+
+@keyframes waveBar {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(2.5);
+  }
+}
+
+/* Voice AI Background Elements */
+.voice-ai-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 214, 255, 0.4);
+  animation: float 15s infinite linear;
+  z-index: 1;
+}
+
+.voice-ai-circuit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(0, 214, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 214, 255, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.15;
+  z-index: 1;
+  animation: circuitMove 20s linear infinite;
+}
+
+.voice-ai-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%2328A0B8" opacity=".2"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%2300D6FF" opacity=".3"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%2300D6FF" opacity=".3"/></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation: waveAnimation 15s linear infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .voice-ai-info-heading {
+    font-size: 2.8rem;
+  }
+  
+  .voice-ai-info-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .voice-ai-info-heading {
+    font-size: 2.2rem;
+  }
+  
+  .voice-ai-info-text {
+    font-size: 1rem;
+  }
+  
+  .voice-ai-visual-mic {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .voice-ai-visual-mic i {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .voice-ai-info-heading {
+    font-size: 1.8rem;
+  }
+  
+  .voice-ai-info-text {
+    font-size: 0.9rem;
+  }
+  
+  .voice-ai-visual {
+    margin-top: 30px;
+  }
+}
+
+
+
+
+/* Voice AI Info Section - Dark Tech Theme */
+.voice-ai-info-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)),
+    url('images/ai-tech-bg.jpg') center/cover no-repeat;
+  overflow: hidden;
+  scroll-snap-align: start;
+  color: #fff;
+}
+
+.voice-ai-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.voice-ai-info-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.voice-ai-info-heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #00f0ff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.voice-ai-info-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Visual Elements */
+.voice-ai-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.voice-ai-visual-mic {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 40px;
+}
+
+.mic-icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mic-icon i {
+  font-size: 50px;
+  color: #00f0ff;
+  z-index: 3;
+  animation: micPulse 2s ease-out infinite;
+}
+
+.mic-ring {
+  position: absolute;
+  border: 2px solid #00f0ff;
+  border-radius: 50%;
+  animation: micRing 3s linear infinite;
+  opacity: 0;
+}
+
+.mic-ring:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  animation-delay: 1s;
+}
+
+.mic-ring:nth-child(3) {
+  width: 140%;
+  height: 140%;
+  animation-delay: 2s;
+}
+
+@keyframes micPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes micRing {
+  0% { 
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+  100% { 
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Frequency Analyzer */
+.voice-ai-frequency {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+  height: 80px;
+  width: 100%;
+}
+
+.frequency-line {
+  width: 12px;
+  height: 10px;
+  background: linear-gradient(to top, #00a2ff, #00f0ff);
+  border-radius: 6px;
+  animation: frequencyWave 1.5s ease-in-out infinite;
+}
+
+.frequency-line:nth-child(1) { animation-delay: 0.1s; }
+.frequency-line:nth-child(2) { animation-delay: 0.3s; }
+.frequency-line:nth-child(3) { animation-delay: 0.5s; }
+.frequency-line:nth-child(4) { animation-delay: 0.2s; }
+.frequency-line:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes frequencyWave {
+  0%, 100% { height: 10px; }
+  50% { height: 70px; }
+}
+
+/* Background Animation Elements */
+.voice-ai-pulse {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.2) 0%, transparent 70%);
+  animation: voicePulse 8s linear infinite;
+  opacity: 0;
+}
+
+.voice-ai-pulse:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.voice-ai-pulse:nth-child(2) {
+  width: 500px;
+  height: 500px;
+  bottom: 10%;
+  right: 5%;
+  animation-delay: 2s;
+}
+
+.voice-ai-pulse:nth-child(3) {
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 4s;
+}
+
+@keyframes voicePulse {
+  0% { 
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% { 
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.voice-ai-radar {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(0, 240, 255, 0.1);
+  border-radius: 50%;
+}
+
+.voice-ai-radar::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 240, 255, 0.1);
+  transform: scale(0.8);
+}
+
+.voice-ai-radar::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 240, 255, 0.1);
+  transform: scale(0.6);
+}
+
+.voice-ai-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .voice-ai-info-heading {
+    font-size: 2.8rem;
+  }
+  
+  .voice-ai-info-text {
+    font-size: 1.1rem;
+  }
+  
+  .voice-ai-visual-mic {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .mic-icon i {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .voice-ai-info-heading {
+    font-size: 2.2rem;
+  }
+  
+  .voice-ai-info-text {
+    font-size: 1rem;
+  }
+  
+  .voice-ai-visual-mic {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+  }
+  
+  .mic-icon i {
+    font-size: 30px;
+  }
+  
+  .voice-ai-frequency {
+    height: 60px;
+  }
+  
+  .frequency-line {
+    width: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .voice-ai-info-heading {
+    font-size: 1.8rem;
+  }
+  
+  .voice-ai-info-text {
+    font-size: 0.9rem;
+  }
+  
+  .voice-ai-visual {
+    margin-top: 30px;
+  }
+  
+  .frequency-line {
+    width: 8px;
+  }
+}
+
+
+/* Enhanced Visible Voice AI Section */
+.voice-ai-explanation-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.parallax-bgs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/background for Voice Ai.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+.content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(15,23,42,0.7) 0%, rgba(45,55,72,0.8) 100%);
+  z-index: 0;
+}
+
+.voice-ai-content {
+  text-align: center;
+  max-width: 900px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.voice-ai-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.4);
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 300;
+}
+
+.ai-features {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.ai-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+.feature-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(79, 209, 197, 0.15);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 2px solid rgba(79, 209, 197, 0.3);
+}
+
+.ai-feature i {
+  font-size: 2.8rem;
+  color: #4fd1c5;
+}
+
+.ai-feature h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.ai-feature p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+
+.pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .voice-ai-explanation-section {
+      height: auto;
+      padding: 4rem 0;
+    }
+    
+    .voice-ai-content h2 {
+      font-size: 2.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .ai-features {
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    
+    .feature-circle {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .ai-feature i {
+      font-size: 2rem;
+    }
+  }
+
+
+  /* x ---------------------------------- x ---------------------------------- x */
+  /* UIIIIIIII / UXXXXXXXX */
+  /* x ---------------------------------- x ---------------------------------- x */
+  .uiux-explanation-section {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+  }
+
+  .uiux-parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/UIUX4.png'); /* Update with your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+    filter: brightness(0.7);
+  }
+
+  .uiux-content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    z-index: 0;
+  }
+
+  .uiux-content {
+    text-align: center;
+    max-width: 900px;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .uiux-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+  }
+
+  .uiux-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+  }
+
+  .uiux-features {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .uiux-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+  }
+
+  .uiux-feature-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(79, 209, 180, 0.15);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 2px solid rgba(79, 209, 180, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .uiux-feature-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(79, 209, 180, 0.4);
+  }
+
+  .uiux-feature i {
+    font-size: 2.8rem;
+    color: #4fd1b4;
+  }
+
+  .uiux-feature h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  .uiux-feature p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+  }
+
+  /* Pulse Animation */
+  .pulse {
+    animation: pulseEffect 2s infinite;
+  }
+
+  @keyframes pulseEffect {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .uiux-explanation-section {
+      height: auto;
+      padding: 4rem 0;
+    }
+
+    .uiux-content h2 {
+      font-size: 2.5rem;
+    }
+
+    .uiux-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .uiux-features {
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .uiux-feature-circle {
+      width: 80px;
+      height: 80px;
+    }
+
+    .uiux-feature i {
+      font-size: 2rem;
+    }
+  }
+
+
+
+
+  /* Update the chatbot-info-container padding */
+  .chatbot-info-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 25px; /* Increased side padding for mobile */
+  }
+
+  /* For very small devices, adjust the padding slightly less */
+  @media (max-width: 359px) {
+    .chatbot-info-container {
+      padding: 20px 20px;
+    }
+  }
+
+  /* For larger screens, you can adjust the padding as needed */
+  @media (min-width: 768px) {
+    .chatbot-info-container {
+      padding: 20px 40px;
+    }
+  }
+
+
+
+
+
+
+    </style>
+
+
+  <style>
+    .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/map-bg.jpg'); /* replace with your image path */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transform: translateZ(0); /* smooth scrolling fix */
+  }
+</style>
+
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="animated-bg">
+    <div class="animated-text">A.R.C.H Labs</div>
+    <div class="animated-text">A.R.C.H Labs</div>
+    <div class="animated-text">A.R.C.H Labs</div>
+    <div class="animated-text">A.R.C.H Labs</div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="glow-effect"></div>
+    <div class="glow-effect"></div>
+  </div>
+
+  <div id="preloader"></div>
+
+  <!-- NavBar Section -->
+  <header id="header">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <a href="#hero">
+          <img src="images/ARCH_Labs White BannerLogo.png" alt="ARCH Labs Logo" title="" />
+        </a>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="../Home/home.html">Home</a></li>
+          <li><a href="../About me/aboutme.html">About Us</a></li>
+          <li class="menu-active"><a href="#services-section">Services</a></li>
+          <li><a href="../Portfolio/portfolio.html">Portfolio</a></li>
+          <!-- <li><a href="./team/team.html">Team</a></li> -->
+          <li><a href="#contact-section">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Toggle -->
+  <i class="fa fa-bars mobile-nav-toggle" id="mobile-nav-toggle"></i>
+
+  <!-- Mobile Navigation Menu -->
+  <nav id="mobile-nav">
+    <ul>
+      <li><a href="../Home/home.html">Home</a></li>
+          <li><a href="../About me/aboutme.html">About Us</a></li>
+          <li class="menu-active"><a href="#services-section">Services</a></li>
+          <li><a href="../Portfolio/portfolio.html">Portfolio</a></li>
+          <!-- <li><a href="./team/team.html">Team</a></li> -->
+          <li><a href="#contact-section">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Body Overlay -->
+  <div id="mobile-body-overly"></div>
+
+  <div id="main-container">
+    <!-- Intro Section -->
+    <section class="intro-section">
+      <div class="intro-text">
+        <h1>Your Partners in Problem-Solving!</h1>
+        <p>Reliable backend systems, AI that pulls its weight, and UIs that stay out of your way</p>
+        <a href="#scroller" class="btn">LET'S GET STARTED</a>
+      </div>
+      <div class="intro-image">
+        <img src="images/f.png" alt="Hero Graphic" />
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-container" id="services-section">
+      <div class="services-video-bg">
+        <video autoplay muted loop playsinline>
+          <source src="images/70241-533814751_tiny.mp4" type="video/mp4" />
+          <img src="images/fallback-bg.jpg" alt="Background" />
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+
+      <div class="services-bg">
+        <div class="services-bg-text layer1">A.R.C.H Labs</div>
+        <div class="services-bg-text layer2">A.R.C.H Labs</div>
+        <div class="services-bg-text layer3">A.R.C.H Labs</div>
+        <div class="services-particle"></div>
+        <div class="services-particle"></div>
+        <div class="services-particle"></div>
+        <div class="services-particle"></div>
+        <div class="services-glow"></div>
+        <div class="services-glow"></div>
+      </div>
+
+      <div class="services-scroller" id="scroller">
+        <div class="service-item">
+          <div class="category"></div>
+          <div class="service-icon"><i class="fas fa-search"></i></div>
+          <h2 class="service-title">Search Engine Optimization</h2>
+          <p class="service-description">Boost your website's visibility on search engines to attract organic traffic and improve rankings with our comprehensive SEO strategies.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="category"></div>
+          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <h2 class="service-title">Machine Learning</h2>
+          <p class="service-description">
+            Harness the power of data with intelligent machine learning solutions that drive predictions, automation, and smarter decision-making.
+          </p>
+        </div>
+
+
+        <div class="service-item">
+          <div class="category"></div>
+          <div class="service-icon"><i class="fas fa-microphone"></i></div>
+          <h2 class="service-title">Voice AI Agent</h2>
+          <p class="service-description">
+            Integrate intelligent voice assistants to enhance customer interactions, automate support, and deliver conversational experiences across channels.
+          </p>
+        </div>
+
+
+        <div class="service-item">
+          <div class="category"></div>
+          <div class="service-icon"><i class="fas fa-comments"></i></div>
+          <h2 class="service-title">Chatbot Development</h2>
+          <p class="service-description">
+            Build intelligent chatbots to automate conversations, provide instant support, and engage users seamlessly across your digital platforms.
+          </p>
+        </div>
+
+
+        <div class="service-item">
+          <div class="category"></div>
+          <div class="service-icon"><i class="fas fa-pencil-ruler"></i></div>
+          <h2 class="service-title">UI/UX Design</h2>
+          <p class="service-description">
+            Craft visually stunning and intuitive digital experiences that delight users and drive engagement through thoughtful design and usability.
+          </p>
+        </div>
+
+        <div class="service-item">
+          <div class="category"></div>
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h2 class="service-title">Web Development</h2>
+          <p class="service-description">
+            Build fast, secure, and scalable websites and applications that bring your vision to life and deliver exceptional user experiences across all devices.
+          </p>
+        </div>
+
+
+        <div class="service-item">
+          <div class="category"></div>
+          <div class="service-icon"><i class="fas fa-database"></i></div>
+          <h2 class="service-title">Web Scraper</h2>
+          <p class="service-description">
+            Extract valuable data from websites efficiently and transform it into actionable insights for analysis, automation, and business intelligence.
+          </p>
+        </div>
+
+        
+         <div class="service-item">
+          <div class="category"></div>
+          <div class="service-icon"><i class="fas fa-hashtag"></i></div>
+          <h2 class="service-title">Social Media Marketing</h2>
+          <p class="service-description">Engage your audience and build brand loyalty through strategic social media campaigns tailored to your business goals.</p>
+        </div>
+        
+      </div>
+    </section>
+
+
+   <!-- Enhanced Visible Voice AI Section -->
+<section class="voice-ai-explanation-section">
+  <div class="parallax-bgs"></div>
+  <div class="content-overlay"></div>
+  <div class="voice-ai-content">
+    <h2>Voice AI Agents</h2>
+    <p class="subtitle">You speak naturally, it understands deeply, like a knowledgeable partner</p>
+    
+    <div class="ai-features">
+      <div class="ai-feature">
+        <div class="feature-circle">
+          <i class="fas fa-microphone-alt pulse"></i>
+        </div>
+        <h3>Listen</h3>
+        <p>Advanced speech recognition</p>
+      </div>
+      
+      <div class="ai-feature">
+        <div class="feature-circle">
+          <i class="fas fa-brain pulse"></i>
+        </div>
+        <h3>Understand</h3>
+        <p>Natural language processing</p>
+      </div>
+      
+      <div class="ai-feature">
+        <div class="feature-circle">
+          <i class="fas fa-robot pulse"></i>
+        </div>
+        <h3>Respond</h3>
+        <p>Context-aware answers</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="voice-ai-info-section">
+      <div class="voice-ai-bg">
+        <div class="voice-ai-pulse"></div>
+        <div class="voice-ai-pulse"></div>
+        <div class="voice-ai-pulse"></div>
+        <div class="voice-ai-radar"></div>
+        <div class="voice-ai-grid"></div>
+      </div>
+      <div class="voice-ai-info-container">
+        <h2 class="voice-ai-info-heading">Voice AI Agents</h2>
+        <p class="voice-ai-info-text">Experience next generation conversational AI that listens with human like attention, understands context and nuance, and responds with intelligent, natural dialogue</p>
+        <div class="voice-ai-visual">
+          <div class="voice-ai-visual-mic">
+            <div class="mic-icon">
+              <i class="fas fa-microphone"></i>
+              <div class="mic-ring"></div>
+              <div class="mic-ring"></div>
+            </div>
+          </div>
+          <div class="voice-ai-frequency">
+            <div class="frequency-line"></div>
+            <div class="frequency-line"></div>
+            <div class="frequency-line"></div>
+            <div class="frequency-line"></div>
+            <div class="frequency-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- Web Development Section 1 -->
+<section class="webdev-explanation-section">
+  <div class="webdev-parallax-bg"></div>
+  <div class="webdev-content-overlay"></div>
+  <div class="webdev-content">
+    <h2>Web Development</h2>
+    <p class="webdev-subtitle">Digital experiences that don't just look good, they drive results</p>
+    
+    <div class="webdev-features">
+      <div class="webdev-feature">
+        <div class="webdev-feature-circle">
+          <i class="fas fa-code pulse"></i>
+        </div>
+        <h3>Web Experiences</h3>
+        <p>Responsive sites, intuitive web apps, and e-commerce built to convert.</p>
+        <!-- <p>Interactive web apps that feel instant and intuitive</p> -->
+        <!-- <p>E-commerce platforms designed to boost conversions</p> -->
+      </div>
+      
+      <div class="webdev-feature">
+        <div class="webdev-feature-circle">
+          <i class="fas fa-server pulse"></i>
+        </div>
+        <h3>Deskware</h3>
+        <p>Native apps, cross-platform builds, and tireless background services.</p>
+        <!-- <p>Cross-platform solutions with single-codebase efficiency</p> -->
+        <!-- <p>Background services that work tirelessly</p> -->
+      </div>
+      
+      <div class="webdev-feature">
+        <div class="webdev-feature-circle">
+          <i class="fas fa-mobile-alt pulse"></i>
+        </div>
+        <h3>Mobile Solutions</h3>
+        <p>PWAs with native features, offline support, and no app store limits.</p>
+        <!-- <p>Full-featured experiences using device capabilities</p> -->
+        <!-- <p>Offline functionality where it matters most</p> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="webdev-info-section">
+  <div class="webdev-bg">
+    <div class="webdev-bubbles"></div>
+    <div class="webdev-circuit"></div>
+    <div class="webdev-circuit"></div>
+    <div class="webdev-code"></div>
+  </div>
+  <div class="webdev-info-container">
+    <h2 class="webdev-info-heading">Modern Web Solutions</h2>
+    <p class="webdev-info-text">
+      Cutting-edge web technologies tailored to your business needs
+    </p>
+    <div class="webdev-visual">
+      <div class="webdev-visual-code">
+        <div class="webdev-feature-circle pulse">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+      </div>
+      <div class="webdev-brackets">
+        <div class="bracket">{</div>
+        <div class="bracket">}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    
+<!-- Chatbot Section 1 - Improved Visibility -->
+<section class="chatbot-explanation-section">
+  <div class="chatbot-parallax-bg"></div>
+  <div class="chatbot-content-overlay"></div>
+  <div class="chatbot-content">
+    <h2>Chatbot Solutions</h2>
+    <p class="chatbot-subtitle">Intelligent conversational interfaces for better customer engagement</p>
+    
+    <div class="chatbot-features">
+      <div class="chatbot-feature">
+        <div class="chatbot-feature-circle">
+          <i class="fas fa-comments pulse"></i>
+        </div>
+        <h3>Natural Conversations</h3>
+        <p class="feature-desc">Chats that feel human, not robotic</p>
+      </div>
+      
+      <div class="chatbot-feature">
+        <div class="chatbot-feature-circle">
+          <i class="fas fa-brain pulse"></i>
+        </div>
+        <h3>Context Awareness</h3>
+        <p class="feature-desc">Remembers what matters</p>
+      </div>
+      
+      <div class="chatbot-feature">
+        <div class="chatbot-feature-circle">
+          <i class="fas fa-random pulse"></i>
+        </div>
+        <h3>Multi-Platform</h3>
+        <p class="feature-desc">Seamless conversations anywhere</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="chatbot-info-section">
+  <div class="chatbot-parallax-bg"></div>
+  <div class="chatbot-content-overlay"></div>
+
+  <div class="chatbot-bg">
+    <div class="chatbot-pulse"></div>
+    <div class="chatbot-pulse"></div>
+    <div class="chatbot-pulse"></div>
+  </div>
+
+  <div class="chatbot-info-container split-layout">
+    <div class="chatbot-text-content">
+      <h2 class="chatbot-info-heading">Smart Conversational AI</h2>
+  
+      <p class="chatbot-info-extra">
+        Our chatbot understands complex queries and delivers precise answers instantly, helping reduce support costs and boost customer satisfaction.
+      </p>
+      <p class="chatbot-info-extra">
+        Easily integrate with your existing systems for a seamless user experience across all digital channels.
+      </p>
+    </div>
+
+    <div class="chatbot-visual-content">
+      <div class="arrow-right"></div>
+      <button class="chatbot-launch-btn">
+        <i class="fas fa-robot"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+ 
+<!-- UI/UX Design Section 1 -->
+<section class="uiux-explanation-section">
+  <div class="uiux-parallax-bg"></div>
+  <div class="uiux-content-overlay"></div>
+  <div class="uiux-content">
+    <h2>UI/UX Design</h2>
+    <p class="uiux-subtitle">Crafting intuitive digital experiences users love</p>
+    
+    <div class="uiux-features">
+      <div class="uiux-feature">
+        <div class="uiux-feature-circle">
+          <i class="fas fa-pencil-ruler pulse"></i>
+        </div>
+        <h3>User Research</h3>
+        <p>Data-driven insights</p>
+      </div>
+      
+      <div class="uiux-feature">
+        <div class="uiux-feature-circle">
+          <i class="fas fa-magic pulse"></i>
+        </div>
+        <h3>Interface Design</h3>
+        <p>Pixel-perfect visuals</p>
+      </div>
+      
+      <div class="uiux-feature">
+        <div class="uiux-feature-circle">
+          <i class="fas fa-project-diagram pulse"></i>
+        </div>
+        <h3>Interaction Flow</h3>
+        <p>Seamless navigation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="uiux-info-section">
+  <div class="uiux-bg">
+    <div class="uiux-wireframe"></div>
+    <div class="uiux-palette"></div>
+    <div class="uiux-grid"></div>
+    <div class="uiux-dots"></div>
+  </div>
+  <div class="uiux-info-container">
+    <h2 class="uiux-info-heading">Crafting Digital Experiences</h2>
+    <p class="uiux-info-text">
+      We transform ideas into intuitive interfaces that users love
+    </p>
+    
+    <div class="uiux-visual">
+      <div class="uiux-device-showcase">
+        <!-- Phone Device
+        <div class="device phone">
+  <div class="device-frame">
+    <div class="screen" style="background-image: url('https://images.unsplash.com/photo-1611162617213-6d7a0de25620?auto=format&fit=crop&w=1074&q=80');"></div>
+  </div>
+</div> -->
+
+        
+        <!-- Tablet Device -->
+        <div class="device tablet">
+          <div class="screen" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');">
+            <div class="screen-overlay"></div>
+          </div>
+        </div>
+        
+        <!-- Desktop Device -->
+        <div class="device desktop">
+          <div class="screen" style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80');">
+            <div class="screen-overlay"></div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+
+<!-- Machine Learning Section 1 -->
+<section class="ml-explanation-section">
+  <div class="ml-parallax-bg"></div>
+  <div class="ml-content-overlay"></div>
+  <div class="ml-content">
+    <h2>Machine Learning Innovations</h2>
+    <p class="ml-subtitle">
+      Unleashing the power of data and algorithms to transform industries.
+    </p>
+    <div class="ml-features">
+      <div class="ml-feature">
+        <div class="ml-feature-circle">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3>Deep Learning</h3>
+        <p>Building neural networks for vision, speech, and NLP tasks.</p>
+      </div>
+      <div class="ml-feature">
+        <div class="ml-feature-circle">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Predictive Models</h3>
+        <p>Forecasting trends and behaviors from complex data.</p>
+      </div>
+      <div class="ml-feature">
+        <div class="ml-feature-circle">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h3>AI Automation</h3>
+        <p>Creating intelligent systems for streamlined operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Machine Learning Section 2 -->
+<section class="ml-features-section">
+  <div class="ml-features-bg"></div>
+  <div class="ml-features-overlay"></div>
+
+  <h2 class="ml-features-heading">Our ML Capabilities</h2>
+  <div class="ml-features-grid">
+    <!-- Original 3 Cards -->
+    <div class="ml-feature-card">
+      <div class="ml-feature-icon"><i class="fas fa-brain"></i></div>
+      <h3 class="ml-feature-title">Deep Learning</h3>
+      <p class="ml-feature-text">Building neural networks for complex tasks like vision, speech, and natural language processing.</p>
+    </div>
+    <div class="ml-feature-card">
+      <div class="ml-feature-icon"><i class="fas fa-chart-line"></i></div>
+      <h3 class="ml-feature-title">Predictive Analytics</h3>
+      <p class="ml-feature-text">Forecasting trends and behaviors to support strategic business decisions.</p>
+    </div>
+    <div class="ml-feature-card">
+      <div class="ml-feature-icon"><i class="fas fa-robot"></i></div>
+      <h3 class="ml-feature-title">AI Automation</h3>
+      <p class="ml-feature-text">Creating intelligent systems that automate repetitive tasks and enhance efficiency.</p>
+    </div>
+
+    <!-- Added Earlier -->
+    <div class="ml-feature-card">
+      <div class="ml-feature-icon"><i class="fas fa-database"></i></div>
+      <h3 class="ml-feature-title">Data Engineering</h3>
+      <p class="ml-feature-text">Designing robust data pipelines and architectures to fuel ML models and analytics.</p>
+    </div>
+    <div class="ml-feature-card">
+      <div class="ml-feature-icon"><i class="fas fa-eye"></i></div>
+      <h3 class="ml-feature-title">Computer Vision</h3>
+      <p class="ml-feature-text">Enabling machines to interpret and process visual information for applications like recognition and tracking.</p>
+    </div>
+
+    <!-- ✅ Newly Added 3 Cards -->
+    <div class="ml-feature-card">
+      <div class="ml-feature-icon"><i class="fas fa-language"></i></div>
+      <h3 class="ml-feature-title">Natural Language Processing</h3>
+      <p class="ml-feature-text">Developing systems that understand, interpret, and generate human language intelligently.</p>
+    </div>
+    <div class="ml-feature-card">
+      <div class="ml-feature-icon"><i class="fas fa-user-shield"></i></div>
+      <h3 class="ml-feature-title">Anomaly Detection</h3>
+      <p class="ml-feature-text">Identifying rare events or patterns that deviate from expected behavior in data.</p>
+    </div>
+    <div class="ml-feature-card">
+      <div class="ml-feature-icon"><i class="fas fa-cloud"></i></div>
+      <h3 class="ml-feature-title">Cloud ML Deployment</h3>
+      <p class="ml-feature-text">Deploying scalable ML models into cloud platforms for real-time applications.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Web Scraper Section 1 -->
+<section class="ws-intro-section">
+  <div class="ws-parallax-bg"></div>
+  <div class="ws-content-overlay"></div>
+
+  <div class="ws-content">
+    <h2>Web Data Extraction</h2>
+    <p class="ws-subtitle">
+      Automate your data gathering with intelligent scraping that handles deep complexity at scale.
+    </p>
+
+    <div class="ws-features">
+  <div class="ws-feature">
+    <div class="ws-feature-circle">
+      <i class="fas fa-globe"></i>
+    </div>
+    <h3>Global Reach</h3>
+    <p class="ws-feature-desc">
+      From surface level to deeply nested data worldwide.
+    </p>
+  </div>
+  <div class="ws-feature">
+    <div class="ws-feature-circle">
+      <i class="fas fa-cogs"></i>
+    </div>
+    <h3>Automation</h3>
+    <p class="ws-feature-desc">
+      Self healing pipelines for flawless 24/7 extraction.
+    </p>
+  </div>
+  <div class="ws-feature">
+    <div class="ws-feature-circle">
+      <i class="fas fa-eye"></i>
+    </div>
+    <h3>Data Insight</h3>
+    <p class="ws-feature-desc">
+      Raw data transformed into decision-ready intelligence.
+    </p>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+
+<!-- Web Scraper Section 2 -->
+<section class="ws-features-section">
+  <div class="ws-features-bg"></div>
+  <div class="ws-features-overlay"></div>
+
+  <h2 class="ws-features-heading">Web Scraper Capabilities</h2>
+  <div class="ws-features-grid">
+    <div class="ws-feature-card">
+      <div class="ws-feature-icon"><i class="fas fa-code"></i></div>
+      <h3 class="ws-feature-title">Dynamic Site Scraping</h3>
+      <p class="ws-feature-text">
+        Extract data from JavaScript-heavy websites with tools that handle dynamic content seamlessly.
+      </p>
+    </div>
+    <div class="ws-feature-card">
+      <div class="ws-feature-icon"><i class="fas fa-lock"></i></div>
+      <h3 class="ws-feature-title">Anti-Bot Evasion</h3>
+      <p class="ws-feature-text">
+        Circumvent detection with rotating proxies, custom headers, and human-like browsing patterns.
+      </p>
+    </div>
+    <div class="ws-feature-card">
+      <div class="ws-feature-icon"><i class="fas fa-database"></i></div>
+      <h3 class="ws-feature-title">Data Storage Pipelines</h3>
+      <p class="ws-feature-text">
+        Streamline scraped data into databases, files, or analytics platforms for immediate use.
+      </p>
+    </div>
+    <div class="ws-feature-card">
+      <div class="ws-feature-icon"><i class="fas fa-sync-alt"></i></div>
+      <h3 class="ws-feature-title">Scheduled Scraping</h3>
+      <p class="ws-feature-text">
+        Automate scraping tasks on daily, weekly, or custom schedules to keep data fresh and updated.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact-section" id="contact-section">
+  <div class="parallax-bg"></div>
+  <div class="contact-content">
+    <h2 class="section-title">Contacts</h2>
+    <div class="fancy-divider">
+      <span class="divider-icon">A</span>
+    </div>
+    
+    <div class="contact-container">
+      <div class="contact-left">
+        <h3>Our Contacts & Socials</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> +92 312 1359857</li>
+          <li><i class="fab fa-whatsapp"></i> +966 54 452 9682</li>
+          <li><i class="fab fa-facebook"></i> <a href="#">A.R.C.H. Labs</a></li>
+          <li><i class="fas fa-globe"></i> <a href="#">arch.labs.co</a></li>
+          <li><i class="fab fa-linkedin"></i> <a href="#">A.R.C.H. Labs</a></li>
+          <li><i class="fas fa-envelope"></i> archlabs1@gmail.com</li>
+        </ul>
+      </div>
+
+      <div class="contact-right">
+        <h3>Contact Us</h3>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="E-mail" required />
+          <input type="text" placeholder="Subject" />
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <p>© Copyright A.R.C.H. Labs. All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+
+
+ 
+ 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const scroller = document.getElementById("scroller");
+  const servicesSection = document.querySelector(".services-container");
+  const introSection = document.querySelector(".intro-section");
+  const voiceSection = document.querySelector(".voice-ai-info-section");
+
+  let isInServices = false;
+  let isScrolling = false;
+
+  function smoothHorizontalScroll(element, amount) {
+    if (isScrolling) return;
+    isScrolling = true;
+    
+    const start = element.scrollLeft;
+    const end = start + amount;
+    const duration = 500; // Increased duration for smoother effect
+    const startTime = performance.now();
+
+    function animate(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Using easeOutQuad for smoother deceleration
+      const easedProgress = 1 - (1 - progress) * (1 - progress);
+      element.scrollLeft = start + (end - start) * easedProgress;
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        isScrolling = false;
+        checkScrollLimits();
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  function checkScrollLimits() {
+    const maxScrollLeft = scroller.scrollWidth - scroller.clientWidth;
+    const scrollLeft = scroller.scrollLeft;
+    
+    // If we've scrolled to the end, allow vertical scroll to next section
+    if (Math.abs(scrollLeft - maxScrollLeft) < 5) {
+      setTimeout(() => {
+        voiceSection.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+    // If we've scrolled to the start, allow vertical scroll to previous section
+    else if (scrollLeft <= 5) {
+      setTimeout(() => {
+        introSection.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+  }
+
+  window.addEventListener("scroll", () => {
+    const rect = servicesSection.getBoundingClientRect();
+    isInServices = rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+  });
+
+  window.addEventListener("wheel", (e) => {
+    if (!isInServices || isScrolling) return;
+
+    const maxScrollLeft = scroller.scrollWidth - scroller.clientWidth;
+    const scrollLeft = scroller.scrollLeft;
+    const direction = e.deltaY > 0 ? 1 : -1;
+    const scrollAmount = window.innerWidth * 0.5; // Scroll half viewport width
+
+    // Check if we're at the boundaries
+    if ((direction > 0 && scrollLeft >= maxScrollLeft) || 
+        (direction < 0 && scrollLeft <= 0)) {
+      return; // Let the browser handle vertical scrolling
+    }
+
+    // Prevent default to stop vertical scroll
+    e.preventDefault();
+    
+    // Calculate target scroll position
+    let targetScroll = scrollLeft + (direction * scrollAmount);
+    targetScroll = Math.max(0, Math.min(maxScrollLeft, targetScroll));
+    
+    smoothHorizontalScroll(scroller, targetScroll - scrollLeft);
+  }, { passive: false });
+
+  // Touch events for mobile
+  let touchStartX = 0;
+  let touchStartY = 0;
+  
+  scroller.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  scroller.addEventListener('touchmove', (e) => {
+    if (!isInServices) return;
+    
+    const touchX = e.touches[0].clientX;
+    const touchY = e.touches[0].clientY;
+    const diffX = touchStartX - touchX;
+    const diffY = touchStartY - touchY;
+    
+    // Only prevent vertical scrolling if we're primarily scrolling horizontally
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      e.preventDefault();
+      scroller.scrollLeft += diffX;
+      touchStartX = touchX;
+      touchStartY = touchY;
+    }
+  }, { passive: false });
+
+  // --- MOBILE NAV LOGIC ---
+  const mobileNavToggle = document.getElementById('mobile-nav-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  const mobileBodyOverly = document.getElementById('mobile-body-overly');
+  const body = document.body;
+
+  mobileNavToggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    mobileNav.classList.toggle('active');
+    mobileBodyOverly.classList.toggle('active');
+    body.classList.toggle('mobile-nav-active');
+  });
+
+  mobileBodyOverly.addEventListener('click', function() {
+    mobileNav.classList.remove('active');
+    mobileBodyOverly.classList.remove('active');
+    body.classList.remove('mobile-nav-active');
+  });
+
+  const mobileNavLinks = mobileNav.querySelectorAll('a');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      mobileNav.classList.remove('active');
+      mobileBodyOverly.classList.remove('active');
+      body.classList.remove('mobile-nav-active');
+    });
+  });
+
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      mobileNav.classList.remove('active');
+      mobileBodyOverly.classList.remove('active');
+      body.classList.remove('mobile-nav-active');
+    }
+  });
+});
+
+
+
+    const bubblesContainer = document.querySelector('.chatbot-bubbles');
+  for (let i = 0; i < 30; i++) {
+    const bubble = document.createElement('span');
+    bubble.style.left = `${Math.random() * 100}%`;
+    const size = 8 + Math.random() * 20;
+    bubble.style.width = bubble.style.height = `${size}px`;
+    bubble.style.animationDuration = `${10 + Math.random() * 20}s`;
+    bubble.style.opacity = Math.random() * 0.3 + 0.2;
+    bubble.style.animationDelay = `${Math.random() * 10}s`;
+    bubblesContainer.appendChild(bubble);
+  }
+
+
+
+
+
+    document.querySelector('.chatbot-launch-btn').addEventListener('click', () => {
+    document.getElementById('chatbotWindow').style.display = 'flex';
+  });
+
+  document.getElementById('closeChatbot').addEventListener('click', () => {
+    document.getElementById('chatbotWindow').style.display = 'none';
+  });
+
+  document.getElementById('sendMessageBtn').addEventListener('click', sendMessage);
+  document.getElementById('chatbotInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') sendMessage();
+  });
+
+  function sendMessage() {
+    const input = document.getElementById('chatbotInput');
+    const text = input.value.trim();
+    if (text === '') return;
+
+    addMessage(text, 'user');
+    input.value = '';
+
+    // Fake bot reply
+    setTimeout(() => {
+      addMessage("Bot says: " + text, 'bot');
+    }, 500);
+  }
+
+  function addMessage(msg, sender) {
+    const container = document.getElementById('chatbotMessages');
+    const messageEl = document.createElement('div');
+    messageEl.classList.add('chatbot-message', sender);
+    messageEl.textContent = msg;
+    container.appendChild(messageEl);
+    container.scrollTop = container.scrollHeight;
+  }
+
+
+
+  
+</script>
+
+</body>
+</html>
