@@ -1,0 +1,858 @@
+/* Web Development Section 1 */
+.webdev-explanation-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.webdev-parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/webdevelopment background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+.webdev-content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 0;
+}
+
+.webdev-content {
+  text-align: center;
+  max-width: 900px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.webdev-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.4);
+  font-weight: 700;
+}
+
+.webdev-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 300;
+}
+
+.webdev-features {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.webdev-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+/* ✅ UPDATED COLORS (same as Voice AI) */
+.webdev-feature-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(79, 209, 180, 0.15);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 2px solid rgba(79, 209, 180, 0.4);
+  transition: all 0.3s ease;
+}
+
+.webdev-feature-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(79, 209, 180, 0.4);
+}
+
+.webdev-feature i {
+  font-size: 2.8rem;
+  color: #4fd1b4;
+}
+
+.webdev-feature h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.webdev-feature p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+
+/* Web Development Section 2 */
+.webdev-info-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.webdev-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f172a;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.webdev-circuit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/aaa1.jpg');
+  opacity: 0.1;
+  animation: circuitMove 30s linear infinite;
+}
+
+.webdev-circuit:nth-child(2) {
+  animation-direction: reverse;
+  opacity: 0.05;
+}
+
+.webdev-code {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/aaa1.jpg');
+  opacity: 0.1;
+  animation: codeMove 40s linear infinite;
+}
+
+@keyframes circuitMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+@keyframes codeMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 1000px; }
+}
+
+.webdev-info-container {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ✅ UPDATED color to match Voice AI style */
+.webdev-info-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #4fd1b4;
+  font-weight: 700;
+}
+
+.webdev-info-text {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.webdev-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.webdev-visual-code {
+  position: relative;
+}
+
+/* ✅ Updated icon color to match Voice AI style */
+.code-icon {
+  font-size: 5rem;
+  color: #4fd1b4;
+  position: relative;
+}
+
+.code-line {
+  position: absolute;
+  height: 3px;
+  background: rgba(79, 209, 180, 0.5);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: codeLine 2s infinite ease-in-out;
+}
+
+.code-line:nth-child(2) {
+  width: 80px;
+  top: 30%;
+  animation-delay: 0.3s;
+}
+
+.code-line:nth-child(3) {
+  width: 120px;
+  top: 60%;
+  animation-delay: 0.6s;
+}
+
+.code-line:nth-child(4) {
+  width: 60px;
+  top: 90%;
+  animation-delay: 0.9s;
+}
+
+@keyframes codeLine {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.webdev-brackets {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.bracket {
+  font-size: 10rem;
+  color: rgba(79, 209, 180, 0.2);
+  line-height: 1;
+  animation: bracketPulse 4s infinite ease-in-out;
+}
+
+.bracket:nth-child(2) {
+  animation-delay: 1s;
+}
+
+@keyframes bracketPulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .webdev-explanation-section,
+  .webdev-info-section {
+    height: auto;
+    padding: 4rem 0;
+  }
+  
+  .webdev-content h2,
+  .webdev-info-heading {
+    font-size: 2.5rem;
+  }
+  
+  .webdev-subtitle,
+  .webdev-info-text {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .webdev-features {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  
+  .webdev-feature-circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .webdev-feature i {
+    font-size: 2rem;
+  }
+  
+  .code-icon {
+    font-size: 3rem;
+  }
+  
+  .bracket {
+    font-size: 5rem;
+  }
+}
+
+
+/* Web Development Section 2 */
+.webdev-info-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.webdev-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f172a;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.webdev-circuit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/aaa1.jpg');
+  opacity: 0.1;
+  animation: circuitMove 30s linear infinite;
+}
+
+.webdev-circuit:nth-child(2) {
+  animation-direction: reverse;
+  opacity: 0.05;
+}
+
+.webdev-code {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/aaa1.jpg');
+  opacity: 0.1;
+  animation: codeMove 40s linear infinite;
+}
+
+@keyframes circuitMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+@keyframes codeMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 1000px; }
+}
+
+.webdev-info-container {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.webdev-info-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #d14f4f;
+  font-weight: 700;
+}
+
+.webdev-info-text {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.webdev-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.webdev-visual-code {
+  position: relative;
+}
+
+.code-icon {
+  font-size: 5rem;
+  color: #d14f4f;
+  position: relative;
+}
+
+.code-line {
+  position: absolute;
+  height: 3px;
+  background: rgba(209, 79, 79, 0.5);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: codeLine 2s infinite ease-in-out;
+}
+
+.code-line:nth-child(2) {
+  width: 80px;
+  top: 30%;
+  animation-delay: 0.3s;
+}
+
+.code-line:nth-child(3) {
+  width: 120px;
+  top: 60%;
+  animation-delay: 0.6s;
+}
+
+.code-line:nth-child(4) {
+  width: 60px;
+  top: 90%;
+  animation-delay: 0.9s;
+}
+
+@keyframes codeLine {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.webdev-brackets {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.bracket {
+  font-size: 10rem;
+  color: rgba(209, 79, 79, 0.2);
+  line-height: 1;
+  animation: bracketPulse 4s infinite ease-in-out;
+}
+
+.bracket:nth-child(2) {
+  animation-delay: 1s;
+}
+
+@keyframes bracketPulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .webdev-explanation-section,
+  .webdev-info-section {
+    height: auto;
+    padding: 4rem 0;
+  }
+  
+  .webdev-content h2,
+  .webdev-info-heading {
+    font-size: 2.5rem;
+  }
+  
+  .webdev-subtitle,
+  .webdev-info-text {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .webdev-features {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  
+  .webdev-feature-circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .webdev-feature i {
+    font-size: 2rem;
+  }
+  
+  .code-icon {
+    font-size: 3rem;
+  }
+  
+  .bracket {
+    font-size: 5rem;
+  }
+}
+
+
+
+/* Shared Styles */
+.pulse {
+  animation: pulseEffect 2s infinite;
+}
+
+@keyframes pulseEffect {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Section 1 */
+.webdev-explanation-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.webdev-parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/web\ development.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+.webdev-content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 0;
+}
+
+.webdev-content {
+  text-align: center;
+  max-width: 900px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.webdev-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.4);
+  font-weight: 700;
+}
+
+.webdev-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 300;
+}
+
+.webdev-features {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.webdev-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+.webdev-feature-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(79, 209, 180, 0.15);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 2px solid rgba(79, 209, 180, 0.4);
+  transition: all 0.3s ease;
+}
+
+.webdev-feature-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(79, 209, 180, 0.4);
+}
+
+.webdev-feature i {
+  font-size: 2.8rem;
+  color: #4fd1b4;
+}
+
+.webdev-feature h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.webdev-feature p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+
+/* Section 2 */
+.webdev-info-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(135deg, #000000, #000000);
+}
+
+.webdev-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.webdev-circuit,
+.webdev-code {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/web\ development.jpg');
+  opacity: 0.05;
+  animation: moveBg 60s linear infinite;
+}
+
+.webdev-circuit:nth-child(2) {
+  animation-direction: reverse;
+}
+
+@keyframes moveBg {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+.webdev-info-container {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.webdev-info-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00f0ff;
+  font-weight: 700;
+}
+
+.webdev-info-text {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.webdev-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.webdev-visual-code {
+  position: relative;
+}
+
+.webdev-visual-code .webdev-feature-circle {
+  width: 120px;
+  height: 120px;
+}
+
+.webdev-visual-code i {
+  font-size: 3rem;
+  color: #4fd1b4;
+}
+
+.webdev-brackets {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.bracket {
+  font-size: 10rem;
+  color: rgba(79, 209, 180, 0.2);
+  line-height: 1;
+  animation: bracketPulse 4s infinite ease-in-out;
+}
+
+.bracket:nth-child(2) {
+  animation-delay: 1s;
+}
+
+@keyframes bracketPulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.1);
+  }
+}
+
+/* New subtle glow on hover for Section 2 icon */
+.webdev-visual-code .webdev-feature-circle:hover {
+  box-shadow: 0 0 30px rgba(79, 209, 180, 0.5);
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .webdev-explanation-section,
+  .webdev-info-section {
+    height: auto;
+    padding: 4rem 0;
+  }
+
+  .webdev-content h2,
+  .webdev-info-heading {
+    font-size: 2.5rem;
+  }
+
+  .webdev-subtitle,
+  .webdev-info-text {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .webdev-features {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .webdev-feature-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .webdev-feature i {
+    font-size: 2rem;
+  }
+
+  .webdev-visual-code .webdev-feature-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .webdev-visual-code i {
+    font-size: 2rem;
+  }
+
+  .bracket {
+    font-size: 5rem;
+  }
+}
+
+/* BUBBLE BACKGROUND FOR SECTION 2 */
+
+.webdev-bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.webdev-bubbles span {
+  position: absolute;
+  display: block;
+  bottom: -50px;
+  border-radius: 50%;
+  background: rgba(79, 209, 180, 0.2);
+  animation: bubbleRise linear infinite;
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateY(-50vh) scale(1.3);
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.8);
+    opacity: 0;
+  }
+}
+
+
+/* Simpler version with single background image */
+.webdev-info-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url('../images/app\ development.jpg') center/cover no-repeat;
+}
+
+/* Then remove .webdev-bg, .webdev-circuit, and .webdev-code classes */
