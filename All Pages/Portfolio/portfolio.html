@@ -22,9 +22,21 @@
   <link rel="stylesheet" href="../Portfolio/css/portfolio2.css">
   <link rel="stylesheet" href="../Portfolio/css/contact.css">
   <link rel="stylesheet" href="../Portfolio/css/ourportfolionavbar.css">
-
-
 </head>
+
+<style>
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+</style>
 
 <body>
 
@@ -35,7 +47,7 @@
       <span></span>
     </div>
     <nav class="home-nav" id="home-nav">
-      <a href="../Home/home.html">Home</a>
+      <a href="../Home/index.html">Home</a>
       <a href="../About me/aboutme.html">About</a>
       <a href="../Service/Service.html">Services</a>
       <a href="../Portfolio/portfolio.html">Portfolio</a>
@@ -68,7 +80,7 @@
   <div class="portfolio-grid animate-on-scroll">
     <!-- Project 1 -->
     <div class="portfolio-card" data-category="ai-assistant">
-      <div class="portfolio-image" style="background-image: url('../Portfolio/images/AI\ Voice\ Assistant.jpg')">
+      <div class="portfolio-image" style="background-image: url('../Portfolio/images/Ai\ Assistant.jpg')">
         <div class="portfolio-overlay">
           <h3 class="portfolio-title">AI Voice Assistant</h3>
           <span class="portfolio-category">AI Assistant</span>
@@ -78,21 +90,9 @@
       </div>
     </div>
     
-    <!-- Project 2 -->
-    <div class="portfolio-card" data-category="web-scraper">
-      <div class="portfolio-image" style="background-image: url('../Portfolio//images/webscraper.png')">
-        <div class="portfolio-overlay">
-          <h3 class="portfolio-title">Web Scraping</h3>
-          <span class="portfolio-category">Web Scraper</span>
-          <p class="portfolio-description">Custom web scraping solution that collects and organizes data from multiple sources with automated quality checks and API integration.</p>
-          <a href="#" class="view-details">View Details <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-    
     <!-- Project 3 -->
     <div class="portfolio-card" data-category="marketing">
-      <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+      <div class="portfolio-image" style="background-image: url('../Portfolio/images//deep\ seek.jpg')">
         <div class="portfolio-overlay">
           <h3 class="portfolio-title">Digital Campaign</h3>
           <span class="portfolio-category">Marketing</span>
@@ -101,8 +101,21 @@
         </div>
       </div>
     </div>
+
+       <!-- Project 2 -->
+    <div class="portfolio-card" data-category="web-scraper">
+      <div class="portfolio-image" style="background-image: url('..//Portfolio/images/web\ scraper.jpg')">
+        <div class="portfolio-overlay">
+          <h3 class="portfolio-title">Web Scraping</h3>
+          <span class="portfolio-category">Web Scraper</span>
+          <p class="portfolio-description">Custom web scraping solution that collects and organizes data from multiple sources with automated quality checks and API integration.</p>
+          <a href="#" class="view-details">View Details <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
  
 <section class="partners-showcase">
   <div class="partners-wrapper animate-on-scroll">
@@ -231,7 +244,7 @@
 
 
 <!-- Pricing Plans Section -->
-<!-- Pricing Section -->
+<!-- Pricing Section -->  
 <section class="pricing-section">
   <div class="pricing-header animate-on-scroll">
     <h2>Choose A Plan That's</h2>
@@ -406,7 +419,7 @@
 <div class="portfolio-scroller animate-on-scroll" id="scroller">
   <!-- Web Development Projects -->
   <div class="portfolio-item" data-category="ai-assistant">
-    <div class="portfolio-image" style="background-image: url('../Portfolio/images/AI\ Voice\ Assistant.jpg')"></div>
+    <div class="portfolio-image" style="background-image: url('../Portfolio/images/Ai\ Assistant.jpg')"></div>
     <div class="portfolio-overlay">
       <h3 class="portfolio-title">AI Voice Assistant</h3>
       <span class="portfolio-category">AI Assistant</span>
@@ -417,7 +430,7 @@
   
   <!-- App Development Project -->
   <div class="portfolio-item" data-category="web-scraper">
-    <div class="portfolio-image" style="background-image: url('../Portfolio/images/webscraper2.png')"></div>
+    <div class="portfolio-image" style="background-image: url('../Portfolio/images/web\ scraper.jpg')"></div>
     <div class="portfolio-overlay">
       <h3 class="portfolio-title">Web Scraping</h3>
       <span class="portfolio-category">Web Scraper</span>
@@ -428,7 +441,7 @@
   
   <!-- Chat Bot Project -->
   <div class="portfolio-item" data-category="chat-bot">
-    <div class="portfolio-image" style="background-image: url('../Portfolio/images/deepseek.png')"></div>
+    <div class="portfolio-image" style="background-image: url('../Portfolio/images/deep\ seek.jpg')"></div>
     <div class="portfolio-overlay">
       <h3 class="portfolio-title">Customer Support Chat Bot</h3>
       <span class="portfolio-category">Chat Bot</span>
@@ -686,180 +699,12 @@
     });
   });
 });
-
-
-
-
-
-
-
-
-
-
-</script>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const animatedElements = document.querySelectorAll(".animate-on-scroll");
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate__animated", "animate__fadeInUp");
-            entry.target.classList.add("animated-visible");
-            observer.unobserve(entry.target); // animate once
-          }
-        });
-      },
-      {
-        threshold: 0.2
-      }
-    );
-
-    animatedElements.forEach(el => observer.observe(el));
-  });
-
-
-  document.addEventListener('DOMContentLoaded', function() {
-  // Intersection Observer for section animations
-  const animateOnScroll = function() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    // Observe all sections
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section);
-    });
-  };
-
-  // Initialize animations
-  animateOnScroll();
-  
-  // Re-run animations when resizing to handle any layout changes
-  window.addEventListener('resize', animateOnScroll);
-});
-
-
-// Add this to your existing JavaScript
-document.addEventListener("DOMContentLoaded", function() {
-  // Scroll animation observer
-  const animateOnScroll = function() {
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    const windowHeight = window.innerHeight;
-    
-    const checkPosition = function() {
-      elements.forEach(function(element) {
-        const positionFromTop = element.getBoundingClientRect().top;
-        
-        if (positionFromTop - windowHeight <= -100) {
-          element.classList.add('animated');
-        }
-      });
-    };
-    
-    window.addEventListener('scroll', checkPosition);
-    window.addEventListener('resize', checkPosition);
-    
-    // Trigger initial check
-    checkPosition();
-  };
-  
-  // Initialize all animations
-  animateOnScroll();
-  
-  // Your existing testimonial and pricing code...
-});
-</script>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        // Remove "active" class from all buttons
-        filterButtons.forEach((btn) => btn.classList.remove("active"));
-        // Add "active" to clicked button
-        button.classList.add("active");
-
-        const filterValue = button.getAttribute("data-filter");
-
-        portfolioItems.forEach((item) => {
-          const itemCategory = item.getAttribute("data-category");
-
-          if (filterValue === "all" || filterValue === itemCategory) {
-            item.style.display = "block"; // show item
-          } else {
-            item.style.display = "none"; // hide item
-          }
-        });
-      });
-    });
-  });
 </script>
 
 
 
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
-});
-
-
-// Update your existing scroll handler to this:
-let isScrolling = false;
-const scroller = document.querySelector(".portfolio-scroller");
-
-scroller.addEventListener("wheel", function (e) {
-  // Only handle horizontal scroll if there's horizontal content to scroll
-  const canScrollHorizontal = scroller.scrollWidth > scroller.clientWidth;
-  
-  if (canScrollHorizontal && Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
-    e.preventDefault();
-    scroller.scrollLeft += e.deltaY;
-    isScrolling = true;
-    
-    // Temporarily prevent vertical page scrolling
-    setTimeout(() => {
-      isScrolling = false;
-    }, 100);
-  }
-});
-
-// Prevent vertical scroll when actively scrolling horizontally
-window.addEventListener("wheel", function(e) {
-  if (isScrolling) {
-    e.preventDefault();
-  }
-}, { passive: false }); 
 </script>
 <script src="../Portfolio/js/portfolio.js"></script>
     

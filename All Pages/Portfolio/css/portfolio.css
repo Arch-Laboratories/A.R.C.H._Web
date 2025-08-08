@@ -2626,3 +2626,17 @@ body {
 .view-details:hover i {
   transform: translateX(5px);
 }
+
+
+
+.portfolio-showcase {
+  position: relative;
+  padding: 100px 10%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../images/ai\ projects.jpg'); /* Change this image URL if you want */
+  z-index: 1;
+  overflow: hidden;
+}
