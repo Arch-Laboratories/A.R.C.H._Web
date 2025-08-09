@@ -778,8 +778,8 @@
 .arrow-right::after {
   content: "";
   position: absolute;
-  right: 0;
-  top: 50%;
+  right: 7px;
+  top: 100%;
   transform: translateY(-50%) rotate(45deg);
   border: solid #4fd1b4;
   border-width: 0 6px 6px 0; /* thicker arrow head */

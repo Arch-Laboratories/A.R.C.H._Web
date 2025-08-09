@@ -139,36 +139,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const scroller = document.getElementById("scroller");
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const scroller = document.getElementById("scroller");
 
-    // Convert vertical scroll to horizontal scroll
-    scroller.addEventListener("wheel", function (e) {
-      e.preventDefault();
-      scroller.scrollLeft += e.deltaY;
-    });
+  //   scroller.addEventListener("wheel", function (e) {
+  //     e.preventDefault();
+  //     scroller.scrollLeft += e.deltaY;
+  //   });
 
-    // Filtering logic (same as before)
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
+  //   const filterButtons = document.querySelectorAll(".filter-btn");
+  //   const portfolioItems = document.querySelectorAll(".portfolio-item");
 
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        filterButtons.forEach((btn) => btn.classList.remove("active"));
-        button.classList.add("active");
-        const filterValue = button.getAttribute("data-filter");
+  //   filterButtons.forEach((button) => {
+  //     button.addEventListener("click", () => {
+  //       filterButtons.forEach((btn) => btn.classList.remove("active"));
+  //       button.classList.add("active");
+  //       const filterValue = button.getAttribute("data-filter");
 
-        portfolioItems.forEach((item) => {
-          const itemCategory = item.getAttribute("data-category");
-          if (filterValue === "all" || filterValue === itemCategory) {
-            item.style.display = "block";
-          } else {
-            item.style.display = "none";
-          }
-        });
-      });
-    });
-  });
+  //       portfolioItems.forEach((item) => {
+  //         const itemCategory = item.getAttribute("data-category");
+  //         if (filterValue === "all" || filterValue === itemCategory) {
+  //           item.style.display = "block";
+  //         } else {
+  //           item.style.display = "none";
+  //         }
+  //       });
+  //     });
+  //   });
+  // });
 
 
 
@@ -313,5 +311,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
 
-
-  
+// Order Us And Conatct Us Scrolling 
+document.querySelectorAll('a[href^="#contact-section"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
