@@ -55,131 +55,60 @@
     scrollbar-width: none;  /* Firefox */
   }
 
-  body, html {
-    -ms-overflow-style: none; 
-    scrollbar-width: none;
-  }
 
-  /* Hide all scrollbars globally */
-  ::-webkit-scrollbar {
-    width: 0 !important;
-    height: 0 !important;
-    display: none !important;
-  }
-  * {
-    -ms-overflow-style: none !important;
-    scrollbar-width: none !important;
-  }
 
-  /* Animation styles for index.html */
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
+  /* Default styles (Desktop) */
+.intro-heading {
+  font-size: 4rem; /* Large size for desktop */
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  white-space: nowrap; /* Keeps text in one line if needed */
+}
 
-  .animate-on-scroll.animated {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.intro-subtext {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
 
-  /* Specific animation delays for index.html sections */
-  /* Intro Section */
-  .intro-section .intro-center-content.animate-on-scroll {
-    transition-delay: 0.3s;
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .intro-heading {
+    font-size: 4.5rem; /* Slightly smaller for tablets */
   }
+  .intro-subtext {
+    font-size: 2.0rem;
+  }
+}
 
-  /* About Us Split Section */
-  .aboutus-split-section .aboutus-left.animate-on-scroll {
-    transition-delay: 0.2s;
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  .intro-heading {
+    font-size: 4.5rem; /* Smaller for mobile */
+    white-space: normal; /* Allow text to wrap if needed */
   }
+  .intro-subtext {
+    font-size: 1.5;
+  }
+}
 
-  .aboutus-split-section .aboutus-right.animate-on-scroll {
-    transition-delay: 0.4s;
+/* Very small mobile devices (optional) */
+@media (max-width: 480px) {
+  .intro-heading {
+    font-size: 4.5rem;
   }
+  .intro-subtext {
+    font-size: 1.5rem;
+  }
+}
 
-  /* Values Section */
-  .aboutus-values-section .aboutus-section-header.animate-on-scroll {
-    transition-delay: 0.2s;
-  }
 
-  .aboutus-values-section .aboutus-value-item:nth-child(1).animate-on-scroll {
-    transition-delay: 0.3s;
-  }
-
-  .aboutus-values-section .aboutus-value-item:nth-child(2).animate-on-scroll {
-    transition-delay: 0.4s;
-  }
-
-  .aboutus-values-section .aboutus-value-item:nth-child(3).animate-on-scroll {
-    transition-delay: 0.5s;
-  }
-
-  /* Voice AI Explanation Section */
-  .voice-ai-explanation-section .outlined-heading.animate-on-scroll {
-    transition-delay: 0.2s;
-  }
-
-  .voice-ai-explanation-section .subtitle.animate-on-scroll {
-    transition-delay: 0.3s;
-  }
-
-  .voice-ai-explanation-section .ai-features.animate-on-scroll {
-    transition-delay: 0.4s;
-  }
-
-  /* Voice AI Info Section */
-  .voice-ai-info-section .voice-ai-info-heading.animate-on-scroll {
-    transition-delay: 0.2s;
-  }
-
-  .voice-ai-info-section .voice-ai-info-text.animate-on-scroll {
-    transition-delay: 0.3s;
-  }
-
-  .voice-ai-info-section .voice-ai-visual.animate-on-scroll {
-    transition-delay: 0.4s;
-  }
-
-  /* Partners Section */
-  .ourportfolio-partners-showcase .ourportfolio-section-header.animate-on-scroll {
-    transition-delay: 0.2s;
-  }
-
-  .ourportfolio-partners-showcase .ourportfolio-partners-container.animate-on-scroll {
-    transition-delay: 0.4s;
-  }
-
-  /* Contact Section */
-  .contact-section .section-title.animate-on-scroll {
-    transition-delay: 0.2s;
-  }
-
-  .contact-section .fancy-divider.animate-on-scroll {
-    transition-delay: 0.3s;
-  }
-
-  .contact-section .contact-left.animate-on-scroll {
-    transition-delay: 0.4s;
-  }
-
-  .contact-section .contact-right.animate-on-scroll {
-    transition-delay: 0.5s;
-  }
-
-  .aboutus-value-item,
-  .ai-feature {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-  }
-
-  .aboutus-value-item.visible,
-  .ai-feature.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  
 </style>
+
+
+
+
 </head>
 <body>
   <!-- Animated Background -->
@@ -198,7 +127,33 @@
 
   <div id="preloader"></div>
 
-  <!-- NavBar Section -->
+
+
+  <!-- Mobile Body Overlay -->
+  <div id="mobile-body-overly"></div>
+
+  <div id="main-container">
+    <!-- Intro Section -->
+    <section class="intro-section">
+      <div class="particles-container" id="particles-js"></div>
+      <div class="intro-center-content animate-on-scroll">
+        <h1 class="intro-heading">
+  <img 
+    src="All Pages/Home/AXIOWARE Logo without BG (big size)/17.png" 
+    alt="Axioware" 
+    class="liquid-animation"
+    width="800" 
+    height="800"
+  >
+</h1>
+        <!-- <p class="intro-subtext">Where ideas meet intelligent execution</p>
+        <section id="scroller">
+        <a href="#scroller" class="btn pulse-animation">LET'S GET STARTED</a>
+        </section> -->
+      </div>
+    </section>
+
+      <!-- NavBar Section -->
   <header class="home-navbar">
     <div class="home-hamburger" id="home-hamburger">
       <span></span>
@@ -213,20 +168,6 @@
       <a href="#contact-section">Contact</a>
     </nav>
   </header>
-
-  <!-- Mobile Body Overlay -->
-  <div id="mobile-body-overly"></div>
-
-  <div id="main-container">
-    <!-- Intro Section -->
-    <section class="intro-section">
-      <div class="particles-container" id="particles-js"></div>
-      <div class="intro-center-content animate-on-scroll">
-        <h1 class="intro-heading liquid-animation">Axioware</h1>
-        <p class="intro-subtext">Where ideas meet intelligent execution</p>
-        <a href="#scroller" class="btn pulse-animation">LET'S GET STARTED</a>
-      </div>
-    </section>
 
     <section class="aboutus-split-section">
       <div class="aboutus-container">
@@ -534,12 +475,12 @@
           <div class="contact-left animate-on-scroll">
             <h3>Our Contacts & Socials</h3>
             <ul>
-              <li><i class="fas fa-phone"></i> +92 331 3134953</li>
-              <li><i class="fab fa-whatsapp"></i> +92 331 3134953</li>
+              <li><i class="fas fa-phone"></i> +92 315 2525625</li>
+              <li><i class="fab fa-whatsapp"></i> +92 315 2525625</li>
               <li><i class="fab fa-facebook"></i> <a href="#">Axioware</a></li>
-              <li><i class="fas fa-globe"></i> <a href="#">Axioware.co</a></li>
+              <li><i class="fas fa-globe"></i> <a href="#">Axioware.tech</a></li>
               <li><i class="fab fa-linkedin"></i> <a href="#">Axioware</a></li>
-              <li><i class="fas fa-envelope"></i>Axioware@gmail.com</li>
+              <li><i class="fas fa-envelope"></i>business@axioware.tech</li>
             </ul>
           </div>
 
@@ -591,6 +532,32 @@
         });
       });
     </script>
+
+
+<script>
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        // Calculate the position to scroll to
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        
+        // Smooth scroll to the target position
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
   </div>
 </body>
 </html>

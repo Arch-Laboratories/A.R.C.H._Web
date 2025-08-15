@@ -2069,3 +2069,204 @@
 
 
 
+/* Existing microphone styles */
+.mic-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #4a90e2;  */
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+/* Active state when clicked */
+.mic-icon.active {
+  /* background: #ff3b30;  */
+  box-shadow: 0 0 0 4px #00ff55(255, 59, 48, 0.3);
+}
+
+/* Mic rings animation */
+.mic-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #4a90e2;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  opacity: 0;
+}
+
+.mic-icon.active .mic-ring {
+  border-color: #00ff55;
+  animation: pulse-active 2s infinite;
+}
+
+/* Animation for active state */
+@keyframes pulse-active {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Original animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.mic-ring:nth-child(2) {
+  animation-delay: 0.66s;
+}
+
+.mic-ring:nth-child(3) {
+  animation-delay: 1.33s;
+}
+
+/* Add this if you want the frequency lines to change color too */
+.mic-icon.active ~ .voice-ai-frequency .frequency-line {
+  background: #00ff55;
+}
+
+
+  body, html {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+  }
+
+  /* Hide all scrollbars globally */
+  ::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none !important;
+  }
+  * {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+
+  /* Animation styles for index.html */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Specific animation delays for index.html sections */
+  /* Intro Section */
+  .intro-section .intro-center-content.animate-on-scroll {
+    transition-delay: 0.3s;
+  }
+
+  /* About Us Split Section */
+  .aboutus-split-section .aboutus-left.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .aboutus-split-section .aboutus-right.animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  /* Values Section */
+  .aboutus-values-section .aboutus-section-header.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .aboutus-values-section .aboutus-value-item:nth-child(1).animate-on-scroll {
+    transition-delay: 0.3s;
+  }
+
+  .aboutus-values-section .aboutus-value-item:nth-child(2).animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  .aboutus-values-section .aboutus-value-item:nth-child(3).animate-on-scroll {
+    transition-delay: 0.5s;
+  }
+
+  /* Voice AI Explanation Section */
+  .voice-ai-explanation-section .outlined-heading.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .voice-ai-explanation-section .subtitle.animate-on-scroll {
+    transition-delay: 0.3s;
+  }
+
+  .voice-ai-explanation-section .ai-features.animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  /* Voice AI Info Section */
+  .voice-ai-info-section .voice-ai-info-heading.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .voice-ai-info-section .voice-ai-info-text.animate-on-scroll {
+    transition-delay: 0.3s;
+  }
+
+  .voice-ai-info-section .voice-ai-visual.animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  /* Partners Section */
+  .ourportfolio-partners-showcase .ourportfolio-section-header.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .ourportfolio-partners-showcase .ourportfolio-partners-container.animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  /* Contact Section */
+  .contact-section .section-title.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .contact-section .fancy-divider.animate-on-scroll {
+    transition-delay: 0.3s;
+  }
+
+  .contact-section .contact-left.animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  .contact-section .contact-right.animate-on-scroll {
+    transition-delay: 0.5s;
+  }
+
+  .aboutus-value-item,
+  .ai-feature {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .aboutus-value-item.visible,
+  .ai-feature.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
