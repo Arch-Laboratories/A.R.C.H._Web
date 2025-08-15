@@ -262,6 +262,7 @@ form button:hover {
 }
 
  .parallax-bg {
+  
           position: absolute;
           top: 0;
           left: 0;
@@ -275,3 +276,6 @@ form button:hover {
           z-index: -1;
           transform: translateZ(0); /* smooth scrolling fix */
 }
+
+
+
