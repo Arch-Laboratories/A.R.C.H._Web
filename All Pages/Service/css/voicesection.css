@@ -1156,7 +1156,7 @@
 
 @media (max-width: 480px) {
   .voice-ai-info-heading {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
   
   .voice-ai-info-text {
@@ -1204,7 +1204,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(15,23,42,0.7) 0%, rgba(45,55,72,0.8) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
   z-index: 0;
 }
 
@@ -1217,7 +1217,7 @@
 }
 
 .voice-ai-content h2 {
-  font-size: 3.5rem;
+  font-size: 3.0rem;
   margin-bottom: 1rem;
   color: #fff;
   text-shadow: 0 2px 15px rgba(0,0,0,0.4);
@@ -1225,7 +1225,7 @@
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 4rem;
   color: rgba(255,255,255,0.9);
   font-weight: 300;
@@ -1294,11 +1294,11 @@
     }
     
     .voice-ai-content h2 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
     
     .subtitle {
-      font-size: 1.2rem;
+      font-size: 1.0rem;
       margin-bottom: 3rem;
     }
     
@@ -1327,3 +1327,80 @@
 
 
 
+
+
+/* Existing microphone styles */
+.mic-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #4a90e2;  */
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+/* Active state when clicked */
+.mic-icon.active {
+  /* background: #ff3b30;  */
+  box-shadow: 0 0 0 4px #00ff55(255, 59, 48, 0.3);
+}
+
+/* Mic rings animation */
+.mic-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #4a90e2;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  opacity: 0;
+}
+
+.mic-icon.active .mic-ring {
+  border-color: #00ff55;
+  animation: pulse-active 2s infinite;
+}
+
+/* Animation for active state */
+@keyframes pulse-active {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Original animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.mic-ring:nth-child(2) {
+  animation-delay: 0.66s;
+}
+
+.mic-ring:nth-child(3) {
+  animation-delay: 1.33s;
+}
+
+/* Add this if you want the frequency lines to change color too */
+.mic-icon.active ~ .voice-ai-frequency .frequency-line {
+  background: #00ff55;
+}

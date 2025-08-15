@@ -116,3 +116,13 @@ document.querySelectorAll(".home-nav a").forEach(link => {
     nav.classList.remove("active");
   });
 });
+
+
+
+
+
+
+
+document.querySelector('.mic-icon').addEventListener('click', function() {
+  this.classList.toggle('active');
+});

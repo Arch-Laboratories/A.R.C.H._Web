@@ -1022,8 +1022,8 @@
 }
 
 .chatbot-content h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3.0rem;
+  margin-bottom: 1.0rem;
   color: #fff;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
@@ -1294,6 +1294,24 @@
   line-height: 1.6;
 }
 
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chatbot-explanation-section {
+    /* height: auto; */
+    /* padding: 4rem 0; */
+  }
+  
+  .chatbot-info-heading {
+    font-size: 2.2rem;
+  }
+  
+  .chatbot-info-text  {
+    font-size: 1.0rem;
+    /* margin-bottom: 2.5rem; */
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .chatbot-explanation-section {
@@ -1302,11 +1320,11 @@
   }
   
   .chatbot-content h2 {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
   
   .chatbot-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     margin-bottom: 2.5rem;
   }
   

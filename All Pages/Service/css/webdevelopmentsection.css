@@ -569,7 +569,7 @@
 }
 
 .webdev-content h2 {
-  font-size: 3.5rem;
+  font-size: 3.0rem;
   margin-bottom: 1rem;
   color: #fff;
   text-shadow: 0 2px 15px rgba(0,0,0,0.4);
@@ -577,7 +577,7 @@
 }
 
 .webdev-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 4rem;
   color: rgba(255,255,255,0.9);
   font-weight: 300;
@@ -684,10 +684,11 @@
 }
 
 .webdev-info-heading {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3.0rem;
+  margin-bottom: 2rem;
   color: #00f0ff;
   font-weight: 700;
+
 }
 
 .webdev-info-text {
@@ -765,14 +766,16 @@
     padding: 4rem 0;
   }
 
+ 
+
   .webdev-content h2,
   .webdev-info-heading {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .webdev-subtitle,
   .webdev-info-text {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     margin-bottom: 3rem;
   }
 
