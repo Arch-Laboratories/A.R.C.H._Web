@@ -69,6 +69,21 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   -ms-overflow-style: none !important; /* IE/Edge */
   scrollbar-width: none !important; /* Firefox */
 }
+
+
+</style>
+<style>
+
+  /* Alternatively, you could use text-stroke (better for some cases) */
+  @supports (-webkit-text-stroke: 1px #28A0B8) {
+    h1, h2, h3, h4, h5, h6 {
+      -webkit-text-stroke: 1px #28A0B8;
+      /* text-stroke: 1px #28A0B8; */
+      text-shadow: none;
+    }
+  }
+
+
 </style>
 
 
@@ -155,8 +170,8 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 <section class="partners-showcase">
   <div class="partners-wrapper animate-on-scroll">
     <div class="section-header animate-on-scroll">
-      <h2>Our Valued Partners</h2>
-      <p>Collaborating with industry leaders to deliver exceptional solutions</p>
+      <h2 class="outlined-heading">Technologies We Work With</h2>
+      <p>Leveraging modern technologies to build reliable, scalable, and future-ready solutions.</p>
     </div>
 
     <div class="partners-container animate-on-scroll">
