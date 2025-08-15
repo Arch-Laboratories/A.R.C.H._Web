@@ -157,3 +157,25 @@
   100% { transform: translateY(0); opacity: 1; }
 }
 
+@media (max-width: 768px) {
+  .home-nav {
+    display: none;
+    flex-direction: column;
+    background: #000; /* adjust to match */
+    position: absolute;
+    top: 37px; /* below header */
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .home-nav.active {
+    display: flex;
+  }
+
+  .home-hamburger {
+    cursor: pointer;
+    z-index: 1000;
+  }
+}

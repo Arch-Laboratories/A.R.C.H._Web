@@ -152,142 +152,18 @@
   50% { transform: translateY(-20px); }
 }
 
-/* Mobile Navbar Styles */
-@media (max-width: 768px) {
-  .home-nav {
-    position: fixed;
-    top: 0;
-    /* left: -100%; */
-    /* width: 70%; */
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.95);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s ease-out;
-    z-index: 999;
-    /* padding: 20px; */
-  }
-
-  .home-nav.active {
-    left: 0;
-  }
-
-  .home-nav a {
-    /* color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin: 15px 0;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    transition: all 0.3s ease; */
-  }
-
-  .home-nav a:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  .home-hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    cursor: pointer;
-    z-index: 1000;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-  }
-
-  .home-hamburger span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: white;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-  }
-
-  /* Hamburger animation
-  .home-hamburger.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-
-  .home-hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .home-hamburger.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  } */
-}
-
-/* Desktop styles */
-@media (min-width: 769px) {
-  .home-hamburger {
-    /* display: none; */
-  }
-  
-  .home-nav {
-    /* display: flex; */
-    /* gap: 25px; */
-  }
-}
-
-
-@media (max-width: 768px) {
-  .home-nav {
-    position: fixed;
-    top: 0;
-    left: -100%;  /* Hidden */
-  
-  }
-
-  .home-nav.active {
-    left: 0;  /* Visible */
-  }
-}
-
 
 
 
 
   
 </style>
-
-
-
-
 </head>
 <body>
-  <!-- Animated Background -->
-  <div class="animated-bg">
-    <div class="animated-text">Axioware</div>
-    <div class="animated-text">Axioware</div>
-    <div class="animated-text">Axioware</div>
-    <div class="animated-text">Axioware</div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="glow-effect"></div>
-    <div class="glow-effect"></div>
-  </div>
 
   <div id="preloader"></div>
-
-
-
   <!-- Mobile Body Overlay -->
   <div id="mobile-body-overly"></div>
-
-
-        <!-- NavBar Section -->
-
-
   <div id="main-container">
     <!-- Intro Section -->
    <section class="intro-section">
@@ -316,7 +192,7 @@
       <span></span>
     </div>
     <nav class="home-nav" id="home-nav">
-      <a href="index.html">Home</a>
+      <a href="/index.html">Home</a>
       <a href="/All%20Pages/About%20me/aboutme.html">About</a>
       <a href="/All%20Pages/Service/Service.html">Services</a>
       <a href="/All%20Pages/Portfolio/portfolio.html">Portfolio</a>
@@ -716,86 +592,16 @@
   });
 
 
-  
-</script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.getElementById('home-hamburger');
-  const nav = document.getElementById('home-nav');
-  
-  // Initially hide nav on mobile
-  if (window.innerWidth <= 768) {
-    nav.classList.remove('active');
-  }
-  
-  // Toggle menu on hamburger click
-  hamburger.addEventListener('click', function() {
-    this.classList.toggle('active');
-    nav.classList.toggle('active');
-    
-    // Toggle body scroll when menu is open
-    if(nav.classList.contains('active')) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-  });
-  
-  // Close menu when clicking on links
-  const navLinks = document.querySelectorAll('.home-nav a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      nav.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-  });
-  
-  // Handle window resize
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-      // Ensure nav is visible on desktop
-      nav.classList.add('active');
-      document.body.style.overflow = '';
-    } else {
-      // Hide nav when switching back to mobile
-      if (!hamburger.classList.contains('active')) {
-        nav.classList.remove('active');
-      }
-    }
-  });
+const nav = document.getElementById('home-nav');
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('active');
 });
 
-// On resize
-if (window.innerWidth > 768) {
-  nav.classList.add('active');
-} else {
-  nav.classList.remove('active');
-}
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  const hamburger = document.getElementById('home-hamburger');
-  const nav = document.getElementById('home-nav');
-
-  hamburger.addEventListener('click', function() {
-    this.classList.toggle('active');
-    nav.classList.toggle('active');
-
-    document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
-  });
-
-  // Always reset nav for desktop
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-      nav.classList.remove('active');
-      hamburger.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  });
-});
-
+  
 </script>
   </div>
 </body>

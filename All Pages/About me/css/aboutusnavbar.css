@@ -120,7 +120,7 @@
 
   .home-nav {
     position: absolute;
-    top: 60px;
+    top: 37px;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -175,19 +175,3 @@
   animation: home-slideDown 0.8s ease forwards;
 }
 
-/* Add padding to the first section to account for fixed navbar */
-.hero-section {
-  padding-top: 80px; /* Adjust this value based on your navbar height */
-  min-height: calc(100vh - 80px); /* Adjust viewport height calculation */
-}
-
-/* Ensure other content doesn't hide behind navbar */
-body {
-  padding-top: 80px; /* Same as navbar height */
-}
-
-/* Remove the hidden class behavior since we want it always visible */
-.home-navbar.hidden {
-  transform: translateY(0);
-  opacity: 1;
-}
