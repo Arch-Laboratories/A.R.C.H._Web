@@ -1145,3 +1145,80 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+
+.responsive-logo {
+  /* Default size for very large screens */
+  width: 800px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .responsive-logo {
+    width: 600px;
+  }
+}
+
+@media (max-width: 992px) { /* tablets landscape */
+  .responsive-logo {
+    width: 500px;
+  }
+}
+
+@media (max-width: 768px) { /* tablets portrait */
+  .responsive-logo {
+    width: 800px;
+  }
+}
+
+@media (max-width: 576px) { /* mobile devices */
+  .responsive-logo {
+    width: 800px;
+  }
+}
+
+@media (max-width: 400px) { /* small mobile devices */
+  .responsive-logo {
+    width: 800px;
+  }
+}
+
+/* Maintain the liquid animation */
+.liquid-animation {
+  /* Your existing animation styles */
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+@media (max-width: 1180px) { /* Targets both tablets and mobiles */
+  .partners-showcase .logo-container img {
+    /* max-width: 180px; Decrease logo size */
+    /* max-height: 40px; Maintain aspect ratio */
+    object-fit: contain; /* Ensure logos fit properly */
+    margin-top: 40px;
+  }
+  
+  .partner-item span {
+    /* font-size: 0.8rem; Decrease text size under logos */
+    /* margin-top: 8px; Adjust spacing */
+  }
+}
+
+/* Further adjustments for mobile */
+@media (max-width: 768px) {
+  .partners-showcase .logo-container img {
+    /* max-width: 60px; Even smaller for mobile */
+    /* max-height: 30px; */
+  }
+  
+  .partner-item span {
+    /* font-size: 0.7rem; */
+  }
+}
