@@ -109,65 +109,7 @@
   100% { transform: translateX(calc(-220px * 6)); }
 }
 
-/* Responsive Styles */
-@media (max-width: 1200px) {
-  .ourportfolio-section-header h2 {
-    font-size: 3.5rem;
-  }
 
-  .ourportfolio-section-header p {
-    font-size: 1.8rem;
-  }
-
-  .ourportfolio-partner-item {
-    min-width: 200px;
-    height: 160px;
-  }
-}
-
-@media (max-width: 768px) {
-  .ourportfolio-partners-showcase {
-    padding: 6rem 0;
-  }
-
-  .ourportfolio-section-header h2 {
-    font-size: 2.8rem;
-  }
-
-  .ourportfolio-section-header p {
-    font-size: 1.5rem;
-  }
-
-  .ourportfolio-partner-item {
-    min-width: 180px;
-    height: 150px;
-    padding: 1.5rem;
-  }
-
-  .ourportfolio-logo-container img {
-    max-width: 140px;
-  }
-}
-
-@media (max-width: 576px) {
-  .ourportfolio-section-header h2 {
-    font-size: 2.2rem;
-  }
-
-  .ourportfolio-section-header p {
-    font-size: 1.2rem;
-  }
-
-  .ourportfolio-partner-item {
-    min-width: 160px;
-    height: 140px;
-    padding: 1rem;
-  }
-
-  .ourportfolio-partner-item span {
-    font-size: 0.9rem;
-  }
-}
 
 
 .ourportfolio-section-header h2 {
@@ -214,6 +156,68 @@
   margin-bottom: 30px;
 }
 
+
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .ourportfolio-section-header h2 {
+    font-size: 3.5rem;
+  }
+
+  .ourportfolio-section-header p {
+    font-size: 1.8rem;
+  }
+
+  .ourportfolio-partner-item {
+    min-width: 200px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ourportfolio-partners-showcase {
+    padding: 6rem 0;
+  }
+
+  .ourportfolio-section-header h2 {
+    font-size: 2.8em;
+  }
+
+  .ourportfolio-section-header p {
+    font-size: 1.5rem;
+  }
+
+  .ourportfolio-partner-item {
+    min-width: 180px;
+    height: 150px;
+    padding: 1.5rem;
+  }
+
+  .ourportfolio-logo-container img {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ourportfolio-section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .ourportfolio-section-header p {
+    font-size: 1.2rem;
+  }
+
+  .ourportfolio-partner-item {
+    min-width: 160px;
+    height: 140px;
+    padding: 1rem;
+  }
+
+  .ourportfolio-partner-item span {
+    font-size: 0.9rem;
+  }
+}
 
 
 /* Animation styles for both sections */

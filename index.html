@@ -8,24 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@800&display=swap" rel="stylesheet" />
 
-
-  <!-- <link rel="stylesheet" href="service.css" />
-  <link rel="stylesheet" href="webdevelopmentsection.css">
-  <link rel="stylesheet" href="contact.css">
-  <link rel="stylesheet" href="home.css">
-  <link rel="stylesheet" href="homeaboutus.css">
-  <link rel="stylesheet" href="homeservice.css">
-  <link rel="stylesheet" href="homeourportfolio.css">  -->
-
-  <!-- <link rel="stylesheet" href="../Home/css/service.css">
-  <link rel="stylesheet" href="../Home/css/homenavbar.css">
-  <link rel="stylesheet" href="../Home/css/contact.css">
-  <link rel="stylesheet" href="../Home/css/home.css">
-  <link rel="stylesheet" href="../Home/css/homeaboutus.css">
-  <link rel="stylesheet" href="../Home/css/homeservice.css">
-  <link rel="stylesheet" href="../Home/css/homeourportfolio.css"> -->
-
-
   <link rel="stylesheet" href="/All%20Pages/Home/css/service.css">
   <link rel="stylesheet" href="/All%20Pages/Home/css/homenavbar.css">
   <link rel="stylesheet" href="/All%20Pages/Home/css/contact.css">
@@ -33,72 +15,9 @@
   <link rel="stylesheet" href="/All%20Pages/Home/css/homeaboutus.css">
   <link rel="stylesheet" href="/All%20Pages/Home/css/homeservice.css">
   <link rel="stylesheet" href="/All%20Pages/Home/css/homeourportfolio.css">
+  
 <style>
   /* Add smooth scrolling to html element */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Optional: Add smooth transitions for elements that appear on scroll */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.animate-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-  /* Hide scrollbar for Chrome, Safari and Opera */
-.services-scroller::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.services-scroller {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.services-scroller {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  height: 100%;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.services-scroller::-webkit-scrollbar {
-  display: none;
-}
-
-body, html {
-  /* overflow-x: hidden; Hide horizontal scrollbar */
-  -ms-overflow-style: none; 
-  scrollbar-width: none; /* Firefox */
-}
-
-/* Hide all scrollbars globally */
-::-webkit-scrollbar {
-  width: 0 !important;
-  height: 0 !important;
-  display: none !important;
-}
-* {
-  -ms-overflow-style: none !important; /* IE/Edge */
-  scrollbar-width: none !important; /* Firefox */
-}
-
-
-  
-</style>
-
-
-<style>
   html {
     scroll-behavior: smooth;
   }
@@ -113,8 +32,154 @@ body, html {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-</style>
 
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .services-scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .services-scroller {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .services-scroller {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  body, html {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+  }
+
+  /* Hide all scrollbars globally */
+  ::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none !important;
+  }
+  * {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+
+  /* Animation styles for index.html */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Specific animation delays for index.html sections */
+  /* Intro Section */
+  .intro-section .intro-center-content.animate-on-scroll {
+    transition-delay: 0.3s;
+  }
+
+  /* About Us Split Section */
+  .aboutus-split-section .aboutus-left.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .aboutus-split-section .aboutus-right.animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  /* Values Section */
+  .aboutus-values-section .aboutus-section-header.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .aboutus-values-section .aboutus-value-item:nth-child(1).animate-on-scroll {
+    transition-delay: 0.3s;
+  }
+
+  .aboutus-values-section .aboutus-value-item:nth-child(2).animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  .aboutus-values-section .aboutus-value-item:nth-child(3).animate-on-scroll {
+    transition-delay: 0.5s;
+  }
+
+  /* Voice AI Explanation Section */
+  .voice-ai-explanation-section .outlined-heading.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .voice-ai-explanation-section .subtitle.animate-on-scroll {
+    transition-delay: 0.3s;
+  }
+
+  .voice-ai-explanation-section .ai-features.animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  /* Voice AI Info Section */
+  .voice-ai-info-section .voice-ai-info-heading.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .voice-ai-info-section .voice-ai-info-text.animate-on-scroll {
+    transition-delay: 0.3s;
+  }
+
+  .voice-ai-info-section .voice-ai-visual.animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  /* Partners Section */
+  .ourportfolio-partners-showcase .ourportfolio-section-header.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .ourportfolio-partners-showcase .ourportfolio-partners-container.animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  /* Contact Section */
+  .contact-section .section-title.animate-on-scroll {
+    transition-delay: 0.2s;
+  }
+
+  .contact-section .fancy-divider.animate-on-scroll {
+    transition-delay: 0.3s;
+  }
+
+  .contact-section .contact-left.animate-on-scroll {
+    transition-delay: 0.4s;
+  }
+
+  .contact-section .contact-right.animate-on-scroll {
+    transition-delay: 0.5s;
+  }
+
+  .aboutus-value-item,
+  .ai-feature {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .aboutus-value-item.visible,
+  .ai-feature.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
 </head>
 <body>
   <!-- Animated Background -->
@@ -150,163 +215,158 @@ body, html {
   </header>
 
   <!-- Mobile Body Overlay -->
-     <div id="mobile-body-overly"></div>
+  <div id="mobile-body-overly"></div>
 
   <div id="main-container">
     <!-- Intro Section -->
-<section class="intro-section">
-  <div class="particles-container" id="particles-js"></div>
-  <div class="intro-center-content">
-    <h1 class="intro-heading liquid-animation">Axioware</h1>
-    <p class="intro-subtext">Where ideas meet intelligent execution</p>
-    <a href="#scroller" class="btn pulse-animation">LET'S GET STARTED</a>
-  </div>
-</section>
+    <section class="intro-section">
+      <div class="particles-container" id="particles-js"></div>
+      <div class="intro-center-content animate-on-scroll">
+        <h1 class="intro-heading liquid-animation">Axioware</h1>
+        <p class="intro-subtext">Where ideas meet intelligent execution</p>
+        <a href="#scroller" class="btn pulse-animation">LET'S GET STARTED</a>
+      </div>
+    </section>
 
+    <section class="aboutus-split-section">
+      <div class="aboutus-container">
+        <div class="aboutus-left animate-on-scroll">
+          <h2>About <span>Axioware</span></h2>
+          <p>Founded in 2024 as a group of friends building intelligent software solutions, Axioware grew from a shared passion for creating tools that make work effortless.</p>
+          <p>We create seamless connections between people and technology. Our mission: to build automation so natural, you forget it's even there.</p>
+          <a href="/All%20Pages/Portfolio/portfolio.html" class="aboutus-btn">View Our Work</a>
+        </div>
 
-
-<section class="aboutus-split-section">
-  <div class="aboutus-container">
-    <div class="aboutus-left">
-      <!-- <div class="aboutus-line"></div> -->
-      <h2>About <span>Axioware</span></h2>
-      <p>Founded in 2024 as a group of friends building intelligent software solutions, Axioware grew from a shared passion for creating tools that make work effortless.</p>
-      <p>We create seamless connections between people and technology. Our mission: to build automation so natural, you forget it's even there.</p>
-      <a href="/All%20Pages/Portfolio/portfolio.html" class="aboutus-btn">View Our Work</a>
-    </div>
-
-    <div class="aboutus-right">
-      <h3>What We Do</h3>
-      <div class="aboutus-service">
-        <i class="fas fa-cogs"></i>
-        <div>
-          <h4>Custom Software</h4>
-          <p>We design and build powerful solutions tailored to your business needs.</p>
+        <div class="aboutus-right animate-on-scroll">
+          <h3>What We Do</h3>
+          <div class="aboutus-service">
+            <i class="fas fa-cogs"></i>
+            <div>
+              <h4>Custom Software</h4>
+              <p>We design and build powerful solutions tailored to your business needs.</p>
+            </div>
+          </div>
+          <div class="aboutus-service">
+            <i class="fas fa-robot"></i>
+            <div>
+              <h4>Automation Solutions</h4>
+              <p>We automate manual tasks and simplify complex workflows with AI-powered tools.</p>
+            </div>
+          </div>
+          <div class="aboutus-service">
+            <i class="fas fa-network-wired"></i>
+            <div>
+              <h4>System Integrations</h4>
+              <p>We connect apps, services, and data into one seamless experience.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="aboutus-service">
-        <i class="fas fa-robot"></i>
-        <div>
-          <h4>Automation Solutions</h4>
-          <p>We automate manual tasks and simplify complex workflows with AI-powered tools.</p>
+    </section>
+
+    <section class="aboutus-values-section">
+      <div class="aboutus-section-header animate-on-scroll">
+        <h2 class="outlined-heading">Our Core Values</h2>
+        <p>Our values aren't wall art, they're how we work.</p>
+      </div>
+
+      <div class="aboutus-values-container">
+        <div class="aboutus-value-item animate-on-scroll">
+          <h3>Straight Talk</h3>
+          <p>No jargon or hype just honest communication, whether it's good news or tough truths.</p>
+        </div>
+
+        <div class="aboutus-value-item animate-on-scroll">
+          <h3>Simplification</h3>
+          <p>We fight complexity until only the essential remains. If it's not making your work easier, we're not done yet.</p>
+        </div>
+
+        <div class="aboutus-value-item animate-on-scroll">
+          <h3>Human Centric</h3>
+          <p>We build for real people—tools should adapt to humans, not the other way around.</p>
         </div>
       </div>
-      <div class="aboutus-service">
-        <i class="fas fa-network-wired"></i>
-        <div>
-          <h4>System Integrations</h4>
-          <p>We connect apps, services, and data into one seamless experience.</p>
+    </section>
+
+    <section class="voice-ai-explanation-section">
+      <div class="parallax-bgs"></div>
+      <div class="content-overlay"></div>
+      <div class="voice-ai-content">
+        <h2 class="outlined-heading animate-on-scroll">What We Offer</h2>
+
+        <p class="subtitle animate-on-scroll">
+          We design smart tools and seamless experiences that make everyday work easier and faster.
+        </p>
+
+        <div class="ai-features animate-on-scroll">
+          <div class="ai-feature">
+            <div class="feature-circle">
+              <i class="fas fa-microphone-alt pulse"></i>
+            </div>
+            <h3>Voice AI Agent</h3>
+            <p>Talk naturally, get smart replies.</p>
+          </div>
+
+          <div class="ai-feature">
+            <div class="feature-circle">
+              <i class="fas fa-comments pulse"></i>
+            </div>
+            <h3>Chatbot</h3>
+            <p>24/7 chat that feels human.</p>
+          </div>
+
+          <div class="ai-feature">
+            <div class="feature-circle">
+              <i class="fas fa-code pulse"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Custom, high-speed websites.</p>
+          </div>
+
+          <div class="ai-feature">
+            <div class="feature-circle">
+              <i class="fas fa-pencil-ruler pulse"></i>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Clean, user-first designs.</p>
+          </div>
+
+          <div class="ai-feature">
+            <div class="feature-circle">
+              <i class="fas fa-search pulse"></i>
+            </div>
+            <h3>SEO</h3>
+            <p>Boost traffic, stay visible.</p>
+          </div>
+
+          <div class="ai-feature">
+            <div class="feature-circle">
+              <i class="fas fa-brain pulse"></i>
+            </div>
+            <h3>Machine Learning</h3>
+            <p>Smarter systems, better results.</p>
+          </div>
+
+          <div class="ai-feature">
+            <div class="feature-circle">
+              <i class="fas fa-spider pulse"></i>
+            </div>
+            <h3>Web Scraper</h3>
+            <p>Grab data, fast and easy.</p>
+          </div>
+
+          <div class="ai-feature">
+            <div class="feature-circle">
+              <i class="fas fa-bullhorn pulse"></i>
+            </div>
+            <h3>Social Media Marketing</h3>
+            <p>Grow your brand online.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  </section>
+    </section>
 
-<section class="aboutus-values-section">
-  <div class="aboutus-section-header animate-on-scroll">
-    <h2 class="outlined-heading">Our Core Values</h2>
-    <p>Our values aren't wall art, they're how we work.</p>
-  </div>
-
-  <div class="aboutus-values-container">
-
-    <div class="aboutus-value-item">
-      <h3>Straight Talk</h3>
-      <p>No jargon or hype just honest communication, whether it's good news or tough truths.</p>
-    </div>
-
-    <div class="aboutus-value-item">
-      <h3>Simplification</h3>
-      <p>We fight complexity until only the essential remains. If it's not making your work easier, we're not done yet.</p>
-    </div>
-
-    <div class="aboutus-value-item">
-      <h3>Human Centric</h3>
-      <p>We build for real people—tools should adapt to humans, not the other way around.</p>
-    </div>
-  </div>
-  </section>
-
-<section class="voice-ai-explanation-section">
-  <div class="parallax-bgs"></div>
-  <div class="content-overlay"></div>
-  <div class="voice-ai-content">
-    <h2 class="outlined-heading">What We Offer</h2>
-
-    <p class="subtitle">
-      We design smart tools and seamless experiences that make everyday work easier and faster.
-    </p>
-
-    <div class="ai-features">
-  <div class="ai-feature">
-    <div class="feature-circle">
-      <i class="fas fa-microphone-alt pulse"></i>
-    </div>
-    <h3>Voice AI Agent</h3>
-    <p>Talk naturally, get smart replies.</p>
-  </div>
-
-  <div class="ai-feature">
-    <div class="feature-circle">
-      <i class="fas fa-comments pulse"></i>
-    </div>
-    <h3>Chatbot</h3>
-    <p>24/7 chat that feels human.</p>
-  </div>
-
-  <div class="ai-feature">
-    <div class="feature-circle">
-      <i class="fas fa-code pulse"></i>
-    </div>
-    <h3>Web Development</h3>
-    <p>Custom, high-speed websites.</p>
-  </div>
-
-  <div class="ai-feature">
-    <div class="feature-circle">
-      <i class="fas fa-pencil-ruler pulse"></i>
-    </div>
-    <h3>UI/UX Design</h3>
-    <p>Clean, user-first designs.</p>
-  </div>
-
-  <div class="ai-feature">
-    <div class="feature-circle">
-      <i class="fas fa-search pulse"></i>
-    </div>
-    <h3>SEO</h3>
-    <p>Boost traffic, stay visible.</p>
-  </div>
-
-  <div class="ai-feature">
-    <div class="feature-circle">
-      <i class="fas fa-brain pulse"></i>
-    </div>
-    <h3>Machine Learning</h3>
-    <p>Smarter systems, better results.</p>
-  </div>
-
-  <div class="ai-feature">
-    <div class="feature-circle">
-      <i class="fas fa-spider pulse"></i>
-    </div>
-    <h3>Web Scraper</h3>
-    <p>Grab data, fast and easy.</p>
-  </div>
-
-  <div class="ai-feature">
-    <div class="feature-circle">
-      <i class="fas fa-bullhorn pulse"></i>
-    </div>
-    <h3>Social Media Marketing</h3>
-    <p>Grow your brand online.</p>
-  </div>
-</div>
-
-  </div>
-  </section>
-
-  <section class="voice-ai-info-section">
+    <section class="voice-ai-info-section">
       <div class="voice-ai-bg">
         <div class="voice-ai-pulse"></div>
         <div class="voice-ai-pulse"></div>
@@ -315,9 +375,9 @@ body, html {
         <div class="voice-ai-grid"></div>
       </div>
       <div class="voice-ai-info-container">
-        <h2 class="voice-ai-info-heading">Voice AI Agents</h2>
-        <p class="voice-ai-info-text">Experience next generation conversational AI that listens with human like attention, understands context and nuance, and responds with intelligent, natural dialogue</p>
-        <div class="voice-ai-visual">
+        <h2 class="voice-ai-info-heading animate-on-scroll">Voice AI Agents</h2>
+        <p class="voice-ai-info-text animate-on-scroll">Experience next generation conversational AI that listens with human like attention, understands context and nuance, and responds with intelligent, natural dialogue</p>
+        <div class="voice-ai-visual animate-on-scroll">
           <div class="voice-ai-visual-mic">
             <div class="mic-icon">
               <i class="fas fa-microphone"></i>
@@ -334,13 +394,12 @@ body, html {
           </div>
         </div>
       </div>
-  </section>
+    </section>
 
-   <section class="ourportfolio-partners-showcase">
+ <section class="ourportfolio-partners-showcase">
   <div class="ourportfolio-partners-wrapper animate-on-scroll">
     <div class="ourportfolio-section-header animate-on-scroll">
-     <h2 class="outlined-heading">Our Valued Partners</h2>
-
+      <h2 class="outlined-heading">Our Valued Partners</h2>
       <p>Collaborating with industry leaders to deliver exceptional solutions</p>
     </div>
 
@@ -461,64 +520,77 @@ body, html {
       </div>
     </div>
   </div>
-  </section>
+</section>
 
-<section class="contact-section" id="contact-section">
-  <div class="parallax-bg"></div>
-  <div class="contact-content">
-    <h2 class="section-title">Contacts</h2>
-    <div class="fancy-divider">
-      <span class="divider-icon">A</span>
-    </div>
+    <section class="contact-section" id="contact-section">
+      <div class="parallax-bg"></div>
+      <div class="contact-content">
+        <h2 class="section-title animate-on-scroll">Contacts</h2>
+        <div class="fancy-divider animate-on-scroll">
+          <span class="divider-icon">A</span>
+        </div>
+        
+        <div class="contact-container">
+          <div class="contact-left animate-on-scroll">
+            <h3>Our Contacts & Socials</h3>
+            <ul>
+              <li><i class="fas fa-phone"></i> +92 331 3134953</li>
+              <li><i class="fab fa-whatsapp"></i> +92 331 3134953</li>
+              <li><i class="fab fa-facebook"></i> <a href="#">Axioware</a></li>
+              <li><i class="fas fa-globe"></i> <a href="#">Axioware.co</a></li>
+              <li><i class="fab fa-linkedin"></i> <a href="#">Axioware</a></li>
+              <li><i class="fas fa-envelope"></i>Axioware@gmail.com</li>
+            </ul>
+          </div>
+
+          <div class="contact-right animate-on-scroll">
+            <h3>Contact Us</h3>
+            <form>
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="E-mail" required />
+              <input type="text" placeholder="Subject" />
+              <textarea placeholder="Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <p>© Copyright Axioware All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/All%20Pages/Home/js/home.js"></script>
+    <script src="/All%20Pages/Home/js/aboutus.js"></script>
+    <script src="/All%20Pages/Home/js/ourportfolio.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
-    <div class="contact-container">
-      <div class="contact-left">
-        <h3>Our Contacts & Socials</h3>
-        <ul>
-          <li><i class="fas fa-phone"></i> +92 331 3134953</li>
-          <li><i class="fab fa-whatsapp"></i> +92 331 3134953</li>
-          <li><i class="fab fa-facebook"></i> <a href="#">Axioware</a></li>
-          <li><i class="fas fa-globe"></i> <a href="#">Axioware.co</a></li>
-          <li><i class="fab fa-linkedin"></i> <a href="#">Axioware</a></li>
-          <li><i class="fas fa-envelope"></i>Axioware@gmail.com</li>
-        </ul>
-      </div>
+    <script>
+      // Intersection Observer for scroll animations
+      document.addEventListener('DOMContentLoaded', function() {
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animated');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
 
-      <div class="contact-right">
-        <h3>Contact Us</h3>
-        <form>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="E-mail" required />
-          <input type="text" placeholder="Subject" />
-          <textarea placeholder="Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </div>
+        animateElements.forEach(element => {
+          observer.observe(element);
+        });
+      });
+    </script>
   </div>
-  
-  </section>
-
-  <footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-content">
-      <p>© Copyright Axioware All Rights Reserved</p>
-    </div>
-  </div>
-</footer>
-
-
-
-<!-- <script src="../Home/js/home.js"></script>
-<script src="../Home/js/aboutus.js"></script>
-<script src="../Home/js/ourportfolio.js"></script> -->
-
-<script src="/All%20Pages/Home/js/home.js"></script>
-<script src="/All%20Pages/Home/js/aboutus.js"></script>
-<script src="/All%20Pages/Home/js/ourportfolio.js"></script>
-
-
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
 </body>
 </html>

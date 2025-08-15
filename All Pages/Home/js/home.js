@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         out_mode: "out" 
       }
     },
-    interactivity: {
+    interactivity: { 
       detect_on: "canvas",
       events: {
         onhover: { enable: true, mode: "bubble" },
@@ -91,14 +91,14 @@ function setupSequentialScroll() {
 
 
 // Scroll effect
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".home-navbar");
-  if (window.scrollY > 60) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
+// window.addEventListener("scroll", () => {
+//   const navbar = document.querySelector(".home-navbar");
+//   if (window.scrollY > 60) {
+//     navbar.classList.add("scrolled");
+//   } else {
+//     navbar.classList.remove("scrolled");
+//   }
+// });
 
 // Hamburger toggle
 const hamburger = document.getElementById("home-hamburger");
