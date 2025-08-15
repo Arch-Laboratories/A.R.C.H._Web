@@ -1,0 +1,39 @@
+name: Deploy to S3 and CloudFront
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      - name: Deploy to S3
+        run: |
+          echo "Starting S3 deployment..."
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete --exclude ".git/*" --exclude ".github/*" --exclude "README.md" --exclude "LICENSE"
+          echo "S3 deployment completed!"
+      
+      - name: Invalidate CloudFront
+        run: |
+          echo "Starting CloudFront invalidation..."
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+          echo "CloudFront invalidation completed!"
+      
+      - name: Deployment Summary
+        run: |
+          echo "🚀 Deployment completed successfully!"
+          echo "📦 Files uploaded to S3 bucket: ${{ secrets.S3_BUCKET_NAME }}"
+          echo "🔄 CloudFront cache invalidated for distribution: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}"
+          echo "🌐 Your website should be updated in a few minutes" 
