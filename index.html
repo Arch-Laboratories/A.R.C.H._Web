@@ -156,6 +156,22 @@
 }
 
 
+.fullscreen-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* Prevent tap showing controls */
+}
+
+video::-webkit-media-controls {
+  display: none !important; /* Hide iOS controls */
+}
+
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+
 
 
 
@@ -171,12 +187,9 @@
     <!-- Intro Section -->
    <section class="intro-section">
   <!-- Video Background -->
-  <video autoplay muted playsinline class="fullscreen-video">
-    <source src="All Pages/Home/video/Logo animation.mp4" type="video/mp4">
-    <!-- Fallback image -->
-    <!-- <img src="All Pages/Home/AXIOWARE Logo without BG (big size)/17.png" alt="Axioware"> -->
-  </video>
-  
+ <video autoplay muted playsinline class="fullscreen-video" preload="auto">
+  <source src="All Pages/Home/video/Logo animation.mp4" type="video/mp4">
+</video>
   <!-- Particles Effect -->
   <div class="particles-container" id="particles-js"></div>
   
