@@ -184,6 +184,47 @@
   /* animation: gradientShift 15s ease infinite alternate; */
 }
 
+.intro-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen height */
+  background: #000; /* optional: black background behind video */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-video {
+  width: 40%;   /* fixed video size */
+  height: auto; /* keeps aspect ratio */
+  object-fit: contain;
+  pointer-events: none; /* no pause/play overlay */
+  z-index: 1;
+}
+
+.fullscreen-video {
+  width: 40%;   /* default for desktop */
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Tablet (up to 1024px) */
+@media (max-width: 1024px) {
+  .fullscreen-video {
+    width: 100%;  /* bigger on tablets */
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .fullscreen-video {
+    width: 100%;  /* even bigger on mobile */
+  }
+}
+
+
 
   
 </style>
