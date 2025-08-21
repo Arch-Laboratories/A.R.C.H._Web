@@ -155,36 +155,7 @@
   50% { transform: translateY(-20px); }
 }
 
-.fullscreen-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none; /* prevent tap controls */
-}
 
-video::-webkit-media-controls,
-video::-webkit-media-controls-enclosure {
-  display: none !important; /* hide iOS overlay */
-}
-
-
-.fullscreen-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none; /* prevent any tap */
-}
-
-/* Hide iOS Safari overlays completely */
-video::-webkit-media-controls,
-video::-webkit-media-controls-enclosure,
-video::-webkit-media-controls-overlay-play-button {
-  display: none !important;
-  -webkit-appearance: none;
-}
 
 
 
@@ -200,19 +171,12 @@ video::-webkit-media-controls-overlay-play-button {
     <!-- Intro Section -->
    <section class="intro-section">
   <!-- Video Background -->
-<video 
-  autoplay 
-  muted 
-  playsinline 
-  preload="auto" 
-  id="intro-video" 
-  class="fullscreen-video" 
-  disablePictureInPicture 
-  controlslist="nodownload noplaybackrate noremoteplayback"
->
-  <source src="All Pages/Home/video/Logo animation.mp4" type="video/mp4">
-</video>
-
+  <video autoplay muted playsinline class="fullscreen-video">
+    <source src="All Pages/Home/video/Logo animation.mp4" type="video/mp4">
+    <!-- Fallback image -->
+    <!-- <img src="All Pages/Home/AXIOWARE Logo without BG (big size)/17.png" alt="Axioware"> -->
+  </video>
+  
   <!-- Particles Effect -->
   <div class="particles-container" id="particles-js"></div>
   
@@ -640,15 +604,6 @@ hamburger.addEventListener('click', () => {
   nav.classList.toggle('active');
 });
 
-
-  document.getElementById('intro-video').addEventListener('ended', () => {
-    document.getElementById('intro-video').style.display = "none";
-  });
-
-   const vid = document.getElementById('intro-video');
-  vid.addEventListener('loadeddata', () => {
-    vid.removeAttribute('controls'); // just in case browser adds it
-  });
 
   
 </script>
