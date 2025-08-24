@@ -1886,7 +1886,20 @@ html {
 .footer-content p {
   margin: 0;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 300;  .team-section {
+      font-family: 'Poppins', sans-serif !important;
+      color: #333;
+    }
+
+    .team-section h2, 
+    .team-section h3 {
+      font-weight: 600;
+    }
+
+    .team-section p {
+      font-weight: 400;
+      line-height: 1.6;
+    }
   letter-spacing: 0.5px;
 }
 

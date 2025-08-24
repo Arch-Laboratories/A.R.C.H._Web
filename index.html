@@ -181,17 +181,17 @@
 }
 
 
-.fullscreen-video {
+/* .fullscreen-video {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 40%;   /* make it smaller */
-  height: auto; /* keep aspect ratio */
+  width: 40%;  
+  height: auto;
   transform: translate(-50%, -50%);
   object-fit: contain; 
   z-index: 1;
-}
-.intro-section {
+} */
+/* .intro-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,48 +206,47 @@
       rgba(0, 0, 0, 0.4)
     ),
     url('../images/Aboutus\ bg.png') no-repeat center center/cover;
-  /* animation: gradientShift 15s ease infinite alternate; */
-}
+} */
 
-.intro-section {
+/* .intro-section {
   position: relative;
   width: 100%;
-  height: 100vh; /* full screen height */
-  background: #000; /* optional: black background behind video */
+  height: 100vh; 
+  background: #000; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .fullscreen-video {
-  width: 40%;   /* fixed video size */
-  height: auto; /* keeps aspect ratio */
-  object-fit: contain;
-  pointer-events: none; /* no pause/play overlay */
-  z-index: 1;
-}
-
-.fullscreen-video {
-  width: 40%;   /* default for desktop */
-  height: auto;
+  width: 40%;  
+  height: auto; 
   object-fit: contain;
   pointer-events: none;
   z-index: 1;
 }
 
-/* Tablet (up to 1024px) */
-@media (max-width: 1024px) {
+.fullscreen-video {
+  width: 40%;   
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+} */
+
+
+/* @media (max-width: 1024px) {
   .fullscreen-video {
-    width: 100%;  /* bigger on tablets */
+    width: 100%; 
   }
 }
 
-/* Mobile (up to 768px) */
+
 @media (max-width: 768px) {
   .fullscreen-video {
-    width: 100%;  /* even bigger on mobile */
+    width: 100%; 
   }
-}
+} */
 
 
 
@@ -264,7 +263,7 @@
    <section class="intro-section">
   <!-- Video Background -->
   <video autoplay muted playsinline class="fullscreen-video">
-    <source src="All Pages/Home/video/Axioware.mp4" type="video/mp4">
+    <source src="All Pages/Home/video/Logo animation.mp4" type="video/mp4">
     <!-- Fallback image -->
     <!-- <img src="All Pages/Home/AXIOWARE Logo without BG (big size)/17.png" alt="Axioware"> -->
   </video>
@@ -605,11 +604,16 @@
             <h3>Our Contacts & Socials</h3>
             <ul>
               <li><i class="fas fa-phone"></i> +92 315 2525625</li>
-              <li><i class="fab fa-whatsapp"></i> +92 315 2525625</li>
-              <li><i class="fab fa-facebook"></i> <a href="#">Axioware</a></li>
-              <!-- <li><i class="fas fa-globe"></i> <a href="#">Axioware.tech</a></li> -->
-              <li><i class="fab fa-linkedin"></i> <a href="#">Axioware</a></li>
-              <li><i class="fas fa-envelope"></i>business@axioware.tech</li>
+<li><i class="fab fa-whatsapp"></i> +92 315 2525625</li>
+<li><i class="fab fa-instagram"></i> 
+  <a href="https://www.instagram.com/axioware.tech/" target="_blank" rel="noopener noreferrer">Axioware.tech</a>
+</li>
+<!-- <li><i class="fas fa-globe"></i> <a href="#">Axioware.tech</a></li> -->
+<li><i class="fab fa-linkedin"></i> 
+  <a href="https://www.linkedin.com/company/axioware/" target="_blank" rel="noopener noreferrer">Axioware</a>
+</li>
+<li><i class="fas fa-envelope"></i> business@axioware.tech</li>
+
             </ul>
           </div>
 
