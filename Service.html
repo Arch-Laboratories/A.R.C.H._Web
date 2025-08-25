@@ -62,6 +62,8 @@
 
 
 
+
+
   /* Tablet-specific styles (iPad Air) */
 @media (min-width: 768px) and (max-width: 1180px) {
   .intro-section {
@@ -260,6 +262,64 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   transform: translateZ(0);
 }
 
+
+/* Footer Styles */
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: static;
+  z-index: 10;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;  .team-section {
+      font-family: 'Poppins', sans-serif !important;
+      color: #333;
+    }
+
+    .team-section h2, 
+    .team-section h3 {
+      font-weight: 600;
+    }
+
+    .team-section p {
+      font-weight: 400;
+      line-height: 1.6;
+    }
+  letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 25px 0;
+  }
+  .footer-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 20px 0;  
+  }
+  .footer-content p {
+    font-size: 13px;
+  }
+}
+
+
 </style>
 
 
@@ -355,7 +415,7 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
         <div class="service-item">
           <div class="category"></div>
           <div class="service-icon"><i class="fas fa-microphone"></i></div>
-          <h2 class="service-title">Voice AI Agent</h2>
+          <h2 class="service-title">AI Voice Agent</h2>
           <p class="service-description">
             Integrate intelligent voice assistants to enhance customer interactions, automate support, and deliver conversational experiences across channels.
           </p>
@@ -415,7 +475,7 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   <div class="parallax-bgs"></div>
   <div class="content-overlay"></div>
   <div class="voice-ai-content">
-    <h2>Voice AI Agents</h2>
+    <h2>AI Voice Agent</h2>
     <p class="subtitle">You speak naturally, it understands deeply, like a knowledgeable partner</p>
     
     <div class="ai-features">
@@ -455,8 +515,8 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
         <div class="voice-ai-grid"></div>
       </div>
       <div class="voice-ai-info-container">
-        <h2 class="voice-ai-info-heading">Voice AI Agents</h2>
-        <p class="voice-ai-info-text">Experience next generation conversational AI that listens with human like attention, understands context and nuance, and responds with intelligent, natural dialogue</p>
+        <h2 class="voice-ai-info-heading">AI Voice Agent</h2>
+        <p class="voice-ai-info-text">Give your customers the experience they deserve with AI Voice Agents that listen carefully, understand context, and respond naturally. Making support faster, better, and more cost-effective.</p>
         <div class="voice-ai-visual">
           <div class="voice-ai-visual-mic">
             <div class="mic-icon">
